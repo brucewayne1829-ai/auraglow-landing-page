@@ -1,17 +1,11 @@
 "use client"
 
-import { ShoppingBag, Sparkles } from "lucide-react"
-import { useCart } from "./cart-context"
-
-const nav = [
-  { label: "Shop", href: "#shop" },
-  { label: "How to Use", href: "#how-to-use" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQ", href: "#faq" },
-]
+import { Sparkles } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { useOrder } from "./order-context"
 
 export function SiteHeader() {
-  const { count, openCart } = useCart()
+  const { openOrder } = useOrder()
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
@@ -25,32 +19,12 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        <button
-          type="button"
-          onClick={openCart}
-          className="relative inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-all hover:border-primary/40 hover:shadow-sm active:translate-y-px"
-          aria-label={`Open cart, ${count} item${count === 1 ? "" : "s"}`}
+        <Button
+          onClick={openOrder}
+          className="h-10 rounded-full px-5 text-sm font-semibold shadow-sm shadow-primary/20 transition-transform hover:scale-[1.03]"
         >
-          <ShoppingBag className="size-4" />
-          <span className="hidden sm:inline">Cart</span>
-          {count > 0 && (
-            <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-primary text-[11px] font-semibold text-primary-foreground">
-              {count}
-            </span>
-          )}
-        </button>
+          Buy Now
+        </Button>
       </div>
     </header>
   )

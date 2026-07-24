@@ -13,12 +13,16 @@ const faqs = [
     a: "Yes! We support both UPI and Cash on Delivery across India, so you can pay however is most convenient for you.",
   },
   {
-    q: "How often should I use the tools?",
-    a: "For best results, use the Ice Roller and Gua Sha daily — once in the morning to depuff and once at night to sculpt and relax facial muscles.",
+    q: "How often should I use it?",
+    a: "For best results, use it daily — once in the morning to depuff and once at night to sculpt and relax facial muscles. Just 60 seconds each time.",
   },
   {
-    q: "How do I keep the ice roller cold?",
-    a: "Simply store the detachable roller head in your freezer for at least 2 hours. It stays cool through your entire routine and the handle never gets uncomfortably cold.",
+    q: "How long does it take to freeze?",
+    a: "Fill the mold, stand it upright, and freeze for at least 4 hours (overnight is ideal). Once frozen, pop off the top cap and it's ready to roll.",
+  },
+  {
+    q: "What can I fill it with?",
+    a: "Anything skin-safe — plain water, green tea, cucumber juice, rosewater, or aloe. The food-grade silicone is leak-proof and easy to rinse clean between uses.",
   },
   {
     q: "What is your return policy?",

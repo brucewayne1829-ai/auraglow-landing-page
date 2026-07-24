@@ -1,9 +1,10 @@
-import { CartProvider } from "@/components/store/cart-context"
-import { CartDrawer } from "@/components/store/cart-drawer"
+import { Benefits } from "@/components/store/benefits"
 import { Faq } from "@/components/store/faq"
 import { Hero } from "@/components/store/hero"
 import { HowToUse } from "@/components/store/how-to-use"
-import { ProductCards } from "@/components/store/product-cards"
+import { OrderDialog } from "@/components/store/order-dialog"
+import { OrderProvider } from "@/components/store/order-context"
+import { Recipes } from "@/components/store/recipes"
 import { Reviews } from "@/components/store/reviews"
 import { SiteFooter } from "@/components/store/site-footer"
 import { SiteHeader } from "@/components/store/site-header"
@@ -11,18 +12,19 @@ import { StickyBuyBar } from "@/components/store/sticky-buy-bar"
 
 export default function Page() {
   return (
-    <CartProvider>
+    <OrderProvider>
       <SiteHeader />
       <main className="pb-24 md:pb-0">
         <Hero />
-        <ProductCards />
         <HowToUse />
+        <Benefits />
+        <Recipes />
         <Reviews />
         <Faq />
       </main>
       <SiteFooter />
       <StickyBuyBar />
-      <CartDrawer />
-    </CartProvider>
+      <OrderDialog />
+    </OrderProvider>
   )
 }

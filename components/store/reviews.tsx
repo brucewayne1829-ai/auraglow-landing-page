@@ -5,19 +5,19 @@ const reviews = [
     name: "Ananya R.",
     location: "Mumbai",
     rating: 5,
-    text: "My morning puffiness is gone in seconds. The ice roller is my new obsession — I use it every single day before work.",
+    text: "My morning puffiness is gone in seconds. This ice roller mold is my new obsession — I use it every single day before work.",
   },
   {
     name: "Priya K.",
     location: "Bengaluru",
     rating: 5,
-    text: "The gua sha genuinely sculpted my cheekbones. Two weeks in and my jawline looks so much more defined in photos.",
+    text: "I freeze green tea in it every night. Two weeks in and my jawline looks so much more defined in photos.",
   },
   {
     name: "Sneha M.",
     location: "Delhi",
     rating: 5,
-    text: "Bought the combo kit and it's the best ₹499 I've spent on skincare. Cash on delivery made it super easy too.",
+    text: "Best ₹299 I've spent on skincare. The silicone never leaks and cash on delivery made it super easy too.",
   },
 ]
 
