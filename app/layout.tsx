@@ -16,9 +16,9 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'AuraGlow — Ice Roller & Gua Sha for Sculpted, Depuffed Skin',
+  title: 'AuraGlow — Oval Refillable Silicone Ice Roller Mold',
   description:
-    'AuraGlow facial tools: reduce puffiness and sculpt your cheekbones in minutes. Get the Glow Combo Kit — Ice Roller + Gua Sha for just ₹499. UPI & Cash on Delivery.',
+    'Instant morning glow & anti-puffiness in 60 seconds. Fill the oval silicone mold with water, tea, or cucumber, freeze, and sculpt your skin daily. Just ₹299 — UPI & Cash on Delivery.',
   generator: 'v0.app',
   icons: {
     icon: [
