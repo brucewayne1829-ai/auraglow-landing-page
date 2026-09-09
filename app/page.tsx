@@ -1,12 +1,14 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Page() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const whatsappNumber = "9715616987";
   const mapUrl = "https://www.google.com/maps/place/No+505,+The+Arya+Vaidya+Pharmacy+Coimbatore+Limited,+Pournami'+Complex,+NSR+Rd,+opp.+to+LIC+Office,+S'Bend,+Nesavaalar+Colony,+Saibaba+Colony,+Coimbatore,+Tamil+Nadu+641011/@11.0268658,76.9467293,15z/data=!4m6!3m5!1s0x3ba858526b5c0591:0x135eacd0cdb95051!8m2!3d11.0268658!4d76.9467293!16s%2Fg%2F1vystznk";
 
   const categories = [
+    "All",
     "Arishtams",
     "Kashayams",
     "Kashayam Tablets",
@@ -28,13 +30,18 @@ export default function Page() {
     },
     {
       id: 2,
-      category: "Thailam",
+      category: "Thailams",
       name: "AVP Dhanwantharam Thailam (200ml)",
       desc: "Relieves body pain, joint pain, and muscle weakness. Best oil for body massage.",
       price: "₹190",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=500"
+      image: "https://avpayurveda.com/cdn/shop/files/4-21-2.png?v=1758801824&width=800"
     }
   ];
+
+  // Filter products based on selected category
+  const filteredProducts = selectedCategory === "All" 
+    ? products 
+    : products.filter(item => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-emerald-950 text-gray-800 font-sans flex flex-col justify-between">
@@ -62,52 +69,80 @@ export default function Page() {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-10 px-4 w-full">
 
-        {/* Categories Section */}
+        {/* Interactive Categories Section */}
         <section className="mb-12 bg-emerald-900/60 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-lg">
-          <h2 className="text-xl font-bold text-amber-300 mb-2">🌿 Available Medicine Categories</h2>
-          <p className="text-xs text-emerald-200 mb-6">We supply all genuine AVP Ayurvedic medicine formulations nationwide.</p>
+          <h2 className="text-xl font-bold text-amber-300 mb-2">🌿 Select Medicine Category</h2>
+          <p className="text-xs text-emerald-200 mb-6">Click on a category to filter the medicines list.</p>
           
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {categories.map((cat, index) => (
-              <div key={index} className="bg-emerald-950 border border-emerald-700/60 rounded-xl p-3 text-center hover:border-amber-400 transition-all">
-                <p className="text-sm font-semibold text-emerald-100">{cat}</p>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((cat, index) => {
+              const isActive = selectedCategory === cat;
+              return (
+                <button
+                  key={index}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                    isActive 
+                      ? "bg-amber-500 text-emerald-950 shadow-md scale-105" 
+                      : "bg-emerald-950 text-emerald-100 hover:bg-emerald-800 border border-emerald-700/60"
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         </section>
 
         {/* Featured Products */}
-        <h2 className="text-xl font-bold text-amber-300 mb-6 text-center">⭐ Popular Products</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center mb-10">
-          {products.map((item) => {
-            const waMessage = encodeURIComponent(`Hi, I want to order ${item.name} (${item.price})`);
-            const waLink = `https://wa.me/${whatsappNumber}?text=${waMessage}`;
+        <h2 className="text-xl font-bold text-amber-300 mb-6 text-center">
+          {selectedCategory === "All" ? "⭐ Popular Products" : `⭐ ${selectedCategory}`}
+        </h2>
 
-            return (
-              <div key={item.id} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100 flex flex-col justify-between hover:shadow-2xl transition-all">
-                <div>
-                  <img src={item.image} alt={item.name} className="w-full h-52 object-cover bg-emerald-50" />
-                  <div className="p-6 text-center">
-                    <span className="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full uppercase">{item.category}</span>
-                    <h3 className="text-xl font-bold text-emerald-950 mt-3 mb-2">{item.name}</h3>
-                    <p className="text-sm text-gray-600 mb-4 leading-relaxed font-medium">{item.desc}</p>
-                    <p className="text-2xl font-black text-emerald-700 mb-2">{item.price}</p>
+        {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center mb-10">
+            {filteredProducts.map((item) => {
+              const waMessage = encodeURIComponent(`Hi, I want to order ${item.name} (${item.price})`);
+              const waLink = `https://wa.me/${whatsappNumber}?text=${waMessage}`;
+
+              return (
+                <div key={item.id} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100 flex flex-col justify-between hover:shadow-2xl transition-all">
+                  <div>
+                    <img src={item.image} alt={item.name} className="w-full h-52 object-cover bg-emerald-50" />
+                    <div className="p-6 text-center">
+                      <span className="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full uppercase">{item.category}</span>
+                      <h3 className="text-xl font-bold text-emerald-950 mt-3 mb-2">{item.name}</h3>
+                      <p className="text-sm text-gray-600 mb-4 leading-relaxed font-medium">{item.desc}</p>
+                      <p className="text-2xl font-black text-emerald-700 mb-2">{item.price}</p>
+                    </div>
+                  </div>
+                  <div className="p-6 pt-0">
+                    <a
+                      href={waLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all active:scale-95"
+                    >
+                      <span>Order via WhatsApp</span>
+                    </a>
                   </div>
                 </div>
-                <div className="p-6 pt-0">
-                  <a
-                    href={waLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all active:scale-95"
-                  >
-                    <span>Order via WhatsApp</span>
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="bg-emerald-900/40 border border-emerald-800 rounded-2xl p-8 text-center text-white mb-10">
+            <p className="text-sm mb-4">No products listed directly under this category right now.</p>
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi, I want to inquire about AVP ${selectedCategory} products.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-5 rounded-xl text-xs transition-all"
+            >
+              Ask for {selectedCategory} via WhatsApp
+            </a>
+          </div>
+        )}
 
         {/* Store Address & Location Section */}
         <section className="bg-emerald-900 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-xl">
