@@ -18,7 +18,7 @@ const products: Product[] = [
     name: "AVP Aswagandharishtam (450ml)",
     desc: "Improves body strength, reduces fatigue, and boosts overall vitality.",
     price: "₹175",
-    image: "https://avpayurveda.com/cdn/shop/files/4-1_a87edc5a-4c61-4c89-b2c3-9eeb11d4f06c.jpg?v=1758802157&width=800"
+    image: "/aswagandharishtam.png"
   },
   {
     id: 2,
