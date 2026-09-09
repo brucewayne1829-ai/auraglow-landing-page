@@ -11,14 +11,14 @@ export default function Page() {
       name: "AVP Chyavanaprasam (400g)",
       desc: "പ്രതിരോധശേഷിയും ഊർജ്ജവും വർദ്ധിപ്പിക്കാൻ സഹായിക്കുന്ന പരമ്പരാഗത ആയുർവേദ ലേഹ്യം.",
       price: "₹215",
-      image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=400"
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=500"
     },
     {
       id: 2,
       name: "AVP Dhanwantharam Thailam (200ml)",
       desc: "വാതസംബന്ധമായ വേദനകൾക്കും പേശി ബലഹീനതയ്ക്കും ശരീര മസാജിനും മികച്ച തൈലം.",
       price: "₹190",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=400"
+      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=500"
     }
   ];
 
@@ -49,7 +49,7 @@ export default function Page() {
             return (
               <div key={item.id} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100 flex flex-col justify-between hover:shadow-2xl transition-all">
                 <div>
-                  <img src={item.image} alt={item.name} className="w-full h-52 object-cover bg-gray-100" />
+                  <img src={item.image} alt={item.name} className="w-full h-52 object-cover bg-emerald-50" />
                   <div className="p-6 text-center">
                     <span className="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full uppercase">AVP Genuine</span>
                     <h3 className="text-xl font-bold text-emerald-950 mt-3 mb-2">{item.name}</h3>
