@@ -26,7 +26,7 @@ export default function Page() {
       name: "AVP Aswagandharishtam (450ml)",
       desc: "Improves physical strength, helps with fatigue, and supports general well-being.",
       price: "₹175",
-      image: " https://avpayurveda.com/cdn/shop/files/4-1_a87edc5a-4c61-4c89-b2c3-9eeb11d4f06c.jpg?v=1758802157&width=800"
+      image: "https://avpayurveda.com/cdn/shop/files/4-1_a87edc5a-4c61-4c89-b2c3-9eeb11d4f06c.jpg?v=1758802157&width=800"
     },
     {
       id: 2,
