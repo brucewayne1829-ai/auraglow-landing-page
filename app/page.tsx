@@ -159,7 +159,7 @@ export default function Home() {
 
         {/* Doctor Appointment Banner */}
         <section className="mb-8 bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-3xl p-6 text-emerald-950 text-center shadow-2xl relative overflow-hidden transform transition hover:scale-[1.01]">
-          <h2 className="text-lg sm:text-xl font-black mb-1.5">📅 Expert Doctor Consultation</h2>
+          <h2 className="text-lg sm:text-xl font-black mb-1.5"> 🩺 Expert Doctor Consultation</h2>
           <p className="text-xs sm:text-sm font-medium mb-4 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
           <a
             href={docWaLink}
