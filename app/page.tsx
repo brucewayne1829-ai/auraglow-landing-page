@@ -11,7 +11,7 @@ export default function Page() {
       name: "AVP Chyavanaprasam (400g)",
       desc: "പ്രതിരോധശേഷിയും ഊർജ്ജവും വർദ്ധിപ്പിക്കാൻ സഹായിക്കുന്ന പരമ്പരാഗത ആയുർവേദ ലേഹ്യം.",
       price: "₹215",
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=500"
+      image: "https://avpayurveda.com/cdn/shop/files/Slide-1.jpg?v=1770813826&width=800"
     },
     {
       id: 2,
