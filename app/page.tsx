@@ -24,13 +24,19 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-emerald-950 text-gray-800 font-sans">
-      {/* Header with AVP Branding */}
+       {/* Header with AVP Logo */}
       <header className="bg-emerald-900 border-b border-emerald-800 text-white py-6 px-4 text-center shadow-lg">
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 max-w-4xl mx-auto">
-          {/* AVP Logo Badge */}
-          <div className="bg-emerald-800 border-2 border-emerald-600 text-amber-300 font-serif font-black text-xl px-4 py-1.5 rounded-lg shadow-inner tracking-widest">
-            AVP
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-4xl mx-auto">
+          
+          {/* AVP LOGO IMAGE HERE */}
+          <div className="bg-white p-2 rounded-xl shadow-md flex items-center justify-center">
+            <img 
+              src="YOUR_AVP_LOGO_URL_HERE" 
+              alt="AVP Logo" 
+              className="h-12 w-auto object-contain"
+            />
           </div>
+
           <div className="text-center sm:text-left">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-wide">AVP Agency</h1>
             <p className="text-xs text-emerald-300 tracking-wider">AUTHORISED DEALER - THE ARYA VAIDYA PHARMACY (COIMBATORE) LTD</p>
@@ -38,6 +44,7 @@ export default function Page() {
         </div>
         <p className="mt-3 text-emerald-100 text-sm font-light italic">"One shop for all ayurvedic medicines"</p>
       </header>
+
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-10 px-4">
