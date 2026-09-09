@@ -16,9 +16,8 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'AuraGlow — Oval Refillable Silicone Ice Roller Mold',
-  description:
-    'Instant morning glow & anti-puffiness in 60 seconds. Fill the oval silicone mold with water, tea, or cucumber, freeze, and sculpt your skin daily. Just ₹299 — UPI & Cash on Delivery.',
+  title: 'AVP Agency | Original Ayurvedic Medicines',
+  description: 'Authorised dealer for The Arya Vaidya Pharmacy (Coimbatore) Ltd. All India delivery available.',
   generator: 'v0.app',
   icons: {
     icon: [
