@@ -132,7 +132,7 @@ export default function Home() {
           </div>
           <div className="text-center sm:text-left">
             <h1 className="text-lg sm:text-2xl font-black tracking-wider text-white">AVP Agency</h1>
-            <p className="text-[10px] sm:text-xs text-amber-300 tracking-widest font-semibold uppercase">The Arya Vaidya Pharmacy (Coimbatore)</p>
+            <p className="text-[10px] sm:text-xs text-amber-300 tracking-widest font-semibold uppercase">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
           </div>
         </div>
         <p className="mt-2 text-emerald-200/90 text-xs font-light tracking-wide italic">"100% Genuine Ayurvedic Heritage • Direct Home Delivery"</p>
