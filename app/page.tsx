@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 
 export default function Page() {
@@ -18,7 +20,6 @@ export default function Page() {
     "Thailams"
   ];
 
-  // നോട്ടിൽ നൽകിയിരിക്കുന്ന പുതിയ മരുന്നുകളുടെ ലിസ്റ്റ്
   const products = [
     {
       id: 1,
