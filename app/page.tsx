@@ -4,6 +4,7 @@ import React from 'react';
 
 export default function Page() {
   const whatsappNumber = "9715616987";
+  const mapUrl = "https://www.google.com/maps/place/No+505,+The+Arya+Vaidya+Pharmacy+Coimbatore+Limited,+Pournami'+Complex,+NSR+Rd,+opp.+to+LIC+Office,+S'Bend,+Nesavaalar+Colony,+Saibaba+Colony,+Coimbatore,+Tamil+Nadu+641011/@11.0268658,76.9467293,15z/data=!4m6!3m5!1s0x3ba858526b5c0591:0x135eacd0cdb95051!8m2!3d11.0268658!4d76.9467293!16s%2Fg%2F1vystznk";
 
   const products = [
     {
@@ -23,7 +24,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="min-h-screen bg-emerald-950 text-gray-800 font-sans">
+    <div className="min-h-screen bg-emerald-950 text-gray-800 font-sans flex flex-col justify-between">
        {/* Header with AVP Logo */}
       <header className="bg-emerald-900 border-b border-emerald-800 text-white py-6 px-4 text-center shadow-lg">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-4xl mx-auto">
@@ -47,8 +48,8 @@ export default function Page() {
 
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto py-10 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center">
+      <main className="max-w-4xl mx-auto py-10 px-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center mb-10">
           {products.map((item) => {
             const waMessage = encodeURIComponent(`Hi, I want to order ${item.name} (${item.price})`);
             const waLink = `https://wa.me/${whatsappNumber}?text=${waMessage}`;
@@ -78,6 +79,27 @@ export default function Page() {
             );
           })}
         </div>
+
+        {/* Store Address & Location Section */}
+        <section className="bg-emerald-900 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-xl">
+          <h2 className="text-xl font-bold text-amber-300 mb-3">📍 Visit Our Agency / Store Location</h2>
+          
+          <div className="text-sm text-emerald-100 leading-relaxed max-w-lg mx-auto mb-5 space-y-1">
+            <p className="font-semibold text-white">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+            <p>No 505, 'Pournami' Complex, NSR Road,</p>
+            <p>Opposite to LIC Office, S'Bend, Nesavaalar Colony,</p>
+            <p>Saibaba Colony, Coimbatore, Tamil Nadu - 641011</p>
+          </div>
+
+          <a
+            href={mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-600 text-emerald-950 font-bold py-2.5 px-6 rounded-xl shadow-md transition-all active:scale-95 text-sm"
+          >
+            <span>Open in Google Maps</span>
+          </a>
+        </section>
       </main>
 
       {/* Footer */}
