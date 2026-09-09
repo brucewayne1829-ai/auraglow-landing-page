@@ -8,9 +8,9 @@ export default function Page() {
   const products = [
     {
       id: 1,
-      name: "AVP Chyavanaprasam (400g)",
+      name: "AVP Chyavanaprasam (250g)",
       desc: "പ്രതിരോധശേഷിയും ഊർജ്ജവും വർദ്ധിപ്പിക്കാൻ സഹായിക്കുന്ന പരമ്പരാഗത ആയുർവേദ ലേഹ്യം.",
-      price: "₹215",
+      price: "₹399",
       image: "https://avpayurveda.com/cdn/shop/files/Slide-1.jpg?v=1770813826&width=800"
     },
     {
