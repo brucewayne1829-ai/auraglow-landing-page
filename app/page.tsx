@@ -31,7 +31,7 @@ export default function Page() {
           {/* AVP LOGO IMAGE HERE */}
           <div className="bg-white p-2 rounded-xl shadow-md flex items-center justify-center">
             <img 
-              src="YOUR_AVP_LOGO_URL_HERE" 
+              src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
               alt="AVP Logo" 
               className="h-12 w-auto object-contain"
             />
