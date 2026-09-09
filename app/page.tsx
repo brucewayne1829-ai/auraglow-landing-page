@@ -18,8 +18,8 @@ export default function Page() {
       id: 2,
       name: "AVP Dhanwantharam Thailam (200ml)",
       desc: "Effective Ayurvedic oil for rheumatic ailments, muscle weakness, and body massages.",
-      price: "₹190",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=500"
+      price: "₹210",
+      image: "https://avpayurveda.com/cdn/shop/files/4-21-2.png?v=1758801824&width=800"
     }
   ];
 
