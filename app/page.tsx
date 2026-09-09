@@ -10,14 +10,14 @@ export default function Page() {
     {
       id: 1,
       name: "AVP Chyavanaprasam (250g)",
-      desc: "പ്രതിരോധശേഷിയും ഊർജ്ജവും വർദ്ധിപ്പിക്കാൻ സഹായിക്കുന്ന പരമ്പരാഗത ആയുർവേദ ലേഹ്യം.",
+      desc: "Traditional Ayurvedic formulation that enhances immunity, energy, and overall vitality.",
       price: "₹399",
       image: "https://avpayurveda.com/cdn/shop/files/Slide-1.jpg?v=1770813826&width=800"
     },
     {
       id: 2,
       name: "AVP Dhanwantharam Thailam (200ml)",
-      desc: "വാതസംബന്ധമായ വേദനകൾക്കും പേശി ബലഹീനതയ്ക്കും ശരീര മസാജിനും മികച്ച തൈലം.",
+      desc: "Effective Ayurvedic oil for rheumatic ailments, muscle weakness, and body massages.",
       price: "₹190",
       image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&q=80&w=500"
     }
@@ -29,7 +29,7 @@ export default function Page() {
       <header className="bg-emerald-900 border-b border-emerald-800 text-white py-6 px-4 text-center shadow-lg">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-4xl mx-auto">
           
-          {/* AVP LOGO IMAGE HERE */}
+          {/* AVP LOGO IMAGE */}
           <div className="bg-white p-2 rounded-xl shadow-md flex items-center justify-center">
             <img 
               src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
@@ -43,15 +43,14 @@ export default function Page() {
             <p className="text-xs text-emerald-300 tracking-wider">AUTHORISED DEALER - THE ARYA VAIDYA PHARMACY (COIMBATORE) LTD</p>
           </div>
         </div>
-        <p className="mt-3 text-emerald-100 text-sm font-light italic">"One shop for all ayurvedic medicines"</p>
+        <p className="mt-3 text-emerald-100 text-sm font-light italic">"One shop for all authentic ayurvedic medicines"</p>
       </header>
-
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-10 px-4 w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center mb-10">
           {products.map((item) => {
-            const waMessage = encodeURIComponent(`Hi, I want to order ${item.name} (${item.price})`);
+            const waMessage = encodeURIComponent(`Hi, I would like to order ${item.name} (${item.price})`);
             const waLink = `https://wa.me/${whatsappNumber}?text=${waMessage}`;
 
             return (
@@ -59,7 +58,7 @@ export default function Page() {
                 <div>
                   <img src={item.image} alt={item.name} className="w-full h-52 object-cover bg-emerald-50" />
                   <div className="p-6 text-center">
-                    <span className="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full uppercase">AVP Genuine</span>
+                    <span className="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full uppercase">100% Genuine AVP</span>
                     <h3 className="text-xl font-bold text-emerald-950 mt-3 mb-2">{item.name}</h3>
                     <p className="text-sm text-gray-600 mb-4 leading-relaxed">{item.desc}</p>
                     <p className="text-2xl font-black text-emerald-700 mb-2">{item.price}</p>
@@ -82,13 +81,14 @@ export default function Page() {
 
         {/* Store Address & Location Section */}
         <section className="bg-emerald-900 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-xl">
-          <h2 className="text-xl font-bold text-amber-300 mb-3">📍 Visit Our Agency / Store Location</h2>
+          <h2 className="text-xl font-bold text-amber-300 mb-3">📍 Visit Our Store / Contact Us</h2>
           
           <div className="text-sm text-emerald-100 leading-relaxed max-w-lg mx-auto mb-5 space-y-1">
             <p className="font-semibold text-white">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
             <p>No 505, 'Pournami' Complex, NSR Road,</p>
             <p>Opposite to LIC Office, S'Bend, Nesavaalar Colony,</p>
             <p>Saibaba Colony, Coimbatore, Tamil Nadu - 641011</p>
+            <p className="pt-2 text-xs text-emerald-300 font-medium">📦 All India Shipping Available</p>
           </div>
 
           <a
@@ -104,7 +104,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="bg-emerald-950 text-emerald-400 py-6 text-center text-xs border-t border-emerald-900">
-        <p>© AVP Agency | Order directly via WhatsApp. (no cash on delivery)</p>
+        <p>© AVP Agency | Order directly via WhatsApp. (All-India Delivery Available | No Cash on Delivery)</p>
       </footer>
     </div>
   );
