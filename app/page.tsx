@@ -75,7 +75,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="bg-emerald-950 text-emerald-400 py-6 text-center text-xs border-t border-emerald-900">
-        <p>© AVP Agency | Order directly via WhatsApp</p>
+        <p>© AVP Agency | Order directly via WhatsApp. (no cash on delivery)</p>
       </footer>
     </div>
   );
