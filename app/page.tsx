@@ -1,10 +1,9 @@
-"use client";
-
 import React, { useState } from 'react';
 
 export default function Page() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const whatsappNumber = "9715616987";
+  const whatsappNumber = "9495562581"; // ഓർഡർ ചെയ്യാനുള്ള നമ്പർ
+  const doctorWhatsapp = "9942662959"; // ഡോക്ടറുടെ കൺസൾട്ടേഷൻ നമ്പർ
   const mapUrl = "https://www.google.com/maps/place/No+505,+The+Arya+Vaidya+Pharmacy+Coimbatore+Limited,+Pournami'+Complex,+NSR+Rd,+opp.+to+LIC+Office,+S'Bend,+Nesavaalar+Colony,+Saibaba+Colony,+Coimbatore,+Tamil+Nadu+641011/@11.0268658,76.9467293,15z/data=!4m6!3m5!1s0x3ba858526b5c0591:0x135eacd0cdb95051!8m2!3d11.0268658!4d76.9467293!16s%2Fg%2F1vystznk";
 
   const categories = [
@@ -19,37 +18,77 @@ export default function Page() {
     "Thailams"
   ];
 
+  // നോട്ടിൽ നൽകിയിരിക്കുന്ന പുതിയ മരുന്നുകളുടെ ലിസ്റ്റ്
   const products = [
     {
       id: 1,
-      category: "Lehyam",
-      name: "AVP Chyavanaprasam (250g)",
-      desc: "Good for health and body energy. Strengthens the body and protects from illness.",
-      price: "₹399",
-      image: "https://avpayurveda.com/cdn/shop/files/Slide-1.jpg?v=1770813826&width=800"
+      category: "Arishtams",
+      name: "AVP Aswagandharishtam (450ml)",
+      desc: "Improves physical strength, helps with fatigue, and supports general well-being.",
+      price: "₹175",
+      image: " https://avpayurveda.com/cdn/shop/files/4-1_a87edc5a-4c61-4c89-b2c3-9eeb11d4f06c.jpg?v=1758802157&width=800"
     },
     {
       id: 2,
+      category: "Lehyam",
+      name: "AVP Dasamoolarasayanam (200g)",
+      desc: "Effective for respiratory care, cough, and throat related issues.",
+      price: "₹220",
+      image: "https://avpayurveda.com/cdn/shop/files/5-2_11c50bc9-935b-4c5b-9fe3-b4126fbc5b1c.png?v=1758801654&width=800"
+    },
+    {
+      id: 3,
+      category: "Kashayams",
+      name: "AVP Dhanwantharam Kashayam (200ml)",
+      desc: "Useful in postnatal care, rheumatic conditions, and neurological disorders.",
+      price: "₹200",
+      image: "https://avpayurveda.com/cdn/shop/files/Dhanwantharam-Kashayam-1.png?v=1758801683&width=800"
+    },
+    {
+      id: 4,
+      category: "Gulika",
+      name: "AVP Manasamithra Vatakam (10 Tabs)",
+      desc: "Supports mental wellness, memory, and helps relieve stress and anxiety.",
+      price: "₹275",
+      image: "https://avpayurveda.com/cdn/shop/files/1_030b0fd9-a741-4418-99e4-0fd874f8758c.jpg?v=1762146451&width=800"
+    },
+    {
+      id: 5,
+      category: "Grithams",
+      name: "AVP Saraswatha Gritham (150g)",
+      desc: "Traditional ghee formulation that supports cognitive functions and memory.",
+      price: "₹200",
+      image: "https://avpayurveda.com/cdn/shop/files/1_9241b43e-733b-4c3d-a4b8-0a42398e0087.jpg?v=1777533541&width=800"
+    },
+    {
+      id: 6,
       category: "Thailams",
       name: "AVP Dhanwantharam Thailam (200ml)",
       desc: "Relieves body pain, joint pain, and muscle weakness. Best oil for body massage.",
-      price: "₹190",
+      price: "₹220",
       image: "https://avpayurveda.com/cdn/shop/files/4-21-2.png?v=1758801824&width=800"
+    },
+    {
+      id: 7,
+      category: "Kashayam Tablets",
+      name: "AVP Manjishtedi Kashayam Tablet (10 Tabs)",
+      desc: "Helps purify blood and supports healthy skin conditions.",
+      price: "₹75",
+      image: "https://avpayurveda.com/cdn/shop/files/Manjishtadi-Kashayam-Tablet-1.png?v=1758802629&width=800"
     }
   ];
 
-  // Filter products based on selected category
   const filteredProducts = selectedCategory === "All" 
     ? products 
     : products.filter(item => item.category === selectedCategory);
 
+  const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi Doctor, I would like to book an online consultation.")}`;
+
   return (
     <div className="min-h-screen bg-emerald-950 text-gray-800 font-sans flex flex-col justify-between">
-       {/* Header with AVP Logo */}
+      {/* Header */}
       <header className="bg-emerald-900 border-b border-emerald-800 text-white py-6 px-4 text-center shadow-lg">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-4xl mx-auto">
-          
-          {/* AVP LOGO IMAGE */}
           <div className="bg-white p-2 rounded-xl shadow-md flex items-center justify-center">
             <img 
               src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
@@ -57,7 +96,6 @@ export default function Page() {
               className="h-12 w-auto object-contain"
             />
           </div>
-
           <div className="text-center sm:text-left">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-wide">AVP Agency</h1>
             <p className="text-xs text-emerald-300 tracking-wider">AUTHORISED DEALER - THE ARYA VAIDYA PHARMACY (COIMBATORE) LTD</p>
@@ -69,8 +107,22 @@ export default function Page() {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-10 px-4 w-full">
 
-        {/* Interactive Categories Section */}
-        <section className="mb-12 bg-emerald-900/60 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-lg">
+        {/* Doctor Online Consultation Banner */}
+        <section className="mb-8 bg-amber-500 border border-amber-600 rounded-2xl p-6 text-emerald-950 text-center shadow-xl">
+          <h2 className="text-xl font-black mb-2">🩺 Doctor Online Consultation</h2>
+          <p className="text-xs sm:text-sm font-medium mb-4">Consult with our expert ayurvedic physician directly via WhatsApp.</p>
+          <a
+            href={docWaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all active:scale-95 text-sm"
+          >
+            <span>Chat with Doctor ({doctorWhatsapp})</span>
+          </a>
+        </section>
+
+        {/* Categories Section */}
+        <section className="mb-10 bg-emerald-900/60 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-lg">
           <h2 className="text-xl font-bold text-amber-300 mb-2">🌿 Select Medicine Category</h2>
           <p className="text-xs text-emerald-200 mb-6">Click on a category to filter the medicines list.</p>
           
@@ -94,9 +146,9 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Featured Products */}
+        {/* Products Grid */}
         <h2 className="text-xl font-bold text-amber-300 mb-6 text-center">
-          {selectedCategory === "All" ? "⭐ Popular Products" : `⭐ ${selectedCategory}`}
+          {selectedCategory === "All" ? "⭐ Available Medicines" : `⭐ ${selectedCategory}`}
         </h2>
 
         {filteredProducts.length > 0 ? (
@@ -144,7 +196,7 @@ export default function Page() {
           </div>
         )}
 
-        {/* Store Address & Location Section */}
+        {/* Store Address Section */}
         <section className="bg-emerald-900 border border-emerald-800 rounded-2xl p-6 text-white text-center shadow-xl">
           <h2 className="text-xl font-bold text-amber-300 mb-3">📍 Visit Our Agency / Store Location</h2>
           
