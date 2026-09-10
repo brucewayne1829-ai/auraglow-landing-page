@@ -55,53 +55,53 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28 pt-36" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28 pt-28" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
-      {/* Sticky Header with Trust & Language Bar */}
-      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-3 px-4 z-50 shadow-lg">
+      {/* Sticky Header */}
+      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2.5 px-3 sm:px-6 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2.5 min-w-0">
+          <div className="flex items-center gap-2.5">
             <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
               <img
                 src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
                 alt="AVP Ayurveda logo"
-                className="h-7 w-auto object-contain"
+                className="h-6 sm:h-8 w-auto object-contain"
               />
             </div>
-            <div className="min-w-0">
-              <p className="font-display text-lg leading-tight text-[#F3EEDD] font-bold truncate">AVP Agency</p>
-              <p className="text-[9px] tracking-wide text-[#C9BE9C] uppercase font-semibold truncate">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+            <div>
+              <p className="font-display text-base sm:text-xl leading-none text-[#F3EEDD] font-bold">AVP Agency</p>
+              <p className="text-[9px] sm:text-[10px] tracking-wider text-[#C9BE9C] mt-0.5 uppercase font-semibold">The Arya Vaidya Pharmacy</p>
             </div>
           </div>
           
-          <div className="shrink-0 text-right">
-            <div className="text-[10px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-2.5 py-1 rounded-full font-medium inline-block leading-tight">
-              English <span className="text-[#B8862F]">·</span> മലയാളം <span className="text-[#B8862F]">·</span> தமிழ்
-            </div>
+          <div className="shrink-0">
+            <span className="text-[10px] sm:text-[11px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-2.5 py-1 rounded-full font-medium">
+              ENG · മലയാളം · தமிழ்
+            </span>
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto mt-2 pt-2 border-t border-[#B8862F]/20 text-center">
-          <p className="text-[10px] sm:text-[11px] text-[#C9BE9C] font-semibold tracking-wide">
+        <div className="max-w-6xl mx-auto mt-1.5 pt-1.5 border-t border-[#B8862F]/20 text-center">
+          <p className="text-[10px] text-[#C9BE9C] font-semibold tracking-wide truncate">
             🌿 100% Authentic AVP Formulations &bull; Direct Agency Support via WhatsApp
           </p>
         </div>
       </header>
 
-      {/* Doctor consultation (Amber/Yellow banner) */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-2xl p-6 text-emerald-950 text-center shadow-xl relative overflow-hidden">
+      {/* Doctor consultation banner */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+        <div className="bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-2xl p-5 sm:p-6 text-emerald-950 text-center shadow-xl relative overflow-hidden">
           <h2 className="font-display text-lg sm:text-xl font-bold mb-1">🩺 Expert Doctor Consultation</h2>
-          <p className="text-xs sm:text-sm font-medium mb-4 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
+          <p className="text-xs sm:text-sm font-medium mb-3 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
           <a
             href={docWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-3 px-6 rounded-xl shadow-md transition-all text-xs sm:text-sm border border-emerald-800"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-2.5 px-5 rounded-xl shadow-md transition-all text-xs sm:text-sm border border-emerald-800"
           >
             <span>Book Consultation via WhatsApp</span>
           </a>
@@ -113,11 +113,11 @@ export default function Home() {
       </div>
 
       {/* Formulary */}
-      <section id="formulary" className="max-w-6xl mx-auto px-6 py-10">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
+      <section id="formulary" className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
-            <p className="text-[#B8862F] text-sm font-medium mb-2">The formulary</p>
-            <h2 className="font-display text-3xl text-[#F3EEDD]">
+            <p className="text-[#B8862F] text-xs sm:text-sm font-medium mb-1">The formulary</p>
+            <h2 className="font-display text-2xl sm:text-3xl text-[#F3EEDD]">
               {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All remedies" : selectedCategory)}
             </h2>
           </div>
@@ -128,11 +128,11 @@ export default function Home() {
             placeholder="Search, e.g. Draksharishtam"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full sm:w-72 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-2 text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
+            className="w-full sm:w-72 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-2 text-sm sm:text-base text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
           />
         </div>
 
-        <div className="flex flex-wrap gap-x-6 gap-y-3 mb-12 border-b border-[#B8862F]/20 pb-6" role="group" aria-label="Filter by category">
+        <div className="flex flex-wrap gap-x-5 gap-y-2.5 mb-10 border-b border-[#B8862F]/20 pb-5" role="group" aria-label="Filter by category">
           {categories.map((cat, index) => {
             const isActive = selectedCategory === cat;
             return (
@@ -140,7 +140,7 @@ export default function Home() {
                 key={index}
                 onClick={() => setSelectedCategory(cat)}
                 aria-pressed={isActive}
-                className={`text-base pb-1 border-b-2 motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm ${
+                className={`text-sm sm:text-base pb-1 border-b-2 motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm ${
                   isActive
                     ? "border-[#B8862F] text-[#F3EEDD] font-semibold"
                     : "border-transparent text-[#8FA192] hover:text-[#D9D0B4]"
@@ -153,7 +153,7 @@ export default function Home() {
         </div>
 
         {filteredProducts.length > 0 ? (
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
@@ -216,11 +216,11 @@ export default function Home() {
       </div>
 
       {/* Store location */}
-      <section className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-10">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-8">
         <div>
           <p className="text-[#B8862F] text-sm font-medium mb-3">Visit the dispensary</p>
-          <h2 className="font-display text-2xl text-[#F3EEDD] mb-5">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
-          <div className="text-[#D9D0B4] leading-relaxed space-y-1 mb-6">
+          <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD] mb-4">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
+          <div className="text-[#D9D0B4] leading-relaxed space-y-1 mb-5 text-sm sm:text-base">
             <p>No 505, 'Pournami' Complex, NSR Road,</p>
             <p>Opposite LIC Office, S'Bend, Nesavaalar Colony,</p>
             <p>Saibaba Colony, Coimbatore, Tamil Nadu - 641011</p>
@@ -229,14 +229,14 @@ export default function Home() {
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#B8862F] border-b border-[#B8862F]/40 hover:border-[#B8862F] pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm"
+            className="inline-flex items-center gap-2 text-[#B8862F] border-b border-[#B8862F]/40 hover:border-[#B8862F] pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm text-sm"
           >
             Open in Google Maps
           </a>
         </div>
-        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-8 flex flex-col justify-center">
+        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-center">
           <p className="font-display text-lg text-[#F3EEDD] mb-2">Delivery, pan-India</p>
-          <p className="text-[#C9BE9C] leading-relaxed">
+          <p className="text-[#C9BE9C] leading-relaxed text-sm sm:text-base">
             We courier securely to any address in the country. Orders are confirmed and paid for
             on WhatsApp — no cash on delivery.
           </p>
@@ -245,14 +245,14 @@ export default function Home() {
 
       {/* Floating cart bar */}
       {cart.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-4 px-6 z-50">
+        <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-3 px-4 sm:px-6 z-50">
           <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-            <p className="text-[#D9D0B4]">
+            <p className="text-[#D9D0B4] text-sm">
               <span className="text-[#F3EEDD] font-semibold">{cart.length}</span> item{cart.length > 1 ? "s" : ""} ready to send
             </p>
             <button
               onClick={handleCartCheckout}
-              className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+              className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-2.5 px-6 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
             >
               Send cart to WhatsApp
             </button>
@@ -261,7 +261,7 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-[#B8862F]/20 py-8 px-6 text-center text-sm text-[#7C8B7E]">
+      <footer className="border-t border-[#B8862F]/20 py-6 px-6 text-center text-xs sm:text-sm text-[#7C8B7E]">
         <p>© AVP Agency — orders placed by WhatsApp. Delivery across India. No cash on delivery.</p>
       </footer>
     </div>
