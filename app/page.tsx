@@ -15,21 +15,6 @@ function LeafDivider({ className = "" }: { className?: string }) {
   );
 }
 
-function BotanicalMark({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 200 320" fill="none" className={className} aria-hidden="true">
-      <path d="M100 310V40" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
-      <path d="M100 260c-24-10-40-30-42-56 26 2 44 18 50 42" fill="currentColor" opacity="0.85" />
-      <path d="M100 260c24-10 40-30 42-56-26 2-44 18-50 42" fill="currentColor" opacity="0.85" />
-      <path d="M100 190c-20-8-33-24-35-46 22 2 37 15 43 36" fill="currentColor" opacity="0.65" />
-      <path d="M100 190c20-8 33-24 35-46-22 2-37 15-43 36" fill="currentColor" opacity="0.65" />
-      <path d="M100 120c-16-6-27-19-29-37 18 2 30 12 35 29" fill="currentColor" opacity="0.45" />
-      <path d="M100 120c16-6 27-19 29-37-18 2-30 12-35 29" fill="currentColor" opacity="0.45" />
-      <circle cx="100" cy="34" r="7" fill="currentColor" />
-    </svg>
-  );
-}
-
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -70,117 +55,67 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-24 pt-20" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
-      {/* Header */}
-      <header className="border-b border-[#B8862F]/30 py-5 px-6">
-        <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="bg-[#F3EEDD] p-2 rounded-lg">
+      {/* Ultra-Compact Sticky Header */}
+      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2 px-3 sm:px-6 z-50 shadow-lg">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <div className="bg-[#F3EEDD] p-1 rounded-md shrink-0">
               <img
                 src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
                 alt="AVP Ayurveda logo"
-                className="h-9 w-auto object-contain"
+                className="h-5 sm:h-7 w-auto object-contain"
               />
             </div>
             <div>
-              <p className="font-display text-xl leading-none text-[#F3EEDD]">AVP Agency</p>
-              <p className="text-[11px] tracking-wide text-[#C9BE9C] mt-0.5">Arya Vaidya Pharmacy, Coimbatore</p>
+              <p className="font-display text-sm sm:text-lg leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+              <p className="text-[8px] sm:text-[9px] tracking-wide text-[#C9BE9C] uppercase font-semibold">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
             </div>
           </div>
-          <a
-            href={`https://wa.me/${whatsappNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 text-sm text-[#C9BE9C] hover:text-[#F3EEDD] border border-[#B8862F]/40 rounded-full px-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]"
-          >
-            English · മലയാളം · தமிழ்
-          </a>
+          
+          <div className="shrink-0">
+            <span className="text-[9px] sm:text-[10px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-2 py-0.5 rounded-full font-medium">
+              ENG · മലയാളം · தமிழ்
+            </span>
+          </div>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-16 pb-14 grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
-        <div>
-          <p className="text-[#B8862F] text-sm font-medium mb-4">Since generations · Traditional Ayurvedic formulations</p>
-          <h1 className="font-display text-4xl sm:text-5xl leading-[1.1] text-[#F3EEDD] mb-6">
-            Genuine Ayurveda,<br />ordered on WhatsApp.
-          </h1>
-          <p className="text-lg text-[#D9D0B4] max-w-md mb-8 leading-relaxed">
-            Browse our formulary, pick what you need, and send it straight to us on WhatsApp.
-            No accounts, no checkout forms — just a conversation with our pharmacy.
+      {/* Compact Trust Badge Bar with WhatsApp Icon */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-3 pb-1">
+        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-1.5 px-3 text-center flex items-center justify-center gap-2">
+          <span className="text-xs">🌿</span>
+          <p className="text-[10px] sm:text-xs text-[#C9BE9C] font-semibold tracking-wide flex items-center gap-1.5 flex-wrap justify-center">
+            <span>100% Authentic AVP Formulations</span>
+            <span>&bull;</span>
+            <span className="inline-flex items-center gap-1">
+              Direct Support via 
+              <svg className="w-3.5 h-3.5 inline-block text-green-400 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </span>
           </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi, I would like to know more about your products.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#B8862F] text-[#0F2A1E] font-semibold py-3.5 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
-            >
-              Message us on WhatsApp
-            </a>
-            <a
-              href="#formulary"
-              className="inline-flex items-center gap-2 text-[#F3EEDD] border border-[#B8862F]/40 py-3.5 px-7 rounded-full hover:border-[#B8862F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]"
-            >
-              Browse the formulary
-            </a>
-          </div>
-        </div>
-        <BotanicalMark className="hidden md:block w-full h-72 text-[#B8862F] mx-auto" />
-      </section>
-
-      {/* Ordering steps */}
-      <section className="bg-[#F3EEDD] text-[#16281F] py-14 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-2xl mb-10">How ordering works</h2>
-          <div className="grid sm:grid-cols-3 gap-10">
-            {[
-              { n: "01", t: "Choose your remedy", d: "Search or filter the formulary below and pick one item, or several." },
-              { n: "02", t: "WhatsApp opens", d: "Your selection is written out for you, ready to send — nothing to type." },
-              { n: "03", t: "Send, and we take it from there", d: "Our team confirms your order and delivery details on chat." },
-            ].map((step) => (
-              <div key={step.n}>
-                <p className="font-display text-3xl text-[#B8862F] mb-3">{step.n}</p>
-                <p className="font-semibold text-lg mb-2">{step.t}</p>
-                <p className="text-[#3E4F44] leading-relaxed">{step.d}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Doctor consultation */}
-      <section className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-center">
-        <div>
-          <p className="text-[#B8862F] text-sm font-medium mb-3">Physician consultation</p>
-          <h2 className="font-display text-3xl text-[#F3EEDD] mb-4">Not sure what you need?</h2>
-          <p className="text-[#D9D0B4] leading-relaxed mb-6 max-w-md">
-            Speak with our Senior Ayurveda Physician directly on WhatsApp before you order —
-            no clinic visit required.
-          </p>
+      {/* Doctor consultation banner */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 py-3">
+        <div className="bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-xl p-4 sm:p-5 text-emerald-950 text-center shadow-md relative overflow-hidden">
+          <h2 className="font-display text-base sm:text-lg font-bold mb-1">🩺 Expert Doctor Consultation</h2>
+          <p className="text-xs sm:text-sm font-medium mb-2.5 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
           <a
             href={docWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 bg-transparent border border-[#B8862F] text-[#B8862F] font-semibold py-3.5 px-7 rounded-full hover:bg-[#B8862F] hover:text-[#0F2A1E] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-2 px-4 rounded-lg shadow transition-all text-xs border border-emerald-800"
           >
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-            </svg>
-            Book a consultation
+            <span>Book Consultation via WhatsApp</span>
           </a>
-        </div>
-        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-8">
-          <p className="font-display text-lg text-[#F3EEDD] mb-3">Trusted since the pharmacy's founding</p>
-          <p className="text-[#C9BE9C] leading-relaxed">
-            Every formulation is prepared to classical Ayurvedic standards, dispatched from our
-            Coimbatore dispensary, and delivered anywhere in India.
-          </p>
         </div>
       </section>
 
@@ -188,27 +123,27 @@ export default function Home() {
         <LeafDivider className="text-[#B8862F]/50 mx-auto" />
       </div>
 
-      {/* Formulary */}
-      <section id="formulary" className="max-w-6xl mx-auto px-6 py-14">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
+      {/* Medicines Section */}
+      <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4">
           <div>
-            <p className="text-[#B8862F] text-sm font-medium mb-2">The formulary</p>
-            <h2 className="font-display text-3xl text-[#F3EEDD]">
+            <p className="text-[#B8862F] text-xs font-medium mb-0.5">Medicines List</p>
+            <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
               {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All remedies" : selectedCategory)}
             </h2>
           </div>
-          <label htmlFor="product-search" className="sr-only">Search medicines</label>
+          <label htmlFor="product-search" className="sr-only">Search medicine</label>
           <input
             id="product-search"
             type="text"
-            placeholder="Search, e.g. Draksharishtem"
+            placeholder="Search medicine..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full sm:w-72 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-2 text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
+            className="w-full sm:w-64 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-1.5 text-xs sm:text-sm text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
           />
         </div>
 
-        <div className="flex flex-wrap gap-x-6 gap-y-3 mb-12 border-b border-[#B8862F]/20 pb-6" role="group" aria-label="Filter by category">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8 border-b border-[#B8862F]/20 pb-4" role="group" aria-label="Filter by category">
           {categories.map((cat, index) => {
             const isActive = selectedCategory === cat;
             return (
@@ -216,7 +151,7 @@ export default function Home() {
                 key={index}
                 onClick={() => setSelectedCategory(cat)}
                 aria-pressed={isActive}
-                className={`text-base pb-1 border-b-2 motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm ${
+                className={`text-xs sm:text-sm pb-1 border-b-2 motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm ${
                   isActive
                     ? "border-[#B8862F] text-[#F3EEDD] font-semibold"
                     : "border-transparent text-[#8FA192] hover:text-[#D9D0B4]"
@@ -229,23 +164,28 @@ export default function Home() {
         </div>
 
         {filteredProducts.length > 0 ? (
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
                 <li key={item.id} className="relative">
+                  {/* Exact notch cutout preserved */}
                   <div className="absolute -top-2 left-6 w-4 h-4 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
+                  
+                  {/* Image Container with larger image height */}
                   <div className="bg-[#F3EEDD] rounded-t-lg overflow-hidden">
-                    <div className="p-6 pt-8">
-                      <img src={item.image} alt={item.name} className="w-full h-44 object-contain" />
+                    <div className="p-4 pt-6 flex items-center justify-center">
+                      <img src={item.image} alt={item.name} className="w-full h-72 sm:h-80 object-contain" />
                     </div>
                   </div>
-                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-6">
-                    <p className="text-xs tracking-wide text-[#B8862F] mb-2">{item.category}</p>
-                    <h3 className="font-display text-xl text-[#F3EEDD] mb-2 leading-snug">{item.name}</h3>
+
+                  {/* Content Container */}
+                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-5">
+                    <p className="text-xs tracking-wide text-[#B8862F] mb-1.5">{item.category}</p>
+                    <h3 className="font-display text-xl text-[#F3EEDD] mb-1.5 leading-snug">{item.name}</h3>
                     <p className="text-sm text-[#A9BAAC] mb-4 leading-relaxed">{item.desc}</p>
-                    <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center justify-between mb-4">
                       <span className="font-display text-lg text-[#B8862F]">{item.price}</span>
                     </div>
                     <div className="flex flex-col gap-2.5">
@@ -292,11 +232,11 @@ export default function Home() {
       </div>
 
       {/* Store location */}
-      <section className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-10">
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 py-8 grid md:grid-cols-2 gap-6">
         <div>
-          <p className="text-[#B8862F] text-sm font-medium mb-3">Visit the dispensary</p>
-          <h2 className="font-display text-2xl text-[#F3EEDD] mb-5">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
-          <div className="text-[#D9D0B4] leading-relaxed space-y-1 mb-6">
+          <p className="text-[#B8862F] text-xs font-medium mb-2">Visit the dispensary</p>
+          <h2 className="font-display text-lg sm:text-xl text-[#F3EEDD] mb-3">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
+          <div className="text-[#D9D0B4] leading-relaxed space-y-0.5 mb-4 text-xs sm:text-sm">
             <p>No 505, 'Pournami' Complex, NSR Road,</p>
             <p>Opposite LIC Office, S'Bend, Nesavaalar Colony,</p>
             <p>Saibaba Colony, Coimbatore, Tamil Nadu - 641011</p>
@@ -305,14 +245,14 @@ export default function Home() {
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#B8862F] border-b border-[#B8862F]/40 hover:border-[#B8862F] pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm"
+            className="inline-flex items-center gap-1.5 text-[#B8862F] border-b border-[#B8862F]/40 hover:border-[#B8862F] pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm text-xs"
           >
             Open in Google Maps
           </a>
         </div>
-        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-8 flex flex-col justify-center">
-          <p className="font-display text-lg text-[#F3EEDD] mb-2">Delivery, pan-India</p>
-          <p className="text-[#C9BE9C] leading-relaxed">
+        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-xl p-5 flex flex-col justify-center">
+          <p className="font-display text-base text-[#F3EEDD] mb-1.5">Delivery, pan-India</p>
+          <p className="text-[#C9BE9C] leading-relaxed text-xs sm:text-sm">
             We courier securely to any address in the country. Orders are confirmed and paid for
             on WhatsApp — no cash on delivery.
           </p>
@@ -321,14 +261,14 @@ export default function Home() {
 
       {/* Floating cart bar */}
       {cart.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-4 px-6 z-50">
-          <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-            <p className="text-[#D9D0B4]">
+        <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-2.5 px-3 sm:px-6 z-50">
+          <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
+            <p className="text-[#D9D0B4] text-xs sm:text-sm">
               <span className="text-[#F3EEDD] font-semibold">{cart.length}</span> item{cart.length > 1 ? "s" : ""} ready to send
             </p>
             <button
               onClick={handleCartCheckout}
-              className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+              className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-2 px-5 rounded-lg hover:bg-[#CB9B3F] motion-safe:transition-colors text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
             >
               Send cart to WhatsApp
             </button>
@@ -337,7 +277,7 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-[#B8862F]/20 py-8 px-6 text-center text-sm text-[#7C8B7E]">
+      <footer className="border-t border-[#B8862F]/20 py-5 px-4 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
         <p>© AVP Agency — orders placed by WhatsApp. Delivery across India. No cash on delivery.</p>
       </footer>
     </div>
