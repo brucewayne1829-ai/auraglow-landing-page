@@ -76,16 +76,6 @@ export const products: Product[] = [
     image: "https://avpayurveda.com/cdn/shop/files/1_4cfc62b3-3570-459b-ba38-8528922e9efe.jpg?v=1763471327&width=800"
   },
 
-  // --- Kashayam Tablets ---
-  {
-    id: 9,
-    category: "Kashayam Tablets",
-    name: "AVP Manjishtedi Kashayam Tablet (10 Tabs)",
-    desc: "Blood purifying formula that supports healthy, clear skin conditions.",
-    price: "₹75",
-    image: "https://avpayurveda.com/cdn/shop/files/Manjishtadi-Kashayam-Tablet-1.png?v=1758802629&width=800"
-  },
-
   // --- Lehyam ---
   {
     id: 10,
@@ -120,10 +110,18 @@ export const products: Product[] = [
     image: "https://avpayurveda.com/cdn/shop/files/Agasthyarasayanam-2.png?v=1758801427&width=800"
   },
 
-  // --- Gulika ---
+  // --- Gulika / Tablet ---
+  {
+    id: 9,
+    category: "Gulika / Tablet",
+    name: "AVP Manjishtedi Kashayam Tablet (10 Tabs)",
+    desc: "Blood purifying formula that supports healthy, clear skin conditions.",
+    price: "₹75",
+    image: "https://avpayurveda.com/cdn/shop/files/Manjishtadi-Kashayam-Tablet-1.png?v=1758802629&width=800"
+  },
   {
     id: 14,
-    category: "Gulika",
+    category: "Gulika / Tablet",
     name: "AVP Manasamithra Vatakam (10 Tabs)",
     desc: "Helps calm the mind, reduces mental stress, and promotes quality sleep.",
     price: "₹275",
@@ -131,7 +129,7 @@ export const products: Product[] = [
   },
   {
     id: 15,
-    category: "Gulika",
+    category: "Gulika / Tablet",
     name: "AVP Vayu Gulika (10 Tabs)",
     desc: "Effective remedy for flatulence, indigestion, and vata imbalances.",
     price: "₹110",
@@ -139,7 +137,7 @@ export const products: Product[] = [
   },
   {
     id: 16,
-    category: "Gulika",
+    category: "Gulika / Tablet",
     name: "AVP Dhanwantharam Gulika (10 Tabs)",
     desc: "Trusted Ayurvedic pill for respiratory issues, chest discomfort, and general wellness.",
     price: "₹35",
@@ -147,7 +145,7 @@ export const products: Product[] = [
   },
   {
     id: 17,
-    category: "Gulika",
+    category: "Gulika / Tablet",
     name: "AVP Gorochanadi Gulika (10 Tabs)",
     desc: "Beneficial for fever, pediatric complaints, and neurological wellness.",
     price: "₹160",
@@ -179,9 +177,8 @@ export const categories = [
   "All",
   "Arishtams",
   "Kashayams",
-  "Kashayam Tablets",
   "Lehyam",
-  "Gulika",
+  "Gulika / Tablet",
   "Choornam",
   "Grithams",
   "Thailams"
