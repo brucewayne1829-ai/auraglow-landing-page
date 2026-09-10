@@ -87,7 +87,6 @@ export default function Home() {
   </span>
 </div>
 
-    
 
 
       {/* Main Content */}
