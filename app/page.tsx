@@ -89,6 +89,13 @@ export default function Home() {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-6 px-4 w-full">
 
+        {/* Subliminal Trust Bar: 100% Genuine Products Reassurance */}
+        <div className="mb-5 bg-emerald-900/40 border border-amber-400/30 rounded-xl py-2 px-4 text-center">
+          <p className="text-[11px] sm:text-xs text-amber-300 font-semibold tracking-wide">
+            🌿 100% Authentic AVP Formulations &bull; Direct Agency Support via WhatsApp
+          </p>
+        </div>
+
         {/* Doctor Appointment Banner */}
         <section className="mb-6 bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-2xl p-5 text-emerald-950 text-center shadow-xl relative overflow-hidden">
           <h2 className="font-display text-base sm:text-lg font-bold mb-1">🩺 Expert Doctor Consultation</h2>
@@ -146,7 +153,7 @@ export default function Home() {
           {searchQuery ? `🔍 Search Results for "${searchQuery}"` : (selectedCategory === "All" ? "⭐ Authentic Ayurvedic Formulary" : `⭐ ${selectedCategory}`)}
         </h2>
 
-        {/* Products Grid - Larger Images & Prominent Names */}
+        {/* Products Grid */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 justify-center mb-8">
             {filteredProducts.map((item) => {
@@ -166,7 +173,8 @@ export default function Home() {
                         <span className="text-[10px] tracking-wider text-amber-300 uppercase font-extrabold">{item.category}</span>
                         <span className="font-display text-base sm:text-lg text-amber-300 font-bold">{item.price}</span>
                       </div>
-                      {/* പ്രൊഡക്റ്റ് നെയിം കുറച്ചുകൂടി വലുതാക്കി നൽകിയിരിക്കുന്നു */}
+                      
+                      {/* Product Name adjusted for better readability */}
                       <h3 className="font-display text-lg sm:text-xl text-white mb-1.5 leading-snug font-bold">{item.name}</h3>
                       <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed line-clamp-2">{item.desc}</p>
                     </div>
