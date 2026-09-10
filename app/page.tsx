@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Doctor consultation */}
+      {/* Doctor consultation - Direct Yellow Button */}
       <section className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-center">
         <div>
           <p className="text-[#B8862F] text-sm font-medium mb-3">Physician consultation</p>
@@ -168,9 +168,9 @@ export default function Home() {
             href={docWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 bg-transparent border border-[#B8862F] text-[#B8862F] font-semibold py-3.5 px-7 rounded-full hover:bg-[#B8862F] hover:text-[#0F2A1E] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+            className="inline-flex items-center gap-2.5 bg-[#B8862F] text-[#0F2A1E] font-semibold py-3.5 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
           >
-            Book a consultation
+            Consult Doctor on WhatsApp
           </a>
         </div>
         <div className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-8">
