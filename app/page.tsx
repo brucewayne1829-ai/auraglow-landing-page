@@ -125,15 +125,15 @@ export default function Home() {
 
       {/* Medicines Section */}
       <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
-        <div className="flex flex-col gap-4 mb-8">
-          <div>
-            <p className="text-[#B8862F] text-xs font-medium mb-0.5">Medicines List</p>
+        <div className="flex flex-col gap-3 mb-6">
+          <div className="flex items-center justify-between">
             <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
-              All remedies
+              Medicines List
             </h2>
+            <span className="text-xs text-[#B8862F] font-medium">AVP Formulations</span>
           </div>
 
-          {/* Clean Prominent Search Box with clear borders */}
+          {/* Clean Prominent Search Box */}
           <div className="relative w-full">
             <label htmlFor="product-search" className="sr-only">Search medicine</label>
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#B8862F]">
