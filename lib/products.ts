@@ -47,7 +47,7 @@ export const products: Product[] = [
     name: "Draksharishtem (450ml)",
     desc: "Traditional ayurvedic formulation for general health and digestion.",
     price: "₹150",
-    image: "https://avpayurveda.com/cdn/shop/files/3-2-24.png?v=1758801729&width=800"
+    image: "https://avpayurveda.com/cdn/shop/files/4-2-14.png?v=1758801960&width=800"
   },
   {
     id: 106,
