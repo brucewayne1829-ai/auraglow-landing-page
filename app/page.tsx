@@ -163,10 +163,10 @@ export default function Home() {
               return (
                 <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
                   <div>
-                    <div className=" p-5 text-center">
+                    <div className=" bg-[#F3EEDD] p-3 text-center">
                       <img src={item.image} alt={item.name} className="w-full h-44 object-contain" />
                     </div>
-                    <div className="bg-[#F3EEDD]p-3">
+                    <div className="p-5">
                       <p className="text-[10px] tracking-wide text-amber-300 mb-1 uppercase font-semibold">{item.category}</p>
                       <h3 className="font-display text-base sm:text-lg text-white mb-2">{item.name}</h3>
                       <p className="text-xs text-emerald-200/80 mb-4 leading-relaxed">{item.desc}</p>
