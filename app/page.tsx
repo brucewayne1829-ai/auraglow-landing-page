@@ -15,21 +15,6 @@ function LeafDivider({ className = "" }: { className?: string }) {
   );
 }
 
-function BotanicalMark({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 200 320" fill="none" className={className} aria-hidden="true">
-      <path d="M100 310V40" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
-      <path d="M100 260c-24-10-40-30-42-56 26 2 44 18 50 42" fill="currentColor" opacity="0.85" />
-      <path d="M100 260c24-10 40-30 42-56-26 2-44 18-50 42" fill="currentColor" opacity="0.85" />
-      <path d="M100 190c-20-8-33-24-35-46 22 2 37 15 43 36" fill="currentColor" opacity="0.65" />
-      <path d="M100 190c20-8 33-24 35-46-22 2-37 15-43 36" fill="currentColor" opacity="0.65" />
-      <path d="M100 120c-16-6-27-19-29-37 18 2 30 12 35 29" fill="currentColor" opacity="0.45" />
-      <path d="M100 120c16-6 27-19 29-37-18 2-30 12-35 29" fill="currentColor" opacity="0.45" />
-      <circle cx="100" cy="34" r="7" fill="currentColor" />
-    </svg>
-  );
-}
-
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -70,81 +55,43 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28 pt-32" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
-      {/* Header */}
-      <header className="border-b border-[#B8862F]/30 py-5 px-6">
+      {/* Sticky Header with Trust & Language Bar */}
+      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-3 px-6 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="bg-[#F3EEDD] p-2 rounded-lg">
+            <div className="bg-[#F3EEDD] p-1.5 rounded-lg">
               <img
                 src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
                 alt="AVP Ayurveda logo"
-                className="h-10 w-auto object-contain"
+                className="h-8 w-auto object-contain"
               />
             </div>
             <div>
-              <p className="font-display text-2xl leading-none text-[#F3EEDD] font-bold">AVP Agency</p>
-              <p className="text-xs tracking-wide text-[#C9BE9C] mt-1 uppercase font-semibold">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+              <p className="font-display text-xl leading-none text-[#F3EEDD] font-bold">AVP Agency</p>
+              <p className="text-[10px] tracking-wide text-[#C9BE9C] mt-0.5 uppercase font-semibold">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
             </div>
           </div>
-          <div className="hidden sm:block">
-            <span className="text-xs text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-3 py-1.5 rounded-full font-medium">
+          <div>
+            <span className="text-[11px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-3 py-1 rounded-full font-medium">
               English · മലയാളം · தமிழ்
             </span>
           </div>
         </div>
-      </header>
-
-      {/* Trust & Language Bar */}
-      <div className="max-w-6xl mx-auto px-6 pt-4">
-        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-xl py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-center">
-          <p className="text-xs text-[#C9BE9C] font-semibold tracking-wide">
+        <div className="max-w-6xl mx-auto mt-2 pt-2 border-t border-[#B8862F]/20 text-center">
+          <p className="text-[11px] text-[#C9BE9C] font-semibold tracking-wide">
             🌿 100% Authentic AVP Formulations &bull; Direct Agency Support via WhatsApp
           </p>
-          <span className="sm:hidden text-[11px] text-[#C9BE9C] bg-[#0F2A1E] border border-[#B8862F]/40 px-3 py-1 rounded-full">
-            English · മലയാളം · தமிழ்
-          </span>
         </div>
-      </div>
+      </header>
 
-      {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-12 pb-14 grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
-        <div>
-          <p className="text-[#B8862F] text-sm font-medium mb-4">Since generations · Traditional Ayurvedic formulations</p>
-          <h1 className="font-display text-4xl sm:text-5xl leading-[1.1] text-[#F3EEDD] mb-6">
-            Genuine Ayurveda,<br />ordered on WhatsApp.
-          </h1>
-          <p className="text-lg text-[#D9D0B4] max-w-md mb-8 leading-relaxed">
-            Browse our formulary, pick what you need, and send it straight to us on WhatsApp.
-            No accounts, no checkout forms — just a conversation with our pharmacy.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi, I would like to know more about your products.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#B8862F] text-[#0F2A1E] font-semibold py-3.5 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
-            >
-              Message us on WhatsApp
-            </a>
-            <a
-              href="#formulary"
-              className="inline-flex items-center gap-2 text-[#F3EEDD] border border-[#B8862F]/40 py-3.5 px-7 rounded-full hover:border-[#B8862F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]"
-            >
-              Browse the formulary
-            </a>
-          </div>
-        </div>
-        <BotanicalMark className="hidden md:block w-full h-72 text-[#B8862F] mx-auto" />
-      </section>
-
-      {/* Doctor consultation (Amber/Yellow banner like code 2) */}
-      <section className="max-w-6xl mx-auto px-6 py-8">
+      {/* Doctor consultation (Amber/Yellow banner) */}
+      <section className="max-w-6xl mx-auto px-6 py-6">
         <div className="bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-2xl p-6 text-emerald-950 text-center shadow-xl relative overflow-hidden">
           <h2 className="font-display text-lg sm:text-xl font-bold mb-1">🩺 Expert Doctor Consultation</h2>
           <p className="text-xs sm:text-sm font-medium mb-4 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
@@ -164,7 +111,7 @@ export default function Home() {
       </div>
 
       {/* Formulary */}
-      <section id="formulary" className="max-w-6xl mx-auto px-6 py-14">
+      <section id="formulary" className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
           <div>
             <p className="text-[#B8862F] text-sm font-medium mb-2">The formulary</p>
