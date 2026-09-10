@@ -181,6 +181,6 @@ export const categories = [
   "Gulika / Tablet",
   "Choornam",
   "Grithams",
-  "Thailams"
+  "Thailams", 
   "Other/ Homemade Products"
 ];
