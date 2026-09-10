@@ -78,19 +78,19 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Mild Support Languages Indicator */}
-            <span className="hidden xs:inline-block text-[11px] text-[#C9BE9C] border border-[#B8862F]/30 px-2.5 py-1 rounded-lg">
-              English · മലയാളം · தமிழ்
+          <div className="flex items-center gap-3">
+            {/* Mild Support Language */}
+            <span className="hidden sm:inline-block text-[11px] text-[#C9BE9C] tracking-wide">
+              English · മലയാളം · हिन्दी
             </span>
-            {/* Quick Doctor Button */}
+            {/* Quick Doctor Button in Header */}
             <a
               href={docWaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-[#B8862F] text-[#0F2A1E] font-bold py-2 px-3.5 rounded-xl text-xs hover:bg-[#CB9B3F] transition-all shadow-md"
+              className="inline-flex items-center gap-1.5 bg-[#B8862F] text-[#0F2A1E] font-bold py-2 px-4 rounded-xl text-xs hover:bg-[#CB9B3F] transition-all shadow-md"
             >
-              <span>🩺 Doctor</span>
+              <span>🩺 Doctor Consultation</span>
             </a>
           </div>
         </div>
