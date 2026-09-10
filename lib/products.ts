@@ -54,7 +54,7 @@ export const products: Product[] = [
   {
     id: 6,
     category: "Kashayams",
-    name: "AVP Khathakelkadhiradi Kashayam (200ml)",
+    name: "AVP Khathakakhadiradi Kashayam (200ml)",
     desc: "Effective herbal remedy for skin health and blood purification.",
     price: "₹135",
     image: "https://avpayurveda.com/cdn/shop/files/4-2-13.png?v=1758801832&width=800"
