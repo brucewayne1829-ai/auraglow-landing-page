@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { products, categories, Product } from '@/lib/product';
+import { products, categories, Product } from '@/lib/products';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
