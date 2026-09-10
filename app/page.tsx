@@ -119,24 +119,24 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px6">
         <LeafDivider className="text-[#B8862F]/50 mx-auto" />
       </div>
 
-      {/* Formulary */}
-      <section id="formulary" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
+      {/* Medicines Section */}
+      <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4">
           <div>
-            <p className="text-[#B8862F] text-xs font-medium mb-0.5">The formulary</p>
+            <p className="text-[#B8862F] text-xs font-medium mb-0.5">Medicines List</p>
             <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
               {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All remedies" : selectedCategory)}
             </h2>
           </div>
-          <label htmlFor="product-search" className="sr-only">Search medicines</label>
+          <label htmlFor="product-search" className="sr-only">Search medicine</label>
           <input
             id="product-search"
             type="text"
-            placeholder="Search, e.g. Draksharishtam"
+            placeholder="Search medicine..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full sm:w-64 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-1.5 text-xs sm:text-sm text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
