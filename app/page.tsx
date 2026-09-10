@@ -146,43 +146,43 @@ export default function Home() {
           {searchQuery ? `🔍 Search Results for "${searchQuery}"` : (selectedCategory === "All" ? "⭐ Authentic Ayurvedic Formulary" : `⭐ ${selectedCategory}`)}
         </h2>
 
-        {/* Products Grid - Highly Compact & Clean */}
+        {/* Products Grid - Larger Images & Prominent Names */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 justify-center mb-8">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
-                <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-xl overflow-hidden flex flex-col justify-between shadow-lg">
+                <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
                   <div>
-                    {/* Cream Background with Image (Height കുറച്ച് ഒതുക്കി വെച്ചു) */}
-                    <div className="bg-[#F3EEDD] py-3 px-4 text-center">
-                      <img src={item.image} alt={item.name} className="w-full h-36 object-contain" />
+                    {/* Cream Background with Larger Image */}
+                    <div className="bg-[#F3EEDD] py-5 px-6 text-center">
+                      <img src={item.image} alt={item.name} className="w-full h-52 sm:h-56 object-contain" />
                     </div>
                     
-                    {/* Tight & Clean Content Section */}
-                    <div className="p-3 pb-1.5">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[9px] tracking-wider text-amber-300 uppercase font-bold">{item.category}</span>
-                        <span className="font-display text-sm sm:text-base text-amber-300 font-bold">{item.price}</span>
+                    {/* Content Section with Clear, Larger Text */}
+                    <div className="p-4 pb-2">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-[10px] tracking-wider text-amber-300 uppercase font-extrabold">{item.category}</span>
+                        <span className="font-display text-base sm:text-lg text-amber-300 font-bold">{item.price}</span>
                       </div>
-                      {/* പ്രൊഡക്റ്റ് നെയിം വലുതായി തന്നെ നിലനിർത്തിയിരിക്കുന്നു */}
-                      <h3 className="font-display text-base sm:text-lg text-white mb-1 leading-snug">{item.name}</h3>
-                      <p className="text-[11px] text-emerald-200/80 leading-snug line-clamp-2">{item.desc}</p>
+                      {/* പ്രൊഡക്റ്റ് നെയിം കുറച്ചുകൂടി വലുതാക്കി നൽകിയിരിക്കുന്നു */}
+                      <h3 className="font-display text-lg sm:text-xl text-white mb-1.5 leading-snug font-bold">{item.name}</h3>
+                      <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed line-clamp-2">{item.desc}</p>
                     </div>
                   </div>
 
-                  {/* Compact Buttons Section */}
-                  <div className="p-3 pt-1.5 flex gap-2">
+                  {/* Action Buttons Section */}
+                  <div className="p-4 pt-2 flex gap-2.5">
                     <button
                       onClick={() => handleQuickBuy(item)}
-                      className="flex-1 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2 px-3 rounded-lg transition-colors text-xs shadow"
+                      className="flex-1 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2.5 px-3 rounded-xl transition-colors text-xs sm:text-sm shadow-md"
                     >
                       Quick Buy
                     </button>
                     <button
                       onClick={() => (isSelected ? removeFromCart(item.id) : addToCart(item))}
-                      className={`flex-1 py-2 px-3 rounded-lg border transition-colors text-xs font-bold ${
+                      className={`flex-1 py-2.5 px-3 rounded-xl border transition-colors text-xs sm:text-sm font-bold ${
                         isSelected
                           ? "border-rose-400 text-rose-300 bg-rose-500/10"
                           : "border-emerald-700 text-emerald-100 bg-emerald-950/60 hover:border-amber-400"
