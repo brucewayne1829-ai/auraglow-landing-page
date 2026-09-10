@@ -86,7 +86,7 @@ export default function Home() {
     English | മലയാളം | தமிழ்
   </span>
 </div>
-
+</header>
 
 
       {/* Main Content */}
