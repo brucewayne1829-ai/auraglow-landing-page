@@ -125,22 +125,29 @@ export default function Home() {
 
       {/* Medicines Section */}
       <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4">
+        <div className="flex flex-col gap-4 mb-8">
           <div>
             <p className="text-[#B8862F] text-xs font-medium mb-0.5">Medicines List</p>
             <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
-              {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All remedies" : selectedCategory)}
+              All remedies
             </h2>
           </div>
-          <label htmlFor="product-search" className="sr-only">Search medicine</label>
-          <input
-            id="product-search"
-            type="text"
-            placeholder="Search medicine..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full sm:w-64 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-1.5 text-xs sm:text-sm text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
-          />
+
+          {/* Clean Prominent Search Box with clear borders */}
+          <div className="relative w-full">
+            <label htmlFor="product-search" className="sr-only">Search medicine</label>
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#B8862F]">
+              🔍
+            </div>
+            <input
+              id="product-search"
+              type="text"
+              placeholder="Search medicine (e.g. Arishtam, Kashayam)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-[#123626] border border-[#B8862F]/50 focus:border-[#B8862F] rounded-xl pl-10 pr-4 py-3 text-xs sm:text-sm text-[#F3EEDD] placeholder-[#8FA192] shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]/50"
+            />
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8 border-b border-[#B8862F]/20 pb-4" role="group" aria-label="Filter by category">
