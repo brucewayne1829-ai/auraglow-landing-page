@@ -166,7 +166,7 @@ export default function Home() {
                         <span className="text-[9px] tracking-wider text-amber-300 uppercase font-bold">{item.category}</span>
                         <span className="font-display text-base text-amber-300 font-bold">{item.price}</span>
                       </div>
-                      <h3 className="font-display text-sm sm:text-lg text-white mb-1 leading-snug">{item.name}</h3>
+                      <h3 className="font-display text-sm sm:text-xl text-white mb-1 leading-snug">{item.name}</h3>
                       <p className="text-[11px] text-emerald-200/80 leading-relaxed line-clamp-2">{item.desc}</p>
                     </div>
                   </div>
