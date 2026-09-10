@@ -81,14 +81,13 @@ export default function Home() {
     </div>
     
     {/* വലത് വശം: സപ്പോർട്ട് ലാംഗ്വേജ് */}
-    <div className="text-right">
-      <span className="text-[10px] sm:text-[11px] text-emerald-200/90 bg-emerald-900/80 px-3 py-1 rounded-full border border-emerald-700/60 font-medium hidden sm:inline-block shadow-inner">
-        English | മലയാളം | தமிழ்
-      </span>
-    </div>
+<div className="text-right">
+  <span className="text-[9px] sm:text-[11px] text-emerald-200/90 bg-emerald-900/80 px-2.5 py-1 rounded-full border border-emerald-700/60 font-medium inline-block shadow-inner">
+    English | മലയാളം | தமிழ்
+  </span>
+</div>
 
-  </div>
-</header>
+    
 
 
       {/* Main Content */}
