@@ -169,8 +169,8 @@ export default function Home() {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
-                <li key={item.id} className="relative bg-[#123626] border border-[#B8862F]/30 rounded-xl overflow-hidden shadow-lg">
-                  <div className="absolute top-1 left-6 w-3.5 h-3.5 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
+                <li key={item.id} className="relative bg-[#123626] border border-[#B8862F]/30 rounded-xl overflow-hidden shadow-lg pt-3">
+                  <div className="absolute top-3 left-4 w-3.5 h-3.5 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
                   
                   {/* Image Container with increased bottle height */}
                   <div className="bg-[#F3EEDD] w-full overflow-hidden border-b border-[#B8862F]/20">
