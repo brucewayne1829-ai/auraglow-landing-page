@@ -78,7 +78,7 @@ export const products: Product[] = [
   {
     id: 202,
     category: "Kashayams",
-    name: "AVP Khathakelkadhiradi Kashayam (200ml)",
+    name: "AVP Khathakakathiradi Kashayam (200ml)",
     desc: "Effective herbal remedy for skin health and blood purification.",
     price: "₹135",
     image: "https://avpayurveda.com/cdn/shop/files/4-2-13.png?v=1758801832&width=800"
@@ -102,15 +102,15 @@ export const products: Product[] = [
   {
     id: 205,
     category: "Kashayams",
-    name: "Drakshedi Kashayam (450ml)",
+    name: "Drakshedi Kashayam (200ml)",
     desc: "Herbal decoction traditionally used for fatigue and general debility.",
     price: "₹200",
-    image: "https://avpayurveda.com/cdn/shop/files/4-2-14.png?v=1758801960&width=800"
+    image: "https://avpayurveda.com/cdn/shop/files/3-2-24.png?v=1758801729&width=800"
   },
   {
     id: 206,
     category: "Kashayams",
-    name: "Indhukantham Kashayam (450ml)",
+    name: "Indhukantham Kashayam (200ml)",
     desc: "Ayurvedic decoction for stomach discomfort and immune support.",
     price: "₹170",
     image: "https://avpayurveda.com/cdn/shop/files/4_1_428a6692-86bd-4837-8251-d2339d617349.jpg?v=1764574197&width=800"
@@ -118,7 +118,7 @@ export const products: Product[] = [
   {
     id: 207,
     category: "Kashayams",
-    name: "Gandharvahastedi Kashayam (450ml)",
+    name: "Gandharvahastedi Kashayam (200ml)",
     desc: "Traditional formulation helpful for digestive wellness and joint comfort.",
     price: "₹140",
     image: "https://avpayurveda.com/cdn/shop/files/SA101726.jpg?v=1758801592&width=800"
@@ -271,7 +271,7 @@ export const products: Product[] = [
   // --- Other Home Made Products (701) ---
   {
     id: 701,
-    category: "Other Home Made Products",
+    category: "Other/HomeMade Products",
     name: "Special Nadan Vaidyar Pain Relief Oil",
     desc: "Traditional homemade blend with Shallots, Thottavadi, and Black Pepper for joint and muscle relief.",
     price: "₹250",
