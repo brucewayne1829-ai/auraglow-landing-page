@@ -61,7 +61,7 @@ export default function Home() {
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
-      {/* Ultra-Compact Sticky Header with Larger Logo & Title */}
+      {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-3 px-3 sm:px-6 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Compact Trust Badge Bar with WhatsApp Icon */}
+      {/* Trust Badge Bar */}
       <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-3 pb-1">
         <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-1.5 px-3 text-center flex items-center justify-center gap-2">
           <span className="text-xs">🌿</span>
@@ -170,10 +170,9 @@ export default function Home() {
 
               return (
                 <li key={item.id} className="relative">
-                  {/* Exact notch cutout preserved */}
                   <div className="absolute -top-2 left-6 w-4 h-4 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
                   
-                  {/* Image Container with larger image height */}
+                  {/* Image Container */}
                   <div className="bg-[#F3EEDD] rounded-t-lg overflow-hidden">
                     <div className="p-4 pt-6 flex items-center justify-center">
                       <img src={item.image} alt={item.name} className="w-full h-72 sm:h-80 object-contain" />
@@ -182,29 +181,33 @@ export default function Home() {
 
                   {/* Content Container */}
                   <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-5">
-                    <p className="text-xs tracking-wide text-[#B8862F] mb-1.5">{item.category}</p>
-                    <h3 className="font-display text-xl text-[#F3EEDD] mb-1.5 leading-snug">{item.name}</h3>
-                    <p className="text-sm text-[#A9BAAC] mb-4 leading-relaxed">{item.desc}</p>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="font-display text-lg text-[#B8862F]">{item.price}</span>
+                    {/* Category and Price aligned side-by-side */}
+                    <div className="flex items-center justify-between mb-1.5">
+                      <p className="text-xs tracking-wide text-[#B8862F]">{item.category}</p>
+                      <span className="font-display text-lg text-[#B8862F] font-semibold">{item.price}</span>
                     </div>
-                    <div className="flex flex-col gap-2.5">
+
+                    <h3 className="font-display text-xl text-[#F3EEDD] mb-1.5 leading-snug">{item.name}</h3>
+                    <p className="text-sm text-[#A9BAAC] mb-5 leading-relaxed">{item.desc}</p>
+                    
+                    {/* Quick Buy and Add to Cart buttons in the same row */}
+                    <div className="grid grid-cols-2 gap-2">
                       <button
                         onClick={() => handleQuickBuy(item)}
-                        className="w-full bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+                        className="w-full bg-[#B8862F] text-[#0F2A1E] font-semibold py-2.5 px-2 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD] text-center truncate"
                       >
                         Quick Buy
                       </button>
                       <button
                         onClick={() => (isSelected ? removeFromCart(item.id) : addToCart(item))}
                         aria-pressed={isSelected}
-                        className={`w-full py-3 rounded-full border motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] ${
+                        className={`w-full py-2.5 px-2 rounded-full border motion-safe:transition-colors text-xs sm:text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] text-center truncate ${
                           isSelected
                             ? "border-[#9C4A34] text-[#E8A594]"
                             : "border-[#B8862F]/40 text-[#D9D0B4] hover:border-[#B8862F]"
                         }`}
                       >
-                        {isSelected ? "Remove from cart" : "Add to cart"}
+                        {isSelected ? "Remove" : "Add to cart"}
                       </button>
                     </div>
                   </div>
