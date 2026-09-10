@@ -166,7 +166,7 @@ export default function Home() {
                     <div className=" p-5 text-center">
                       <img src={item.image} alt={item.name} className="w-full h-44 object-contain" />
                     </div>
-                    <div className="p-5">
+                    <div className="bg-[#F3EEDD]p-3">
                       <p className="text-[10px] tracking-wide text-amber-300 mb-1 uppercase font-semibold">{item.category}</p>
                       <h3 className="font-display text-base sm:text-lg text-white mb-2">{item.name}</h3>
                       <p className="text-xs text-emerald-200/80 mb-4 leading-relaxed">{item.desc}</p>
