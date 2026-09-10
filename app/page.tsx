@@ -62,7 +62,7 @@ export default function Home() {
       `}</style>
 
       {/* Header */}
-      <header className="backdrop-blur-xl bg-emerald-950/90 border-b border-amber-500/30 py-3 px-4 sticky top-0 z-40 shadow-xl">
+      <header className="backdrop-blur-xl bg-emerald-950/90 border-b border-amber-500/35 py-3 px-4 sticky top-0 z-40 shadow-xl">
         <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="bg-white/95 p-1.5 rounded-xl shadow-md ring-1 ring-amber-400/30 flex items-center justify-center">
@@ -87,47 +87,47 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto py-8 px-4 w-full">
+      <main className="max-w-4xl mx-auto py-6 px-4 w-full">
 
         {/* Doctor Appointment Banner */}
-        <section className="mb-8 bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-3xl p-6 text-emerald-950 text-center shadow-2xl relative overflow-hidden">
-          <h2 className="font-display text-lg sm:text-xl font-bold mb-1.5">🩺 Expert Doctor Consultation</h2>
-          <p className="text-xs sm:text-sm font-medium mb-4 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
+        <section className="mb-6 bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-2xl p-5 text-emerald-950 text-center shadow-xl relative overflow-hidden">
+          <h2 className="font-display text-base sm:text-lg font-bold mb-1">🩺 Expert Doctor Consultation</h2>
+          <p className="text-xs sm:text-sm font-medium mb-3 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
           <a
             href={docWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-3 px-6 rounded-2xl shadow-xl transition-all text-xs sm:text-sm border border-emerald-800"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-2.5 px-5 rounded-xl shadow-md transition-all text-xs sm:text-sm border border-emerald-800"
           >
             <span>Book Consultation via WhatsApp</span>
           </a>
         </section>
 
         {/* Search Bar & Categories Section */}
-        <section className="mb-10 bg-emerald-900/50 backdrop-blur-md border border-emerald-700/40 rounded-3xl p-5 text-white text-center shadow-2xl">
-          <h2 className="font-display text-base sm:text-lg font-bold text-amber-300 mb-1">🌿 Search & Categories</h2>
-          <p className="text-[11px] text-emerald-200/80 mb-4">Find authentic formulations quickly</p>
+        <section className="mb-8 bg-emerald-900/50 backdrop-blur-md border border-emerald-700/40 rounded-2xl p-4 text-white text-center shadow-xl">
+          <h2 className="font-display text-sm sm:text-base font-bold text-amber-300 mb-1">🌿 Search & Categories</h2>
+          <p className="text-[11px] text-emerald-200/80 mb-3">Find authentic formulations quickly</p>
           
-          <div className="max-w-md mx-auto mb-5">
+          <div className="max-w-md mx-auto mb-4">
             <input
               type="text"
               placeholder="Search medicines (e.g., Draksharishtem, Kashayam)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-emerald-950/85 border border-emerald-700/60 rounded-2xl px-4 py-3 text-xs sm:text-sm text-white placeholder-emerald-300/60 focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-inner"
+              className="w-full bg-emerald-950/85 border border-emerald-700/60 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white placeholder-emerald-300/60 focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-inner"
             />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-1.5">
             {categories.map((cat, index) => {
               const isActive = selectedCategory === cat;
               return (
                 <button
                   key={index}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                     isActive 
-                      ? "bg-amber-400 text-emerald-950 shadow-lg scale-105 font-bold ring-2 ring-amber-300/50" 
+                      ? "bg-amber-400 text-emerald-950 shadow-md scale-105 font-bold ring-2 ring-amber-300/50" 
                       : "bg-emerald-950/80 text-emerald-100 hover:bg-emerald-800 border border-emerald-700/60"
                   }`}
                 >
@@ -138,50 +138,51 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="my-6">
+        <div className="my-4">
           <LeafDivider className="text-amber-400/40 mx-auto" />
         </div>
 
-        <h2 className="font-display text-lg font-bold text-amber-300 mb-6 text-center tracking-wide">
+        <h2 className="font-display text-base font-bold text-amber-300 mb-4 text-center tracking-wide">
           {searchQuery ? `🔍 Search Results for "${searchQuery}"` : (selectedCategory === "All" ? "⭐ Authentic Ayurvedic Formulary" : `⭐ ${selectedCategory}`)}
         </h2>
 
-        {/* Products Grid - Compact and Clean */}
+        {/* Products Grid - Highly Compact & Clean */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 justify-center mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center mb-8">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
-                <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
+                <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-xl overflow-hidden flex flex-col justify-between shadow-lg">
                   <div>
-                    {/* Cream Background with Image */}
-                    <div className="bg-[#F3EEDD] py-4 px-6 text-center">
-                      <img src={item.image} alt={item.name} className="w-full h-48 object-contain" />
+                    {/* Cream Background with Image (Height കുറച്ച് ഒതുക്കി വെച്ചു) */}
+                    <div className="bg-[#F3EEDD] py-3 px-4 text-center">
+                      <img src={item.image} alt={item.name} className="w-full h-36 object-contain" />
                     </div>
                     
                     {/* Tight & Clean Content Section */}
-                    <div className="p-4 pb-2">
+                    <div className="p-3 pb-1.5">
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-[9px] tracking-wider text-amber-300 uppercase font-bold">{item.category}</span>
-                        <span className="font-display text-base text-amber-300 font-bold">{item.price}</span>
+                        <span className="font-display text-sm sm:text-base text-amber-300 font-bold">{item.price}</span>
                       </div>
-                      <h3 className="font-display text-sm sm:text-xl text-white mb-1 leading-snug">{item.name}</h3>
-                      <p className="text-[11px] text-emerald-200/80 leading-relaxed line-clamp-2">{item.desc}</p>
+                      {/* പ്രൊഡക്റ്റ് നെയിം വലുതായി തന്നെ നിലനിർത്തിയിരിക്കുന്നു */}
+                      <h3 className="font-display text-base sm:text-lg text-white mb-1 leading-snug">{item.name}</h3>
+                      <p className="text-[11px] text-emerald-200/80 leading-snug line-clamp-2">{item.desc}</p>
                     </div>
                   </div>
 
                   {/* Compact Buttons Section */}
-                  <div className="p-4 pt-2 flex gap-2">
+                  <div className="p-3 pt-1.5 flex gap-2">
                     <button
                       onClick={() => handleQuickBuy(item)}
-                      className="flex-1 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2 px-3 rounded-xl transition-colors text-xs shadow-md"
+                      className="flex-1 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2 px-3 rounded-lg transition-colors text-xs shadow"
                     >
                       Quick Buy
                     </button>
                     <button
                       onClick={() => (isSelected ? removeFromCart(item.id) : addToCart(item))}
-                      className={`flex-1 py-2 px-3 rounded-xl border transition-colors text-xs font-bold ${
+                      className={`flex-1 py-2 px-3 rounded-lg border transition-colors text-xs font-bold ${
                         isSelected
                           ? "border-rose-400 text-rose-300 bg-rose-500/10"
                           : "border-emerald-700 text-emerald-100 bg-emerald-950/60 hover:border-amber-400"
@@ -195,23 +196,23 @@ export default function Home() {
             })}
           </div>
         ) : (
-          <div className="bg-emerald-900/40 backdrop-blur-md border border-emerald-700/40 rounded-3xl p-8 text-center text-white mb-10 shadow-2xl">
-            <p className="text-xs sm:text-sm mb-4 text-emerald-200">No products found matching your search or category.</p>
+          <div className="bg-emerald-900/40 backdrop-blur-md border border-emerald-700/40 rounded-2xl p-6 text-center text-white mb-8 shadow-xl">
+            <p className="text-xs sm:text-sm mb-2 text-emerald-200">No products found matching your search or category.</p>
           </div>
         )}
 
         {/* Store Location Section */}
-        <section className="bg-emerald-900/40 backdrop-blur-xl border border-emerald-700/40 rounded-3xl p-6 text-white text-center shadow-2xl">
-          <h2 className="font-display text-base sm:text-lg font-bold text-amber-300 mb-3">📍 Store Location & Details</h2>
-          <div className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed max-w-lg mx-auto mb-5 space-y-1">
-            <p className="font-bold text-white text-base mb-1">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+        <section className="bg-emerald-900/40 backdrop-blur-xl border border-emerald-700/40 rounded-2xl p-5 text-white text-center shadow-xl">
+          <h2 className="font-display text-sm sm:text-base font-bold text-amber-300 mb-2">📍 Store Location & Details</h2>
+          <div className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed max-w-lg mx-auto mb-4 space-y-0.5">
+            <p className="font-bold text-white text-sm sm:text-base mb-0.5">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
             <p>No 505, 'Pournami' Complex, NSR Road, Saibaba Colony, Coimbatore - 641011</p>
           </div>
           <a
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2.5 px-6 rounded-2xl shadow-xl transition-all text-xs sm:text-sm"
+            className="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2 px-5 rounded-xl shadow-md transition-all text-xs sm:text-sm"
           >
             <span>Open in Google Maps</span>
           </a>
@@ -220,14 +221,14 @@ export default function Home() {
 
       {/* Floating Cart Bar */}
       {cart.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-emerald-950/95 backdrop-blur-2xl border-t border-emerald-700/50 shadow-2xl p-4 z-50">
+        <div className="fixed bottom-0 left-0 right-0 bg-emerald-950/95 backdrop-blur-2xl border-t border-emerald-700/50 shadow-2xl p-3 z-50">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div className="text-white">
               <p className="text-xs sm:text-sm font-bold text-amber-300">{cart.length} item(s) in cart</p>
             </div>
             <button
               onClick={handleCartCheckout}
-              className="bg-amber-400 hover:bg-amber-500 text-emerald-950 text-xs sm:text-sm font-black px-6 py-3 rounded-2xl shadow-xl transition-all"
+              className="bg-amber-400 hover:bg-amber-500 text-emerald-950 text-xs sm:text-sm font-black px-5 py-2.5 rounded-xl shadow-lg transition-all"
             >
               Send Cart to WhatsApp
             </button>
@@ -236,7 +237,7 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="bg-emerald-950 text-emerald-400/80 py-5 text-center text-[11px] border-t border-emerald-900/60 px-4">
+      <footer className="bg-emerald-950 text-emerald-400/80 py-4 text-center text-[11px] border-t border-emerald-900/60 px-4">
         <p>© AVP Agency | Order directly via WhatsApp.</p>
       </footer>
     </div>
