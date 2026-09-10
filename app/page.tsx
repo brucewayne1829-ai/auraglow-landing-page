@@ -163,7 +163,7 @@ export default function Home() {
               return (
                 <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
                   <div>
-                    <div className="bg-[#F3EEDD] p-5 text-center">
+                    <div className=" p-5 text-center">
                       <img src={item.image} alt={item.name} className="w-full h-44 object-contain" />
                     </div>
                     <div className="p-5">
