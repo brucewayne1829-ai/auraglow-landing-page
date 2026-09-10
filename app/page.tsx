@@ -164,19 +164,19 @@ export default function Home() {
         </div>
 
         {filteredProducts.length > 0 ? (
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
-                <li key={item.id} className="relative">
-                  <div className="absolute -top-2 left-6 w-3.5 h-3.5 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
-                  <div className="bg-[#F3EEDD] rounded-t-lg overflow-hidden">
-                    <div className="p-4 pt-6">
-                      <img src={item.image} alt={item.name} className="w-full h-36 object-contain" />
+                <li key={item.id} className="relative pt-3">
+                  <div className="absolute top-1 left-6 w-3.5 h-3.5 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
+                  <div className="bg-[#F3EEDD] rounded-t-xl overflow-hidden shadow-inner">
+                    <div className="p-5 pt-7 pb-5">
+                      <img src={item.image} alt={item.name} className="w-full h-48 object-contain" />
                     </div>
                   </div>
-                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-4 sm:p-5">
+                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-xl p-4 sm:p-5">
                     {/* Category & Rate in Same Straight Line */}
                     <div className="flex items-center justify-between mb-2">
                       <p className="text-[11px] tracking-wide text-[#B8862F] font-medium uppercase">{item.category}</p>
