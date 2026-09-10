@@ -62,29 +62,34 @@ export default function Home() {
       `}</style>
 
       {/* Compact Luxury Header */}
-      <header className="backdrop-blur-xl bg-emerald-950/90 border-b border-amber-500/30 py-3 px-4 sticky top-0 z-40 shadow-xl">
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="bg-white/95 p-1.5 rounded-xl shadow-md ring-1 ring-amber-400/30 flex items-center justify-center">
-              <img 
-                src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
-                alt="AVP Logo" 
-                className="h-8 w-auto object-contain"
-              />
-            </div>
-            <div>
-              <h1 className="font-display text-base sm:text-lg font-bold tracking-wider text-white leading-tight">AVP Agency</h1>
-              <p className="text-[9px] sm:text-[10px] text-amber-300 tracking-wide font-semibold uppercase">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
-            </div>
-          </div>
-          
-          <div className="text-right">
-            <span className="text-[10px] sm:text-[11px] text-emerald-200/90 bg-emerald-900/80 px-3 py-1 rounded-full border border-emerald-700/60 font-medium hidden sm:inline-block">
-              English | മലയാളം | தமிழ்
-            </span>
-          </div>
-        </div>
-      </header>
+<header className="backdrop-blur-xl bg-emerald-950/90 border-b border-amber-500/30 py-3 px-4 sticky top-0 z-40 shadow-xl">
+  <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+    
+    {/* ഇടത് വശം: ലോഗോയും പേരും */}
+    <div className="flex items-center gap-3">
+      <div className="bg-white/95 p-1.5 rounded-xl shadow-md ring-1 ring-amber-400/30 flex items-center justify-center">
+        <img 
+          src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
+          alt="AVP Logo" 
+          className="h-8 w-auto object-contain"
+        />
+      </div>
+      <div>
+        <h1 className="font-display text-base sm:text-lg font-bold tracking-wider text-white leading-tight">AVP Agency</h1>
+        <p className="text-[9px] sm:text-[10px] text-amber-300 tracking-wide font-semibold uppercase">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+      </div>
+    </div>
+    
+    {/* വലത് വശം: സപ്പോർട്ട് ലാംഗ്വേജ് */}
+    <div className="text-right">
+      <span className="text-[10px] sm:text-[11px] text-emerald-200/90 bg-emerald-900/80 px-3 py-1 rounded-full border border-emerald-700/60 font-medium hidden sm:inline-block shadow-inner">
+        English | മലയാളം | தமிழ்
+      </span>
+    </div>
+
+  </div>
+</header>
+
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-8 px-4 w-full">
