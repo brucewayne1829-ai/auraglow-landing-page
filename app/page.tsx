@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
           <span className="text-xs text-[#C9BE9C] border border-[#B8862F]/40 rounded-full px-3 py-1.5">
-            English · മലയാളം · தமிழ்
+            Pan-India Delivery
           </span>
         </div>
       </header>
@@ -101,48 +101,53 @@ export default function Home() {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-10 px-4 w-full">
 
-        {/* Ordering Guide Card */}
+        {/* Premium Doctor Consultation Banner */}
+        <section className="mb-10 bg-gradient-to-r from-[#173b2b] via-[#123626] to-[#1f4a36] border-2 border-[#B8862F]/60 rounded-3xl p-6 md:p-8 text-[#F3EEDD] shadow-2xl relative overflow-hidden">
+          <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#B8862F]/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="grid md:grid-cols-[1.3fr_0.7fr] gap-6 items-center">
+            <div>
+              <span className="inline-block bg-[#B8862F]/20 text-[#B8862F] border border-[#B8862F]/40 text-xs px-3 py-1 rounded-full font-semibold mb-3 tracking-wide uppercase">
+                Expert Guidance
+              </span>
+              <h2 className="font-display text-2xl md:text-3xl text-white mb-3">Consult Our Senior Physician</h2>
+              <p className="text-[#D9D0B4] text-sm leading-relaxed mb-6">
+                Unsure about the right formulation for your health condition? Connect directly with our qualified Ayurveda Physician via WhatsApp for personalized advice before ordering.
+              </p>
+              <a
+                href={docWaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#B8862F] text-[#0F2A1E] font-bold py-3.5 px-7 rounded-2xl hover:bg-[#CB9B3F] transition-all text-sm shadow-xl active:scale-95"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                Book Doctor Consultation
+              </a>
+            </div>
+            <BotanicalMark className="hidden md:block w-full h-44 text-[#B8862F] mx-auto opacity-80" />
+          </div>
+        </section>
+
+        {/* Simple Ordering Guide Card (English) */}
         <section className="mb-10 bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 text-[#F3EEDD] shadow-xl">
-          <p className="font-display text-base text-[#B8862F] mb-3 flex items-center gap-2">
-            <span>✨</span> എങ്ങനെ ഓർഡർ ചെയ്യാം / How to order:
+          <p className="font-display text-base text-[#B8862F] mb-3 flex items-center gap-2 font-semibold">
+            <span>✨</span> How to Order:
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-sm text-[#D9D0B4]">
-            <li>ഒന്നിലധികം സാധനങ്ങൾ വേണമെങ്കിൽ <strong>'Add to cart'</strong> കൊടുക്കുക, അല്ലെങ്കിൽ നേരിട്ട് <strong>'Quick Buy'</strong> ചെയ്യാം.</li>
-            <li>ബട്ടൺ അമർത്തുമ്പോൾ WhatsApp ഓപ്പൺ ആയി മെസ്സേജ് റെഡിയായി വരും.</li>
-            <li>WhatsApp-ൽ <strong>Send</strong> കൊടുത്താൽ ഓർഡർ പൂർത്തിയായി!</li>
+            <li>Browse the formulations below and click <strong>'Quick Buy'</strong> for instant orders, or <strong>'Add to Cart'</strong> for multiple products.</li>
+            <li>WhatsApp will open automatically with your selected items pre-filled in a message.</li>
+            <li>Simply press <strong>Send</strong> on WhatsApp to place your order directly with our dispensary!</li>
           </ol>
         </section>
 
-        {/* Doctor consultation */}
-        <section className="mb-10 bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 md:p-8 grid md:grid-cols-[1.2fr_0.8fr] gap-6 items-center">
-          <div>
-            <p className="text-[#B8862F] text-sm font-medium mb-2">Physician consultation</p>
-            <h2 className="font-display text-2xl text-[#F3EEDD] mb-3">ഡോക്ടറുടെ ഉപദേശം തേടാം</h2>
-            <p className="text-[#D9D0B4] text-sm leading-relaxed mb-5">
-              ഏത് മരുന്നാണ് കഴിക്കേണ്ടതെന്ന് സംശയമുണ്ടോ? ഞങ്ങളുടെ സീനിയർ ആയുർവേദ ഡോക്ടറുമായി WhatsApp വഴി നേരിട്ട് സംസാരിക്കാം.
-            </p>
-            <a
-              href={docWaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 px-6 rounded-full hover:bg-[#CB9B3F] transition-colors text-sm shadow-md"
-            >
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-              </svg>
-              Book a consultation
-            </a>
-          </div>
-          <BotanicalMark className="hidden md:block w-full h-48 text-[#B8862F] mx-auto" />
-        </section>
-
         {/* Search & Categories */}
-        <section className="mb-10 bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 text-center">
-          <h2 className="font-display text-xl text-[#F3EEDD] mb-4">മരുന്നുകൾ തെരഞ്ഞെടുക്കാം</h2>
+        <section className="mb-10 bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 text-center shadow-md">
+          <h2 className="font-display text-xl text-[#F3EEDD] mb-4">Browse Formulary</h2>
           <div className="max-w-md mx-auto mb-6">
             <input
               type="text"
-              placeholder="Search medicines (e.g. Draksharishtam)..."
+              placeholder="Search medicines (e.g., Draksharishtam, Kashayam)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-[#0F2A1E] border border-[#B8862F]/40 rounded-xl px-4 py-3 text-sm text-[#F3EEDD] placeholder-[#7C8B7E] focus:outline-none focus:border-[#B8862F]"
@@ -175,7 +180,7 @@ export default function Home() {
 
         {/* Products Grid */}
         <h2 className="font-display text-2xl text-[#F3EEDD] mb-6 text-center">
-          {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All remedies" : selectedCategory)}
+          {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All Remedies" : selectedCategory)}
         </h2>
 
         {filteredProducts.length > 0 ? (
@@ -234,14 +239,14 @@ export default function Home() {
         )}
 
         {/* Store location */}
-        <section className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 md:p-8 text-center">
+        <section className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 md:p-8 text-center shadow-lg">
           <p className="text-[#B8862F] text-sm font-medium mb-2">Visit the dispensary</p>
           <h2 className="font-display text-xl text-[#F3EEDD] mb-4">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
           <div className="text-[#D9D0B4] text-xs sm:text-sm leading-relaxed space-y-1 mb-6">
             <p>No 505, 'Pournami' Complex, NSR Road,</p>
             <p>Opposite LIC Office, S'Bend, Nesavaalar Colony,</p>
             <p>Saibaba Colony, Coimbatore, Tamil Nadu - 641011</p>
-            <p className="pt-2 text-amber-300 font-semibold">📦 Pan-India Secure Delivery Available</p>
+            <p className="pt-2 text-amber-300 font-semibold">📦 Secure Pan-India Courier Delivery Available</p>
           </div>
           <a
             href={mapUrl}
@@ -273,7 +278,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-[#B8862F]/20 py-6 px-6 text-center text-xs text-[#7C8B7E]">
-        <p>© AVP Agency — orders placed by WhatsApp. Delivery across India. No cash on delivery.</p>
+        <p>© AVP Agency — orders placed via WhatsApp. Pan-India Delivery. No cash on delivery.</p>
       </footer>
     </div>
   );
