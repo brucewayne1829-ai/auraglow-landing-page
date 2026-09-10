@@ -55,36 +55,38 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28 pt-32" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28 pt-36" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
       {/* Sticky Header with Trust & Language Bar */}
-      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-3 px-6 z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="bg-[#F3EEDD] p-1.5 rounded-lg">
+      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-3 px-4 z-50 shadow-lg">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
               <img
                 src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
                 alt="AVP Ayurveda logo"
-                className="h-8 w-auto object-contain"
+                className="h-7 w-auto object-contain"
               />
             </div>
-            <div>
-              <p className="font-display text-xl leading-none text-[#F3EEDD] font-bold">AVP Agency</p>
-              <p className="text-[10px] tracking-wide text-[#C9BE9C] mt-0.5 uppercase font-semibold">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+            <div className="min-w-0">
+              <p className="font-display text-lg leading-tight text-[#F3EEDD] font-bold truncate">AVP Agency</p>
+              <p className="text-[9px] tracking-wide text-[#C9BE9C] uppercase font-semibold truncate">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
             </div>
           </div>
-          <div>
-            <span className="text-[11px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-3 py-1 rounded-full font-medium">
-              English · മലയാളം · தமிழ்
-            </span>
+          
+          <div className="shrink-0 text-right">
+            <div className="text-[10px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-2.5 py-1 rounded-full font-medium inline-block leading-tight">
+              English <span className="text-[#B8862F]">·</span> മലയാളം <span className="text-[#B8862F]">·</span> தமிழ்
+            </div>
           </div>
         </div>
+
         <div className="max-w-6xl mx-auto mt-2 pt-2 border-t border-[#B8862F]/20 text-center">
-          <p className="text-[11px] text-[#C9BE9C] font-semibold tracking-wide">
+          <p className="text-[10px] sm:text-[11px] text-[#C9BE9C] font-semibold tracking-wide">
             🌿 100% Authentic AVP Formulations &bull; Direct Agency Support via WhatsApp
           </p>
         </div>
