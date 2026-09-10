@@ -1,86 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-
-interface Product {
-  id: number;
-  category: string;
-  name: string;
-  desc: string;
-  price: string;
-  image: string;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    category: "Arishtams",
-    name: "AVP Aswagandharishtam (450ml)",
-    desc: "Improves body strength, reduces fatigue, and boosts overall vitality.",
-    price: "₹175",
-    image: "/aswagandharishtam.png"
-  },
-  {
-    id: 2,
-    category: "Lehyam",
-    name: "AVP Dasamoolarasayanam (200g)",
-    desc: "Effective remedy for chronic cough, cold, and throat discomfort.",
-    price: "₹220",
-    image: "https://avpayurveda.com/cdn/shop/files/5-2_11c50bc9-935b-4c5b-9fe3-b4126fbc5b1c.png?v=1758801654&width=800"
-  },
-  {
-    id: 3,
-    category: "Kashayams",
-    name: "AVP Dhanwantharam Kashayam (200ml)",
-    desc: "Trusted herbal decoction for joint pain, rheumatism, and body aches.",
-    price: "₹200",
-    image: "https://avpayurveda.com/cdn/shop/files/Dhanwantharam-Kashayam-1.png?v=1758801683&width=800"
-  },
-  {
-    id: 4,
-    category: "Gulika",
-    name: "AVP Manasamithra Vatakam (10 Tabs)",
-    desc: "Helps calm the mind, reduces mental stress, and promotes quality sleep.",
-    price: "₹275",
-    image: "https://avpayurveda.com/cdn/shop/files/1_030b0fd9-a741-4418-99e4-0fd874f8758c.jpg?v=1762146451&width=800"
-  },
-  {
-    id: 5,
-    category: "Grithams",
-    name: "AVP Saraswatha Gritham (150g)",
-    desc: "Medicated ghee formulation that supports memory, focus, and brain health.",
-    price: "₹200",
-    image: "https://avpayurveda.com/cdn/shop/files/1_9241b43e-733b-4c3d-a4b8-0a42398e0087.jpg?v=1777533541&width=800"
-  },
-  {
-    id: 6,
-    category: "Thailams",
-    name: "AVP Dhanwantharam Thailam (200ml)",
-    desc: "Classic massage oil for muscle relaxation, joint care, and physical strength.",
-    price: "₹220",
-    image: "https://avpayurveda.com/cdn/shop/files/4-21-2.png?v=1758801824&width=800"
-  },
-  {
-    id: 7,
-    category: "Kashayam Tablets",
-    name: "AVP Manjishtedi Kashayam Tablet (10 Tabs)",
-    desc: "Blood purifying formula that supports healthy, clear skin conditions.",
-    price: "₹75",
-    image: "https://avpayurveda.com/cdn/shop/files/Manjishtadi-Kashayam-Tablet-1.png?v=1758802629&width=800"
-  }
-];
-
-const categories = [
-  "All",
-  "Arishtams",
-  "Kashayams",
-  "Kashayam Tablets",
-  "Lehyam",
-  "Gulika",
-  "Choornam",
-  "Grithams",
-  "Thailams"
-];
+import { products, categories, Product } from '@/lib/product';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -294,7 +215,6 @@ export default function Home() {
               <p className="text-[10px] text-emerald-200/80">Ready for instant WhatsApp checkout</p>
             </div>
             <button
-              href="#"
               onClick={handleCartCheckout}
               className="bg-amber-400 hover:bg-amber-500 text-emerald-950 text-xs sm:text-sm font-black px-6 py-3 rounded-2xl shadow-xl transition-all active:scale-95 ring-2 ring-amber-300/50"
             >
