@@ -5,15 +5,20 @@ import { products, categories, Product } from '@/lib/products';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
   const [cart, setCart] = useState<Product[]>([]);
   
   const whatsappNumber = "9495562581"; 
   const doctorWhatsapp = "9942662959"; 
   const mapUrl = "https://www.google.com/maps/place/No+505,+The+Arya+Vaidya+Pharmacy+Coimbatore+Limited,+Pournami'+Complex,+NSR+Rd,+opp.+to+LIC+Office,+S'Bend,+Nesavaalar+Colony,+Saibaba+Colony,+Coimbatore,+Tamil+Nadu+641011/@11.0268658,76.9467293,15z/data=!4m6!3m5!1s0x3ba858526b5c0591:0x135eacd0cdb95051!8m2!3d11.0268658!4d76.9467293!16s%2Fg%2F1vystznk";
 
-  const filteredProducts = selectedCategory === "All" 
-    ? products 
-    : products.filter(item => item.category === selectedCategory);
+  // Filter products by Category and Search Query
+  const filteredProducts = products.filter(item => {
+    const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const addToCart = (product: Product) => {
     if (!cart.some((item) => item.id === product.id)) {
@@ -95,11 +100,23 @@ export default function Home() {
           </a>
         </section>
 
-        {/* Categories Carousel / Grid */}
+        {/* Search Bar & Categories Section */}
         <section className="mb-10 bg-emerald-900/50 backdrop-blur-md border border-emerald-700/40 rounded-3xl p-5 text-white text-center shadow-2xl">
-          <h2 className="text-base sm:text-lg font-bold text-amber-300 mb-1">🌿 Select Medicine Category</h2>
-          <p className="text-[11px] text-emerald-200/80 mb-4">Explore authentic formulations by category</p>
+          <h2 className="text-base sm:text-lg font-bold text-amber-300 mb-1">🌿 Search & Categories</h2>
+          <p className="text-[11px] text-emerald-200/80 mb-4">Find authentic formulations quickly</p>
           
+          {/* Search Input */}
+          <div className="max-w-md mx-auto mb-5">
+            <input
+              type="text"
+              placeholder="Search medicines (e.g., Draksharishtem, Kashayam)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-emerald-950/85 border border-emerald-700/60 rounded-2xl px-4 py-3 text-xs sm:text-sm text-white placeholder-emerald-300/60 focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-inner"
+            />
+          </div>
+
+          {/* Category Tabs */}
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat, index) => {
               const isActive = selectedCategory === cat;
@@ -122,7 +139,7 @@ export default function Home() {
 
         {/* Products Grid Header */}
         <h2 className="text-lg font-bold text-amber-300 mb-6 text-center tracking-wide">
-          {selectedCategory === "All" ? "⭐ Authentic Ayurvedic Formulary" : `⭐ ${selectedCategory}`}
+          {searchQuery ? `🔍 Search Results for "${searchQuery}"` : (selectedCategory === "All" ? "⭐ Authentic Ayurvedic Formulary" : `⭐ ${selectedCategory}`)}
         </h2>
 
         {/* Products Grid */}
@@ -171,9 +188,9 @@ export default function Home() {
           </div>
         ) : (
           <div className="bg-emerald-900/40 backdrop-blur-md border border-emerald-700/40 rounded-3xl p-8 text-center text-white mb-10 shadow-2xl">
-            <p className="text-xs sm:text-sm mb-4 text-emerald-200">No products available under this category right now.</p>
+            <p className="text-xs sm:text-sm mb-4 text-emerald-200">No products found matching your search or category.</p>
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi, I want to inquire about AVP ${selectedCategory} products.`)}`}
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi, I want to inquire about products in AVP Agency.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2.5 px-5 rounded-2xl text-xs transition-all shadow-lg"
