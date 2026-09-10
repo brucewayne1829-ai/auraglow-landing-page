@@ -61,24 +61,28 @@ export default function Home() {
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
-      {/* Luxury Glass Header */}
-      <header className="backdrop-blur-xl bg-emerald-950/85 border-b border-amber-500/30 py-5 px-4 text-center sticky top-0 z-40 shadow-2xl">
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 max-w-4xl mx-auto">
-          <div className="bg-white/95 p-2.5 rounded-2xl shadow-xl ring-1 ring-amber-400/30 flex items-center justify-center">
-            <img 
-              src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
-              alt="AVP Logo" 
-              className="h-10 w-auto object-contain"
-            />
+      {/* Compact Luxury Header */}
+      <header className="backdrop-blur-xl bg-emerald-950/90 border-b border-amber-500/30 py-3 px-4 sticky top-0 z-40 shadow-xl">
+        <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="bg-white/95 p-1.5 rounded-xl shadow-md ring-1 ring-amber-400/30 flex items-center justify-center">
+              <img 
+                src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747" 
+                alt="AVP Logo" 
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+            <div>
+              <h1 className="font-display text-base sm:text-lg font-bold tracking-wider text-white leading-tight">AVP Agency</h1>
+              <p className="text-[9px] sm:text-[10px] text-amber-300 tracking-wide font-semibold uppercase">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+            </div>
           </div>
-          <div className="text-center sm:text-left">
-            <h1 className="font-display text-xl sm:text-2xl font-bold tracking-wider text-white">AVP Agency</h1>
-            <p className="text-[10px] sm:text-xs text-amber-300 tracking-wider font-semibold uppercase">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+          
+          <div className="text-right">
+            <span className="text-[10px] sm:text-[11px] text-emerald-200/90 bg-emerald-900/80 px-3 py-1 rounded-full border border-emerald-700/60 font-medium hidden sm:inline-block">
+              English | മലയാളം | தமிழ்
+            </span>
           </div>
-        </div>
-        <p className="mt-2 text-emerald-200/90 text-xs font-light tracking-wide italic">"100% Genuine Ayurvedic Heritage • Direct Home Delivery"</p>
-        <div className="mt-3 text-[11px] bg-emerald-900/90 backdrop-blur-md inline-block px-4 py-1.5 rounded-full text-amber-200 border border-emerald-700/60 shadow-inner font-medium">
-          💬 Support Languages: <strong>English | മലയാളം | தமிழ்</strong>
         </div>
       </header>
 
@@ -146,43 +150,42 @@ export default function Home() {
           {searchQuery ? `🔍 Search Results for "${searchQuery}"` : (selectedCategory === "All" ? "⭐ Authentic Ayurvedic Formulary" : `⭐ ${selectedCategory}`)}
         </h2>
 
-        {/* Products Grid with Glassmorphism */}
+        {/* Products Grid with Original Clean Background Style */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center mb-10">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
-                <div key={item.id} className="bg-emerald-900/30 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-emerald-700/40 flex flex-col justify-between hover:border-amber-400/50 transition-all group">
+                <div key={item.id} className="bg-emerald-900 border border-emerald-700/30 rounded-3xl overflow-hidden flex flex-col justify-between shadow-xl">
                   <div>
-                    <div className="relative overflow-hidden bg-emerald-950/40 p-4">
-                      <img src={item.image} alt={item.name} className="w-full h-52 object-contain group-hover:scale-105 transition-transform duration-500" />
-                      <span className="absolute top-3 right-3 bg-amber-400/90 text-emerald-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-md">{item.category}</span>
+                    <div className="bg-[#F3EEDD] p-5 text-center">
+                      <img src={item.image} alt={item.name} className="w-full h-44 object-contain" />
                     </div>
-
-                    <div className="p-5 text-center">
-                      <h3 className="font-display text-base font-bold text-white mb-2 leading-snug">{item.name}</h3>
-                      <p className="text-xs text-emerald-200/80 font-normal mb-4 leading-relaxed">{item.desc}</p>
-                      <p className="font-display text-xl font-bold text-amber-300 mb-2">{item.price}</p>
+                    <div className="p-5">
+                      <p className="text-[10px] tracking-wide text-amber-300 mb-1 uppercase font-semibold">{item.category}</p>
+                      <h3 className="font-display text-base sm:text-lg text-white mb-2">{item.name}</h3>
+                      <p className="text-xs text-emerald-200/80 mb-4 leading-relaxed">{item.desc}</p>
+                      <p className="font-display text-lg text-amber-300 mb-2 font-bold">{item.price}</p>
                     </div>
                   </div>
 
                   <div className="p-5 pt-0 flex gap-2.5">
                     <button
                       onClick={() => handleQuickBuy(item)}
-                      className="flex-1 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-3 px-3 rounded-2xl shadow-xl transition-all active:scale-95 text-xs text-center"
+                      className="flex-1 bg-amber-400 hover:bg-amber-500 text-emerald-950 font-black py-2.5 px-3 rounded-xl transition-colors text-xs shadow-md"
                     >
                       Quick Buy
                     </button>
                     <button
                       onClick={() => (isSelected ? removeFromCart(item.id) : addToCart(item))}
-                      className={`flex-1 text-xs font-bold py-3 px-3 rounded-2xl transition text-center shadow-lg ${
+                      className={`flex-1 py-2.5 px-3 rounded-xl border transition-colors text-xs font-bold ${
                         isSelected
-                          ? 'bg-rose-500/20 text-rose-300 border border-rose-500/50 hover:bg-rose-500/30'
-                          : 'bg-emerald-950/80 text-emerald-100 border border-emerald-700/60 hover:bg-emerald-800'
+                          ? "border-rose-400 text-rose-300 bg-rose-500/10"
+                          : "border-emerald-700 text-emerald-100 bg-emerald-950/60 hover:border-amber-400"
                       }`}
                     >
-                      {isSelected ? 'Remove Cart' : 'Add to Cart'}
+                      {isSelected ? "Remove" : "Add to Cart"}
                     </button>
                   </div>
                 </div>
@@ -228,7 +231,7 @@ export default function Home() {
 
       {/* Floating Cart Bar */}
       {cart.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-emerald-950/95 backdrop-blur-2xl border-t border-emerald-700/50 shadow-2xl p-4 z-50 animate-slide-up">
+        <div className="fixed bottom-0 left-0 right-0 bg-emerald-950/95 backdrop-blur-2xl border-t border-emerald-700/50 shadow-2xl p-4 z-50">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div className="text-white">
               <p className="text-xs sm:text-sm font-bold text-amber-300">{cart.length} item(s) in cart</p>
