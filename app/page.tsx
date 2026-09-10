@@ -169,14 +169,18 @@ export default function Home() {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
-                <li key={item.id} className="relative pt-3">
+                <li key={item.id} className="relative bg-[#123626] border border-[#B8862F]/30 rounded-xl overflow-hidden shadow-lg">
                   <div className="absolute top-1 left-6 w-3.5 h-3.5 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
-                  <div className="bg-[#F3EEDD] rounded-t-xl overflow-hidden shadow-inner">
-                    <div className="p-5 pt-7 pb-5">
-                      <img src={item.image} alt={item.name} className="w-full h-48 object-contain" />
+                  
+                  {/* Image Container with increased bottle height */}
+                  <div className="bg-[#F3EEDD] w-full overflow-hidden border-b border-[#B8862F]/20">
+                    <div className="p-3 py-4 flex items-center justify-center">
+                      <img src={item.image} alt={item.name} className="w-full h-64 sm:h-72 object-contain" />
                     </div>
                   </div>
-                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-xl p-4 sm:p-5">
+
+                  {/* Content Container */}
+                  <div className="p-4 sm:p-5">
                     {/* Category & Rate in Same Straight Line */}
                     <div className="flex items-center justify-between mb-2">
                       <p className="text-[11px] tracking-wide text-[#B8862F] font-medium uppercase">{item.category}</p>
