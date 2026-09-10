@@ -182,4 +182,5 @@ export const categories = [
   "Choornam",
   "Grithams",
   "Thailams"
+  "Other/ Homemade Products) 
 ];
