@@ -70,7 +70,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-3xl mx-auto py-8 px-5 w-full space-y-8">
+      <main className="max-w-5xl mx-auto py-8 px-5 w-full space-y-8">
 
         {/* Ordering Guide */}
         <section className="bg-[#123626] border-2 border-[#2C5943] rounded-3xl p-6 shadow-lg" aria-labelledby="guide-heading">
@@ -160,7 +160,7 @@ export default function Home() {
 
         {/* Products List — single column for easy, unhurried scanning */}
         {filteredProducts.length > 0 ? (
-          <ul className="space-y-6">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
@@ -178,17 +178,17 @@ export default function Home() {
                     <p className="text-lg text-[#D9EAE0] mb-3 leading-relaxed">{item.desc}</p>
                     <p className="text-2xl font-black text-[#F2D26B] mb-5">{item.price}</p>
 
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3">
                       <button
                         onClick={() => handleQuickBuy(item)}
-                        className="motion-safe:transition-transform motion-safe:active:scale-95 w-full min-h-[64px] bg-[#F2B705] text-[#0B2A1D] font-black text-xl rounded-2xl shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#F2D26B]"
+                        className="motion-safe:transition-transform motion-safe:active:scale-95 flex-1 min-h-[64px] bg-[#F2B705] text-[#0B2A1D] font-black text-xl rounded-2xl shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#F2D26B]"
                       >
                         Quick Buy on WhatsApp
                       </button>
                       <button
                         onClick={() => (isSelected ? removeFromCart(item.id) : addToCart(item))}
                         aria-pressed={isSelected}
-                        className={`w-full min-h-[64px] text-xl font-bold rounded-2xl border-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#F2B705] ${
+                        className={`flex-1 min-h-[64px] text-xl font-bold rounded-2xl border-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#F2B705] ${
                           isSelected
                             ? 'bg-[#3A1712] text-[#FF9C89] border-[#E85D4F]'
                             : 'bg-[#0B2A1D] text-white border-[#2C5943]'
