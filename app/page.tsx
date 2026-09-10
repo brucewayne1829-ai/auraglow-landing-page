@@ -55,53 +55,64 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-28 pt-28" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-24 pt-20" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
-      {/* Sticky Header */}
-      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2.5 px-3 sm:px-6 z-50 shadow-lg">
+      {/* Ultra-Compact Sticky Header */}
+      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2 px-3 sm:px-6 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2.5">
-            <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
+          <div className="flex items-center gap-2">
+            <div className="bg-[#F3EEDD] p-1 rounded-md shrink-0">
               <img
                 src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
                 alt="AVP Ayurveda logo"
-                className="h-6 sm:h-8 w-auto object-contain"
+                className="h-5 sm:h-7 w-auto object-contain"
               />
             </div>
             <div>
-              <p className="font-display text-base sm:text-xl leading-none text-[#F3EEDD] font-bold">AVP Agency</p>
-              <p className="text-[9px] sm:text-[10px] tracking-wider text-[#C9BE9C] mt-0.5 uppercase font-semibold">The Arya Vaidya Pharmacy</p>
+              <p className="font-display text-sm sm:text-lg leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+              <p className="text-[8px] sm:text-[9px] tracking-wide text-[#C9BE9C] uppercase font-semibold">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
             </div>
           </div>
           
           <div className="shrink-0">
-            <span className="text-[10px] sm:text-[11px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-2.5 py-1 rounded-full font-medium">
+            <span className="text-[9px] sm:text-[10px] text-[#C9BE9C] bg-[#123626] border border-[#B8862F]/40 px-2 py-0.5 rounded-full font-medium">
               ENG · മലയാളം · தமிழ்
             </span>
           </div>
         </div>
-
-        <div className="max-w-6xl mx-auto mt-1.5 pt-1.5 border-t border-[#B8862F]/20 text-center">
-          <p className="text-[10px] text-[#C9BE9C] font-semibold tracking-wide truncate">
-            🌿 100% Authentic AVP Formulations &bull; Direct Agency Support via WhatsApp
-          </p>
-        </div>
       </header>
 
+      {/* Compact Trust Badge Bar with WhatsApp Icon */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-3 pb-1">
+        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-1.5 px-3 text-center flex items-center justify-center gap-2">
+          <span className="text-xs">🌿</span>
+          <p className="text-[10px] sm:text-xs text-[#C9BE9C] font-semibold tracking-wide flex items-center gap-1.5 flex-wrap justify-center">
+            <span>100% Authentic AVP Formulations</span>
+            <span>&bull;</span>
+            <span className="inline-flex items-center gap-1">
+              Direct Support via 
+              <svg className="w-3.5 h-3.5 inline-block text-green-400 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </span>
+          </p>
+        </div>
+      </section>
+
       {/* Doctor consultation banner */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-4">
-        <div className="bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-2xl p-5 sm:p-6 text-emerald-950 text-center shadow-xl relative overflow-hidden">
-          <h2 className="font-display text-lg sm:text-xl font-bold mb-1">🩺 Expert Doctor Consultation</h2>
-          <p className="text-xs sm:text-sm font-medium mb-3 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 py-3">
+        <div className="bg-gradient-to-r from-amber-500 to-amber-600 border border-amber-400/50 rounded-xl p-4 sm:p-5 text-emerald-950 text-center shadow-md relative overflow-hidden">
+          <h2 className="font-display text-base sm:text-lg font-bold mb-1">🩺 Expert Doctor Consultation</h2>
+          <p className="text-xs sm:text-sm font-medium mb-2.5 text-emerald-950/90">Connect directly with our Senior Ayurveda Physician via WhatsApp.</p>
           <a
             href={docWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-2.5 px-5 rounded-xl shadow-md transition-all text-xs sm:text-sm border border-emerald-800"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-2 px-4 rounded-lg shadow transition-all text-xs border border-emerald-800"
           >
             <span>Book Consultation via WhatsApp</span>
           </a>
@@ -113,11 +124,11 @@ export default function Home() {
       </div>
 
       {/* Formulary */}
-      <section id="formulary" className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+      <section id="formulary" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4">
           <div>
-            <p className="text-[#B8862F] text-xs sm:text-sm font-medium mb-1">The formulary</p>
-            <h2 className="font-display text-2xl sm:text-3xl text-[#F3EEDD]">
+            <p className="text-[#B8862F] text-xs font-medium mb-0.5">The formulary</p>
+            <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
               {searchQuery ? `Results for "${searchQuery}"` : (selectedCategory === "All" ? "All remedies" : selectedCategory)}
             </h2>
           </div>
@@ -128,11 +139,11 @@ export default function Home() {
             placeholder="Search, e.g. Draksharishtam"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full sm:w-72 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-2 text-sm sm:text-base text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
+            className="w-full sm:w-64 bg-transparent border-b border-[#B8862F]/40 focus:border-[#B8862F] px-1 py-1.5 text-xs sm:text-sm text-[#F3EEDD] placeholder-[#7C8B7E] focus-visible:outline-none"
           />
         </div>
 
-        <div className="flex flex-wrap gap-x-5 gap-y-2.5 mb-10 border-b border-[#B8862F]/20 pb-5" role="group" aria-label="Filter by category">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8 border-b border-[#B8862F]/20 pb-4" role="group" aria-label="Filter by category">
           {categories.map((cat, index) => {
             const isActive = selectedCategory === cat;
             return (
@@ -140,7 +151,7 @@ export default function Home() {
                 key={index}
                 onClick={() => setSelectedCategory(cat)}
                 aria-pressed={isActive}
-                className={`text-sm sm:text-base pb-1 border-b-2 motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm ${
+                className={`text-xs sm:text-sm pb-1 border-b-2 motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm ${
                   isActive
                     ? "border-[#B8862F] text-[#F3EEDD] font-semibold"
                     : "border-transparent text-[#8FA192] hover:text-[#D9D0B4]"
@@ -153,42 +164,46 @@ export default function Home() {
         </div>
 
         {filteredProducts.length > 0 ? (
-          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
             {filteredProducts.map((item) => {
               const isSelected = cart.some((cartItem) => cartItem.id === item.id);
 
               return (
                 <li key={item.id} className="relative">
-                  <div className="absolute -top-2 left-6 w-4 h-4 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
+                  <div className="absolute -top-2 left-6 w-3.5 h-3.5 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
                   <div className="bg-[#F3EEDD] rounded-t-lg overflow-hidden">
-                    <div className="p-6 pt-8">
-                      <img src={item.image} alt={item.name} className="w-full h-44 object-contain" />
+                    <div className="p-4 pt-6">
+                      <img src={item.image} alt={item.name} className="w-full h-36 object-contain" />
                     </div>
                   </div>
-                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-6">
-                    <p className="text-xs tracking-wide text-[#B8862F] mb-2">{item.category}</p>
-                    <h3 className="font-display text-xl text-[#F3EEDD] mb-2 leading-snug">{item.name}</h3>
-                    <p className="text-sm text-[#A9BAAC] mb-4 leading-relaxed">{item.desc}</p>
-                    <div className="flex items-center justify-between mb-5">
-                      <span className="font-display text-lg text-[#B8862F]">{item.price}</span>
+                  <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-4 sm:p-5">
+                    {/* Category & Rate in Same Straight Line */}
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-[11px] tracking-wide text-[#B8862F] font-medium uppercase">{item.category}</p>
+                      <span className="font-display text-base text-[#B8862F] font-bold">{item.price}</span>
                     </div>
-                    <div className="flex flex-col gap-2.5">
+
+                    <h3 className="font-display text-lg text-[#F3EEDD] mb-1.5 leading-snug">{item.name}</h3>
+                    <p className="text-xs text-[#A9BAAC] mb-4 leading-relaxed line-clamp-2">{item.desc}</p>
+                    
+                    {/* Compact Side-by-Side Action Buttons */}
+                    <div className="grid grid-cols-2 gap-2">
                       <button
                         onClick={() => handleQuickBuy(item)}
-                        className="w-full bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+                        className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-2.5 px-3 rounded-lg hover:bg-[#CB9B3F] motion-safe:transition-colors text-xs text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
                       >
                         Quick Buy
                       </button>
                       <button
                         onClick={() => (isSelected ? removeFromCart(item.id) : addToCart(item))}
                         aria-pressed={isSelected}
-                        className={`w-full py-3 rounded-full border motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] ${
+                        className={`py-2.5 px-3 rounded-lg border motion-safe:transition-colors text-xs text-center font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] ${
                           isSelected
-                            ? "border-[#9C4A34] text-[#E8A594]"
+                            ? "border-[#9C4A34] text-[#E8A594] bg-[#9C4A34]/10"
                             : "border-[#B8862F]/40 text-[#D9D0B4] hover:border-[#B8862F]"
                         }`}
                       >
-                        {isSelected ? "Remove from cart" : "Add to cart"}
+                        {isSelected ? "Remove" : "Add to cart"}
                       </button>
                     </div>
                   </div>
@@ -197,13 +212,13 @@ export default function Home() {
             })}
           </ul>
         ) : (
-          <div className="border border-[#B8862F]/30 rounded-2xl p-10 text-center">
-            <p className="text-[#D9D0B4] mb-6">Nothing matched that search — ask us directly instead.</p>
+          <div className="border border-[#B8862F]/30 rounded-xl p-8 text-center">
+            <p className="text-[#D9D0B4] mb-4 text-sm">Nothing matched that search — ask us directly instead.</p>
             <a
               href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi, I want to inquire about products in AVP Agency.')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+              className="inline-flex items-center gap-2 bg-[#B8862F] text-[#0F2A1E] font-semibold py-2.5 px-5 rounded-lg hover:bg-[#CB9B3F] motion-safe:transition-colors text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
             >
               Ask on WhatsApp
             </a>
@@ -216,11 +231,11 @@ export default function Home() {
       </div>
 
       {/* Store location */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-8">
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 py-8 grid md:grid-cols-2 gap-6">
         <div>
-          <p className="text-[#B8862F] text-sm font-medium mb-3">Visit the dispensary</p>
-          <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD] mb-4">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
-          <div className="text-[#D9D0B4] leading-relaxed space-y-1 mb-5 text-sm sm:text-base">
+          <p className="text-[#B8862F] text-xs font-medium mb-2">Visit the dispensary</p>
+          <h2 className="font-display text-lg sm:text-xl text-[#F3EEDD] mb-3">The Arya Vaidya Pharmacy (Coimbatore) Limited</h2>
+          <div className="text-[#D9D0B4] leading-relaxed space-y-0.5 mb-4 text-xs sm:text-sm">
             <p>No 505, 'Pournami' Complex, NSR Road,</p>
             <p>Opposite LIC Office, S'Bend, Nesavaalar Colony,</p>
             <p>Saibaba Colony, Coimbatore, Tamil Nadu - 641011</p>
@@ -229,14 +244,14 @@ export default function Home() {
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#B8862F] border-b border-[#B8862F]/40 hover:border-[#B8862F] pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm text-sm"
+            className="inline-flex items-center gap-1.5 text-[#B8862F] border-b border-[#B8862F]/40 hover:border-[#B8862F] pb-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F] rounded-sm text-xs"
           >
             Open in Google Maps
           </a>
         </div>
-        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-center">
-          <p className="font-display text-lg text-[#F3EEDD] mb-2">Delivery, pan-India</p>
-          <p className="text-[#C9BE9C] leading-relaxed text-sm sm:text-base">
+        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-xl p-5 flex flex-col justify-center">
+          <p className="font-display text-base text-[#F3EEDD] mb-1.5">Delivery, pan-India</p>
+          <p className="text-[#C9BE9C] leading-relaxed text-xs sm:text-sm">
             We courier securely to any address in the country. Orders are confirmed and paid for
             on WhatsApp — no cash on delivery.
           </p>
@@ -245,14 +260,14 @@ export default function Home() {
 
       {/* Floating cart bar */}
       {cart.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-3 px-4 sm:px-6 z-50">
-          <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
-            <p className="text-[#D9D0B4] text-sm">
+        <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-2.5 px-3 sm:px-6 z-50">
+          <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
+            <p className="text-[#D9D0B4] text-xs sm:text-sm">
               <span className="text-[#F3EEDD] font-semibold">{cart.length}</span> item{cart.length > 1 ? "s" : ""} ready to send
             </p>
             <button
               onClick={handleCartCheckout}
-              className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-2.5 px-6 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
+              className="bg-[#B8862F] text-[#0F2A1E] font-semibold py-2 px-5 rounded-lg hover:bg-[#CB9B3F] motion-safe:transition-colors text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
             >
               Send cart to WhatsApp
             </button>
@@ -261,7 +276,7 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-[#B8862F]/20 py-6 px-6 text-center text-xs sm:text-sm text-[#7C8B7E]">
+      <footer className="border-t border-[#B8862F]/20 py-5 px-4 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
         <p>© AVP Agency — orders placed by WhatsApp. Delivery across India. No cash on delivery.</p>
       </footer>
     </div>
