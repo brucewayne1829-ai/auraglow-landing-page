@@ -12,25 +12,25 @@ export const products: Product[] = [
   {
     id: 101,
     category: "Arishtams",
-    name: "AVP Aragwadharishtam",
+    name: "AVP Aragwadharishtam (450ml)",
     desc: "Skin health & blood purification",
-    price: "₹140 / 450ml",
+    price: "₹140",
     image: "https://avpayurveda.com/cdn/shop/files/4-2-3_b201c03e-9c48-4ce9-9008-2df884a5545e.png?v=1758801625&width=800"
   },
   {
     id: 102,
     category: "Arishtams",
-    name: "AVP Khadirarishtam",
+    name: "AVP Khadirarishtam (450ml)",
     desc: "Skin disorders & blood cleansing",
-    price: "₹150 / 450ml",
+    price: "₹150",
     image: "https://avpayurveda.com/cdn/shop/files/1_750d336f-3093-4f70-b957-8d624b7e554e.jpg?v=1764238126&width=800"
   },
   {
     id: 103,
     category: "Arishtams",
-    name: "AVP Parthadyarishtam",
+    name: "AVP Parthadyarishtam (450ml)",
     desc: "Heart health & cardiac support",
-    price: "₹135 / 450ml",
+    price: "₹135",
     image: "https://avpayurveda.com/cdn/shop/files/1_89ceeebe-de60-43f4-9873-e18210e3da95.jpg?v=1766291938&width=800"
   },
   {
@@ -94,25 +94,25 @@ export const products: Product[] = [
   {
     id: 201,
     category: "Kashayams",
-    name: "AVP Kallyanaka Kashayam",
+    name: "AVP Kallyanaka Kashayam (200ml)",
     desc: "Mental wellness & memory",
-    price: "₹255 / 200ml",
+    price: "₹255",
     image: "https://avpayurveda.com/cdn/shop/files/31_9dfe38b7-e4a0-4cc0-8458-a24f73b6895f.jpg?v=1764232082&width=800"
   },
   {
     id: 202,
     category: "Kashayams",
-    name: "AVP Rasnasaptakam Kashayam",
+    name: "AVP Rasnasaptakam Kashayam (200ml)",
     desc: "Joint pain & rheumatism",
-    price: "₹150 / 200ml",
+    price: "₹150",
     image: "https://avpayurveda.com/cdn/shop/files/SA102032-2-e1680772064188.jpg?v=1758802039&width=800"
   },
   {
     id: 203,
     category: "Kashayams",
-    name: "AVP Sahacharadi Kashayam",
+    name: "AVP Sahacharadi Kashayam (200ml)",
     desc: "Vata disorders & lower back pain",
-    price: "₹140 / 200ml",
+    price: "₹140",
     image: "https://avpayurveda.com/cdn/shop/files/1.1-1.jpg?v=1758802048&width=800"
   },
   {
@@ -176,25 +176,25 @@ export const products: Product[] = [
   {
     id: 301,
     category: "Choornams",
-    name: "AVP Amrutha Choornam",
+    name: "AVP Amrutha Choornam (25g)",
     desc: "Blood sugar management & immunity",
-    price: "₹100 / 25g",
+    price: "₹100",
     image: "https://avpayurveda.com/cdn/shop/files/1_0e1a9c01-dc15-470f-9dc5-2ecef026ae9e.jpg?v=1765864814&width=800"
   },
   {
     id: 302,
     category: "Choornams",
-    name: "AVP Ashta Choornam",
+    name: "AVP Ashta Choornam (25g)",
     desc: "Digestion, gas & acidity relief",
-    price: "₹65 / 25g",
+    price: "₹65",
     image: "https://avpayurveda.com/cdn/shop/files/21_334efde0-158f-44e5-8311-f66ab0a46dd4.jpg?v=1765952695&width=800"
   },
   {
     id: 303,
     category: "Choornams",
-    name: "AVP Rasnadi Choornam",
+    name: "AVP Rasnadi Choornam (25g)",
     desc: "Cold, headache & sinus care",
-    price: "₹60 / 25g",
+    price: "₹60",
     image: "https://avpayurveda.com/cdn/shop/files/1_3228b7e8-3f15-4f2b-90f9-a92e239fe250.jpg?v=1766387994&width=800"
   },
 
@@ -202,25 +202,25 @@ export const products: Product[] = [
   {
     id: 401,
     category: "Gulika / Tablet",
-    name: "AVP Chandraprabha Vati",
+    name: "AVP Chandraprabha Vati (10\u00A0nos)",
     desc: "Urinary tract & general vitality",
-    price: "₹40 / 10nos",
+    price: "₹40",
     image: "https://avpayurveda.com/cdn/shop/files/Chandraprabha-Vatika.jpg?v=1758803874&width=800"
   },
   {
     id: 402,
     category: "Gulika / Tablet",
-    name: "AVP Kankayana Gutika",
+    name: "AVP Kankayana Gutika (10\u00A0nos)",
     desc: "Piles & digestive wellness",
-    price: "₹60 / 10nos",
+    price: "₹60",
     image: "https://avpayurveda.com/cdn/shop/files/1_6bfef594-9b3a-432a-ad93-b325e380075d.jpg?v=1765961681&width=800"
   },
   {
     id: 403,
     category: "Gulika / Tablet",
-    name: "AVP Rajapravarthini Vati",
+    name: "AVP Rajapravarthini Vati (100\u00A0Tablets)",
     desc: "Women's health & menstrual care",
-    price: "₹60 / 100nos",
+    price: "₹60",
     image: "https://avpayurveda.com/cdn/shop/files/1_5767750b-e883-4f59-ba16-9fde2eda0acd.jpg?v=1766387696&width=800"
   },
   {
@@ -292,25 +292,25 @@ export const products: Product[] = [
   {
     id: 501,
     category: "Lehyam",
-    name: "AVP Narasimha Rasayanam",
+    name: "AVP Narasimha Rasayanam (200g)",
     desc: "Hair growth & overall vitality",
-    price: "₹160 / 200g",
+    price: "₹160",
     image: "https://avpayurveda.com/cdn/shop/files/1_f5c62de9-b66d-4ad8-bd94-5b6f9b6e3c29.jpg?v=1766203978&width=800"
   },
   {
     id: 502,
     category: "Lehyam",
-    name: "AVP Vilwadi Lehyam",
+    name: "AVP Vilwadi Lehyam (200g)",
     desc: "Diarrhea & digestive health",
-    price: "₹150 / 200g",
+    price: "₹150",
     image: "https://avpayurveda.com/cdn/shop/files/SA102069-1-e1680774561592.jpg?v=1758802085&width=800"
   },
   {
     id: 503,
     category: "Lehyam",
-    name: "AVP Sathavari Gulam",
+    name: "AVP Sathavari Gulam (200g)",
     desc: "Women's health & hormonal balance",
-    price: "₹165 / 200g",
+    price: "₹165",
     image: "/Sathavarigulam.png"
   },
   {
