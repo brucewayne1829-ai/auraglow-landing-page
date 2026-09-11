@@ -160,7 +160,7 @@ export const products: Product[] = [
   {
     id: 305,
     category: "Lehyam",
-    name: "AVP Kalyanagulam (400g)",
+    name: "AVP Kalyanagulam (200g)",
     desc: "Safe laxative that detoxifies the body and helps treat skin disorders.",
     price: "₹110",
     image: "https://avpayurveda.com/cdn/shop/files/1_e4e97d85-81f0-4e17-a18a-e99b5e971065.jpg?v=1765961301&width=800"
@@ -168,7 +168,7 @@ export const products: Product[] = [
   {
     id: 306,
     category: "Lehyam",
-    name: "AVP Thrivril Lehyam (400g)",
+    name: "AVP Thrivril Lehyam (200g)",
     desc: "Excellent for treating severe constipation and ensuring smooth bowel clearance.",
     price: "₹145",
     image: "https://avpayurveda.com/cdn/shop/files/11_3212f2ba-a1f0-4a0b-af25-3cf5aaa9443b.jpg?v=1763819211&width=800"
@@ -176,7 +176,7 @@ export const products: Product[] = [
   {
     id: 307,
     category: "Lehyam",
-    name: "AVP Dasamoolaharitaki Lehyam (400g)",
+    name: "AVP Dasamoolaharitaki Lehyam (200g)",
     desc: "Reduces body swelling, aids weight loss, and improves liver health.",
     price: "₹115",
     image: "https://avpayurveda.com/cdn/shop/files/1_122a9f18-34f2-48bb-b15f-bc2a57b6a0d7.jpg?v=1765954936&width=800"
@@ -186,7 +186,7 @@ export const products: Product[] = [
   {
     id: 401,
     category: "Gulika / Tablet",
-    name: "AVP Manjishtadi Kashayam Tablet (10 Tabs)",
+    name: "AVP Manjishtadi Kashayam Tablet (10&nbsp;Tablets)",
     desc: "Purifies blood to clear acne, pimples, and stubborn skin allergies.",
     price: "₹75",
     image: "https://avpayurveda.com/cdn/shop/files/Manjishtadi-Kashayam-Tablet-1.png?v=1758802629&width=800"
@@ -194,7 +194,7 @@ export const products: Product[] = [
   {
     id: 402,
     category: "Gulika / Tablet",
-    name: "AVP Manasamithra Vatakam (10 Tabs)",
+    name: "AVP Manasamithra Vatakam (10&nbsp;Tablets)",
     desc: "Reduces anxiety, mental stress, and promotes deep, uninterrupted sleep.",
     price: "₹275",
     image: "https://avpayurveda.com/cdn/shop/files/1_030b0fd9-a741-4418-99e4-0fd874f8758c.jpg?v=1762146451&width=800"
@@ -202,7 +202,7 @@ export const products: Product[] = [
   {
     id: 403,
     category: "Gulika / Tablet",
-    name: "AVP Vayu Gulika (10 Tabs)",
+    name: "AVP Vayu Gulika (10&nbsp;Tablets)",
     desc: "Instant relief from gas trouble, stomach bloating, and acidity.",
     price: "₹110",
     image: "https://avpayurveda.com/cdn/shop/files/Vayu-Gulika-1.png?v=1758803740&width=800"
@@ -210,7 +210,7 @@ export const products: Product[] = [
   {
     id: 404,
     category: "Gulika / Tablet",
-    name: "AVP Dhanwantharam Gulika (10 Tabs)",
+    name: "AVP Dhanwantharam Gulika (10&nbsp;Tablets)",
     desc: "First-aid pill for chest congestion, breathlessness, and dizziness.",
     price: "₹35",
     image: "https://avpayurveda.com/cdn/shop/files/1_1_f50d264f-1c97-4f23-afde-ff40ab9bc848.jpg?v=1767438537&width=800"
@@ -218,7 +218,7 @@ export const products: Product[] = [
   {
     id: 405,
     category: "Gulika / Tablet",
-    name: "AVP Gorochanadi Gulika (10 Tabs)",
+    name: "AVP Gorochanadi Gulika (10&nbsp;Tablets)",
     desc: "Treats high fever, breathing issues in kids, and balances body temperature.",
     price: "₹160",
     image: "https://avpayurveda.com/cdn/shop/files/5-2.jpg?v=1758801764&width=800"
@@ -226,7 +226,7 @@ export const products: Product[] = [
   {
     id: 406,
     category: "Gulika / Tablet",
-    name: "AVP Suvarnamuktadi Gulika (10 Nos)",
+    name: "AVP Suvarnamuktadi Gulika (10&nbsp;Tablets)",
     desc: "Premium formulation for treating chronic fevers and improving immunity.",
     price: "₹180",
     image: "https://avpayurveda.com/cdn/shop/files/51.jpg?v=1764254129&width=800"
@@ -234,7 +234,7 @@ export const products: Product[] = [
   {
     id: 407,
     category: "Gulika / Tablet",
-    name: "AVP Vilwadi Gulika (10 Nos)",
+    name: "AVP Vilwadi Gulika (10&nbsp;Tablets)",
     desc: "Excellent for food poisoning, stomach infections, and insect bites.",
     price: "₹50",
     image: "https://avpayurveda.com/cdn/shop/files/11_89d49319-1684-4af5-a96a-fa55617b8550.jpg?v=1764255625&width=800"
@@ -242,7 +242,7 @@ export const products: Product[] = [
   {
     id: 408,
     category: "Gulika / Tablet",
-    name: "AVP Swasanandam Gulika (10 Nos)",
+    name: "AVP Swasanandam Gulika (10&nbsp;Tablets)",
     desc: "Provides immediate relief from asthma attacks and chest tightness.",
     price: "₹40",
     image: "https://avpayurveda.com/cdn/shop/files/Swasanandam-Gulika-1-01.jpg?v=1758803937&width=800"
