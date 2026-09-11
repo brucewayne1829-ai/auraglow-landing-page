@@ -262,7 +262,7 @@ export default function Home() {
         <div className="bg-[#123626] border border-[#B8862F]/30 rounded-xl p-5 flex flex-col justify-center">
           <p className="font-display text-base text-[#F3EEDD] mb-1.5">Delivery, pan-India</p>
           <p className="text-[#C9BE9C] leading-relaxed text-xs sm:text-sm mb-2">
-            Prepaid WhatsApp Order. Orders are confirmed and paid for securely on WhatsApp.
+            Direct delivery across India via secure prepaid WhatsApp orders.
           </p>
           <p className="text-[#B8862F] text-xs sm:text-sm font-semibold">
             No COD (No Cash on Delivery) &bull; Fast & Safe Shipping
@@ -270,7 +270,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer with Support & Doctor Guidance */}
+      {/* Clean Footer */}
       <footer className="border-t border-[#B8862F]/30 bg-[#0A2217] pt-8 pb-6 px-4 text-[#D9D0B4]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-6 text-xs sm:text-sm">
           <div>
@@ -278,7 +278,7 @@ export default function Home() {
               The Arya Vaidya Pharmacy (Coimbatore) Limited
             </h3>
             <p className="text-[#A9BAAC] leading-relaxed">
-              Authorized online dispensary for 100% authentic AVP formulations. Direct delivery across India via secure prepaid WhatsApp orders.
+              Your trusted partner for authentic traditional Ayurvedic medicines and wellness solutions delivered directly to your home.
             </p>
           </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto border-t border-[#B8862F]/20 pt-4 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
-          <p>© {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) Limited. All rights reserved. Pan-India Delivery.</p>
+          <p>© {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) Limited. All rights reserved.</p>
         </div>
       </footer>
 
