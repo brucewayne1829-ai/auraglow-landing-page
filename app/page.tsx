@@ -264,23 +264,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clean Professional Footer (Without Quick Links) */}
-      <footer className="border-t border-[#B8862F]/30 bg-[#0A2217] pt-10 pb-6 px-4 text-[#D9D0B4]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-xs sm:text-sm">
+      {/* Ultra-Minimalist Clean Footer */}
+      <footer className="border-t border-[#B8862F]/30 bg-[#0A2217] pt-8 pb-6 px-4 text-[#D9D0B4]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-6 text-xs sm:text-sm">
           <div>
-            <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3 flex items-center gap-2">
-              <span>🌿</span> The Arya Vaidya Pharmacy (Coimbatore) Limited
+            <h3 className="font-display text-sm sm:text-base text-[#F3EEDD] font-bold mb-2">
+              The Arya Vaidya Pharmacy (Coimbatore) Limited
             </h3>
-            <p className="text-[#A9BAAC] leading-relaxed mb-3">
-              Authorized online dispensary for 100% authentic AVP formulations. Direct delivery across India via secure prepaid WhatsApp orders.
+            <p className="text-[#A9BAAC] leading-relaxed">
+              Authorized online dispensary for authentic AVP formulations. Personal care and secure WhatsApp orders.
             </p>
-            <p className="text-[#B8862F] font-semibold">No Cash on Delivery (COD) · Fast & Safe Shipping</p>
           </div>
 
           <div>
-            <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3">Customer Support</h3>
-            <p className="text-[#A9BAAC] leading-relaxed mb-3">
-              All orders are verified and processed directly through WhatsApp to ensure personal care and correct product selection.
+            <h3 className="font-display text-sm sm:text-base text-[#F3EEDD] font-bold mb-2">Customer Support</h3>
+            <p className="text-[#A9BAAC] leading-relaxed mb-2">
+              All orders are verified and processed directly through WhatsApp.
             </p>
             <div className="inline-block bg-[#123626] border border-[#B8862F]/40 px-3 py-1.5 rounded-lg text-xs text-[#C9BE9C]">
               Support: Mon - Sat (9:00 AM - 7:00 PM)
@@ -288,8 +287,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto border-t border-[#B8862F]/20 pt-5 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
-          <p>© {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) Limited (Saibaba Colony, Coimbatore). All rights reserved. Pan-India Delivery.</p>
+        <div className="max-w-6xl mx-auto border-t border-[#B8862F]/20 pt-4 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
+          <p>© {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) Limited. All rights reserved.</p>
         </div>
       </footer>
 
