@@ -62,28 +62,29 @@ export default function Home() {
       `}</style>
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2.5 px-3 sm:px-6 z-50 shadow-lg">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3 w-full">
-            <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
-              <img
-                src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
-                alt="AVP Ayurveda logo"
-                className="h-8 sm:h-10 w-auto object-contain"
-              />
-            </div>
-            <div className="flex flex-col w-full">
-              <div className="flex items-center justify-between">
-                <p className="font-display text-base sm:text-xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
-                <span className="text-[10px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
-                  ENG · മലയാളം · தமிழ்
-                </span>
-              </div>
-              <p className="text-[9px] sm:text-[10px] tracking-wide text-[#C9BE9C] uppercase font-semibold mt-0.5">THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED</p>
-            </div>
-          </div>
+<header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2.5 px-3 sm:px-6 z-50 shadow-lg">
+  <div className="max-w-6xl mx-auto flex items-center justify-between">
+    <div className="flex items-center gap-3 w-full">
+      <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
+        <img
+          src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
+          alt="AVP Ayurveda logo"
+          className="h-10 sm:h-12 w-auto object-contain"
+        />
+      </div>
+      <div className="flex flex-col w-full">
+        <div className="flex items-center justify-between">
+          <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+          <span className="text-[10px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
+            ENG · മലയാളം · தமிழ்
+          </span>
         </div>
-      </header>
+        <p className="text-[10px] sm:text-xs tracking-wide text-[#C9BE9C] uppercase font-semibold mt-0.5">THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED</p>
+      </div>
+    </div>
+  </div>
+</header>
+
 
       {/* Trust Badge Bar */}
       <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-2 pb-1">
