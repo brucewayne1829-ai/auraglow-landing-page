@@ -264,9 +264,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clean Professional Footer */}
+      {/* Clean Professional Footer (Without Quick Links) */}
       <footer className="border-t border-[#B8862F]/30 bg-[#0A2217] pt-10 pb-6 px-4 text-[#D9D0B4]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-xs sm:text-sm">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 text-xs sm:text-sm">
           <div>
             <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3 flex items-center gap-2">
               <span>🌿</span> The Arya Vaidya Pharmacy (Coimbatore) Limited
@@ -275,25 +275,6 @@ export default function Home() {
               Authorized online dispensary for 100% authentic AVP formulations. Direct delivery across India via secure prepaid WhatsApp orders.
             </p>
             <p className="text-[#B8862F] font-semibold">No Cash on Delivery (COD) · Fast & Safe Shipping</p>
-          </div>
-
-          <div>
-            <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3">Quick Links</h3>
-            <ul className="space-y-2 text-[#A9BAAC]">
-              <li>
-                <a href="#medicines" className="hover:text-[#F3EEDD] transition-colors">Browse All Medicines</a>
-              </li>
-              <li>
-                <a href={docWaLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#F3EEDD] transition-colors">
-                  Consult Ayurveda Physician
-                </a>
-              </li>
-              <li>
-                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#F3EEDD] transition-colors">
-                  Store Location & Map
-                </a>
-              </li>
-            </ul>
           </div>
 
           <div>
