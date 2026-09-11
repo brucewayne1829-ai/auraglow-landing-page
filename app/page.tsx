@@ -130,13 +130,14 @@ export default function Home() {
 
       {/* Medicines Section */}
       <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
-        <div className="flex items-center justify-between">
-  <h2 className="font-display text-sm sm:text-base text-[#B8862F] font-semibold tracking-wide">
-    Medicine List
-  </h2>
-  <span className="text-xs sm:text-sm text-[#B8862F] font-semibold">
-    {selectedCategory}
-  </span>
+        <div className="flex flex-col gap-4 mb-8">
+          <div className="flex items-center justify-between">
+            <h2 className="font-display text-sm sm:text-base text-[#B8862F] font-semibold tracking-wide">
+              Medicine List
+            </h2>
+            <span className="text-xs sm:text-sm text-[#B8862F] font-semibold">
+              {selectedCategory}
+            </span>
           </div>
 
           <div className="relative w-full">
