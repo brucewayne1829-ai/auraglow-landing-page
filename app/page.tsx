@@ -72,18 +72,21 @@ export default function Home() {
           className="h-10 sm:h-12 w-auto object-contain"
         />
       </div>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full overflow-hidden">
         <div className="flex items-center justify-between">
           <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
           <span className="text-[10px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
             ENG · മലയാളം · தமிழ்
           </span>
         </div>
-        <p className="text-[10px] sm:text-xs tracking-wide text-[#C9BE9C] uppercase font-semibold mt-0.5">THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED</p>
+        <p className="text-[8.5px] sm:text-xs tracking-tight text-[#C9BE9C] uppercase font-semibold mt-0.5 whitespace-nowrap">
+          THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED
+        </p>
       </div>
     </div>
   </div>
 </header>
+
 
 
       {/* Trust Badge Bar */}
