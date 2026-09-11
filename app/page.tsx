@@ -55,43 +55,41 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-24 pt-16 sm:pt-20" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-24 pt-24 sm:pt-28" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
       `}</style>
 
       {/* Header */}
-<header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-2.5 px-3 sm:px-6 z-50 shadow-lg">
-  <div className="max-w-6xl mx-auto flex items-center justify-between">
-    <div className="flex items-center gap-3 w-full">
-      <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
-        <img
-          src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
-          alt="AVP Ayurveda logo"
-          className="h-10 sm:h-12 w-auto object-contain"
-        />
-      </div>
-      <div className="flex flex-col w-full overflow-hidden">
-        <div className="flex items-center justify-between">
-          <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
-          <span className="text-[10px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
-            ENG · മലയാളം · தமிழ்
-          </span>
+      <header className="fixed top-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-b border-[#B8862F]/30 py-3 px-3 sm:px-6 z-50 shadow-lg">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-3 w-full">
+            <div className="bg-[#F3EEDD] p-1.5 rounded-lg shrink-0">
+              <img
+                src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
+                alt="AVP Ayurveda logo"
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="flex flex-col w-full overflow-hidden">
+              <div className="flex items-center justify-between">
+                <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+                <span className="text-[10px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
+                  ENG · മലയാളം · தமிழ்
+                </span>
+              </div>
+              <p className="text-[9.5px] sm:text-xs tracking-normal sm:tracking-wide text-[#C9BE9C] uppercase font-semibold mt-0.5 whitespace-nowrap">
+                THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="text-[8.5px] sm:text-xs tracking-tight text-[#C9BE9C] uppercase font-semibold mt-0.5 whitespace-nowrap">
-          THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED
-        </p>
-      </div>
-    </div>
-  </div>
-</header>
+      </header>
 
-
-
-      {/* Trust Badge Bar */}
-      <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-2 pb-1">
-        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-1.5 px-3 text-center flex items-center justify-center gap-2">
+      {/* Trust Badge Bar - given top margin to move slightly down */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-3 pb-1">
+        <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-2 px-3 text-center flex items-center justify-center gap-2">
           <span className="text-xs">🌿</span>
           <p className="text-[10px] sm:text-xs text-[#C9BE9C] font-semibold tracking-wide flex items-center gap-1.5 flex-wrap justify-center">
             <span>100% Authentic AVP Formulations</span>
