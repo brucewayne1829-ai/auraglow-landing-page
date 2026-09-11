@@ -311,7 +311,7 @@ export const products: Product[] = [
     name: "AVP Sathavari Gulam",
     desc: "Women's health & hormonal balance",
     price: "₹165 / 200g",
-    image: "https://avpayurveda.com/cdn/shop/files/1_3228b7e8-3f15-4f2b-90f9-a92e239fe250.jpg?v=1766387994&width=800"
+    image: "/Sathavarigulam.png"
   },
   {
     id: 504,
