@@ -73,8 +73,8 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
-              <p className="text-[9px] sm:text-[11px] tracking-wide text-[#C9BE9C] uppercase font-semibold">The Arya Vaidya Pharmacy (Coimbatore) Limited</p>
+              <p className="font-display text-base sm:text-xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+              <p className="text-[9px] sm:text-[10px] tracking-wide text-[#C9BE9C] uppercase font-semibold">THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED</p>
             </div>
           </div>
           
@@ -125,15 +125,14 @@ export default function Home() {
 
       {/* Medicines Section */}
       <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
-        <div className="flex flex-col gap-3 mb-6">
-          <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-4 mb-8">
+          <div>
+            <p className="text-[#B8862F] text-xs font-medium mb-0.5">Medicines List</p>
             <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
-              Medicines List
+              All remedies
             </h2>
-            <span className="text-xs text-[#B8862F] font-medium">AVP Formulations</span>
           </div>
 
-          {/* Clean Prominent Search Box */}
           <div className="relative w-full">
             <label htmlFor="product-search" className="sr-only">Search medicine</label>
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#B8862F]">
@@ -179,16 +178,13 @@ export default function Home() {
                 <li key={item.id} className="relative">
                   <div className="absolute -top-2 left-6 w-4 h-4 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
                   
-                  {/* Image Container */}
                   <div className="bg-[#F3EEDD] rounded-t-lg overflow-hidden">
                     <div className="p-4 pt-6 flex items-center justify-center">
                       <img src={item.image} alt={item.name} className="w-full h-72 sm:h-80 object-contain" />
                     </div>
                   </div>
 
-                  {/* Content Container */}
                   <div className="bg-[#123626] border border-t-0 border-[#B8862F]/30 rounded-b-lg p-5">
-                    {/* Category and Price aligned side-by-side */}
                     <div className="flex items-center justify-between mb-1.5">
                       <p className="text-xs tracking-wide text-[#B8862F]">{item.category}</p>
                       <span className="font-display text-lg text-[#B8862F] font-semibold">{item.price}</span>
@@ -197,7 +193,6 @@ export default function Home() {
                     <h3 className="font-display text-xl text-[#F3EEDD] mb-1.5 leading-snug">{item.name}</h3>
                     <p className="text-sm text-[#A9BAAC] mb-5 leading-relaxed">{item.desc}</p>
                     
-                    {/* Quick Buy and Add to Cart buttons in the same row */}
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         onClick={() => handleQuickBuy(item)}
@@ -226,7 +221,7 @@ export default function Home() {
           <div className="border border-[#B8862F]/30 rounded-2xl p-10 text-center">
             <p className="text-[#D9D0B4] mb-6">Nothing matched that search — ask us directly instead.</p>
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi, I want to inquire about products in AVP Agency.')}`}
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hi, I want to inquire about products.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#B8862F] text-[#0F2A1E] font-semibold py-3 px-7 rounded-full hover:bg-[#CB9B3F] motion-safe:transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F3EEDD]"
@@ -269,6 +264,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clean Professional Footer */}
+      <footer className="border-t border-[#B8862F]/30 bg-[#0A2217] pt-10 pb-6 px-4 text-[#D9D0B4]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-xs sm:text-sm">
+          <div>
+            <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3 flex items-center gap-2">
+              <span>🌿</span> The Arya Vaidya Pharmacy (Coimbatore) Limited
+            </h3>
+            <p className="text-[#A9BAAC] leading-relaxed mb-3">
+              Authorized online dispensary for 100% authentic AVP formulations. Direct delivery across India via secure prepaid WhatsApp orders.
+            </p>
+            <p className="text-[#B8862F] font-semibold">No Cash on Delivery (COD) · Fast & Safe Shipping</p>
+          </div>
+
+          <div>
+            <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-[#A9BAAC]">
+              <li>
+                <a href="#medicines" className="hover:text-[#F3EEDD] transition-colors">Browse All Medicines</a>
+              </li>
+              <li>
+                <a href={docWaLink} target="_blank" rel="noopener noreferrer" className="hover:text-[#F3EEDD] transition-colors">
+                  Consult Ayurveda Physician
+                </a>
+              </li>
+              <li>
+                <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#F3EEDD] transition-colors">
+                  Store Location & Map
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-display text-base text-[#F3EEDD] font-bold mb-3">Customer Support</h3>
+            <p className="text-[#A9BAAC] leading-relaxed mb-3">
+              All orders are verified and processed directly through WhatsApp to ensure personal care and correct product selection.
+            </p>
+            <div className="inline-block bg-[#123626] border border-[#B8862F]/40 px-3 py-1.5 rounded-lg text-xs text-[#C9BE9C]">
+              Support: Mon - Sat (9:00 AM - 7:00 PM)
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto border-t border-[#B8862F]/20 pt-5 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
+          <p>© {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) Limited (Saibaba Colony, Coimbatore). All rights reserved. Pan-India Delivery.</p>
+        </div>
+      </footer>
+
       {/* Floating cart bar */}
       {cart.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 bg-[#0F2A1E]/95 backdrop-blur border-t border-[#B8862F]/40 py-2.5 px-3 sm:px-6 z-50">
@@ -285,11 +328,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-      {/* Footer */}
-      <footer className="border-t border-[#B8862F]/20 py-5 px-4 text-center text-[11px] sm:text-xs text-[#7C8B7E]">
-        <p>© AVP Agency — orders placed by WhatsApp. Delivery across India. No cash on delivery.</p>
-      </footer>
     </div>
   );
 }
