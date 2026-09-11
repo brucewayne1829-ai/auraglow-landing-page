@@ -131,10 +131,13 @@ export default function Home() {
       {/* Medicines Section */}
       <section id="medicines" className="max-w-6xl mx-auto px-3 sm:px-6 py-6">
         <div className="flex flex-col gap-4 mb-8">
-          <div>
-            <h2 className="font-display text-xl sm:text-2xl text-[#F3EEDD]">
+          <div className="flex items-center justify-between">
+            <h2 className="font-display text-sm sm:text-base text-[#B8862F] font-semibold tracking-wide">
               Medicine List
             </h2>
+            <span className="text-xs sm:text-sm text-[#F3EEDD] bg-[#123626] border border-[#B8862F]/40 px-3 py-1 rounded-full font-medium">
+              {selectedCategory}
+            </span>
           </div>
 
           <div className="relative w-full">
@@ -145,7 +148,7 @@ export default function Home() {
             <input
               id="product-search"
               type="text"
-              placeholder="Search medicine (e.g. Arishtam, Kashayam)..."
+              placeholder="Search medicine name (e.g. Arishtam, Kashayam)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-[#123626] border border-[#B8862F]/50 focus:border-[#B8862F] rounded-xl pl-10 pr-4 py-3 text-xs sm:text-sm text-[#F3EEDD] placeholder-[#8FA192] shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]/50"
