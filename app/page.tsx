@@ -55,7 +55,7 @@ export default function Home() {
   const docWaLink = `https://wa.me/${doctorWhatsapp}?text=${encodeURIComponent("Hi, I would like to book an appointment for consultation.")}`;
 
   return (
-    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-24 pt-24 sm:pt-28" style={{ fontFamily: "'Work Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#0F2A1E] text-[#F3EEDD] pb-24 pt-20 sm:pt-24" style={{ fontFamily: "'Work Sans', sans-serif" }}>
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
         .font-display { font-family: 'Fraunces', serif; }
@@ -72,14 +72,14 @@ export default function Home() {
                 className="h-10 sm:h-12 w-auto object-contain"
               />
             </div>
-            <div className="flex flex-col w-full overflow-hidden">
+            <div className="flex flex-col w-full overflow-hidden justify-center">
               <div className="flex items-center justify-between">
-                <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+                <p className="font-display text-xl sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
                 <span className="text-[10px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
                   ENG · മലയാളം · தமிழ்
                 </span>
               </div>
-              <p className="text-[9.5px] sm:text-xs tracking-normal sm:tracking-wide text-[#C9BE9C] uppercase font-semibold mt-0.5 whitespace-nowrap">
+              <p className="text-[10.5px] sm:text-xs tracking-normal text-[#C9BE9C] uppercase font-bold mt-0.5 whitespace-nowrap">
                 THE ARYA VAIDYA PHARMACY (COIMBATORE) LIMITED
               </p>
             </div>
@@ -87,8 +87,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Trust Badge Bar - given top margin to move slightly down */}
-      <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-3 pb-1">
+      {/* Trust Badge Bar - Reduced top spacing to stay closer to header */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-2 pb-1">
         <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-2 px-3 text-center flex items-center justify-center gap-2">
           <span className="text-xs">🌿</span>
           <p className="text-[10px] sm:text-xs text-[#C9BE9C] font-semibold tracking-wide flex items-center gap-1.5 flex-wrap justify-center">
