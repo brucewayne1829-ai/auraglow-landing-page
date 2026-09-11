@@ -220,7 +220,7 @@ export const products: Product[] = [
     category: "Gulika / Tablet",
     name: "AVP Rajapravarthini Vati (100\u00A0Tablets)",
     desc: "Women's health & menstrual care",
-    price: "₹60",
+    price: "₹600",
     image: "https://avpayurveda.com/cdn/shop/files/1_5767750b-e883-4f59-ba16-9fde2eda0acd.jpg?v=1766387696&width=800"
   },
   {
