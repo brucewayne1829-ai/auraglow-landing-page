@@ -197,6 +197,14 @@ export const products: Product[] = [
     price: "₹60",
     image: "https://avpayurveda.com/cdn/shop/files/1_3228b7e8-3f15-4f2b-90f9-a92e239fe250.jpg?v=1766387994&width=800"
   },
+  {
+    id: 304,
+    category: "Choornams",
+    name: "Vaidyaratnam Thaiketta Moos Brihat Thriphala Choornam (100g)",
+    desc: "Aids digestion, detoxifies the body, and relieves constipation.",
+    price: "₹112",
+    image: "https://vaidyaratnamstore.com/storage/products/Oi5Q75EBKWkDTNMEdtGLple8lqiUtm27M5k0849B.png"
+  },
 
   // --- Gulika / Tablet ---
   {
@@ -286,6 +294,22 @@ export const products: Product[] = [
     desc: "Provides immediate relief from asthma attacks and chest tightness.",
     price: "₹40",
     image: "https://avpayurveda.com/cdn/shop/files/Swasanandam-Gulika-1-01.jpg?v=1758803937&width=800"
+  },
+  {
+    id: 412,
+    category: "Gulika / Tablet",
+    name: "Kottakkal Glysikot Tablet (60\u00A0Tablets)",
+    desc: "Helps manage blood sugar levels and diabetes care.",
+    price: "₹200",
+    image: "https://shop.aryavaidyasala.com/pub/media/catalog/product/g/l/glysikot-1.jpg"
+  },
+  {
+    id: 413,
+    category: "Gulika / Tablet",
+    name: "Kottakkal H.T. Kot (100\u00A0Tablets)",
+    desc: "Supports hypertension and cardiovascular health.",
+    price: "₹320",
+    image: "https://shop.aryavaidyasala.com/pub/media/catalog/product/h/t/ht_kot_1_1.png"
   },
 
   // --- Lehyam ---
@@ -388,6 +412,14 @@ export const products: Product[] = [
     desc: "Best massage oil for muscle cramps, joint care, and pregnancy body care.",
     price: "₹220",
     image: "https://avpayurveda.com/cdn/shop/files/4-21-2.png?v=1758801824&width=800"
+  },
+  {
+    id: 702,
+    category: "Thailams",
+    name: "Kottakkal Rhukot Liniment (100ml)",
+    desc: "Relief from joint pain, swelling, and muscular stiffness.",
+    price: "₹250",
+    image: "https://shop.aryavaidyasala.com/pub/media/catalog/product/f/r/front1_copy_2.jpg"
   },
 
   // --- Other Home Made Products ---
