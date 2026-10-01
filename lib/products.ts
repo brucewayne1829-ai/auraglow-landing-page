@@ -23,7 +23,7 @@ export const products: Product[] = [
     name: "AVP Khadirarishtam (450ml)",
     desc: "Skin disorders & blood cleansing",
     price: "₹150",
-    image: "https://avpayurveda.com/cdn/shop/files/1_750d336f-3093-4f70-b957-8d624b7e554e.jpg?v=1764238126&width=800"
+    image: "/Khadirarishtam.png"
   },
   {
     id: 103,
@@ -31,7 +31,7 @@ export const products: Product[] = [
     name: "AVP Parthadyarishtam (450ml)",
     desc: "Heart health & cardiac support",
     price: "₹135",
-    image: "https://avpayurveda.com/cdn/shop/files/1_89ceeebe-de60-43f4-9873-e18210e3da95.jpg?v=1766291938&width=800"
+    image: "/Parthadyarishtam.png"
   },
   {
     id: 104,
