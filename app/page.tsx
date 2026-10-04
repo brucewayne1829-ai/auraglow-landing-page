@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { products, categories, Product } from '@/lib/products';
 
 function LeafDivider({ className = "" }: { className?: string }) {
@@ -18,11 +19,25 @@ function LeafDivider({ className = "" }: { className?: string }) {
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [cart, setCart] = useState<Product[]>([]);
+
+  const searchContainerRef = useRef<HTMLDivElement>(null);
 
   const whatsappNumber = "9495562581";
   const doctorWhatsapp = "9942662959";
   const mapUrl = "https://www.google.com/maps/place/No+505,+The+Arya+Vaidya+Pharmacy+Coimbatore+Limited,+Pournami'+Complex,+NSR+Rd,+opp.+to+LIC+Office,+S'Bend,+Nesavaalar+Colony,+Saibaba+Colony,+Coimbatore,+Tamil+Nadu+641011/@11.0268658,76.9467293,15z/data=!4m6!3m5!1s0x3ba858526b5c0591:0x135eacd0cdb95051!8m2!3d11.0268658!4d76.9467293!16s%2Fg%2F1vystznk";
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setIsSearchFocused(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const filteredProducts = products.filter(item => {
     const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
@@ -30,6 +45,12 @@ export default function Home() {
                           item.desc.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Dropdown live suggestions based purely on query text
+  const searchSuggestions = searchQuery.trim() === "" ? [] : products.filter(item =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.desc.toLowerCase().includes(searchQuery.toLowerCase())
+  ).slice(0, 5); // Limit dropdown to top 5 matches
 
   const addToCart = (product: Product) => {
     if (!cart.some((item) => item.id === product.id)) {
@@ -66,10 +87,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2.5 w-full">
             <div className="bg-[#F3EEDD] p-1 rounded-lg shrink-0">
-              <img
+              <Image
                 src="https://avpayurveda.com/cdn/shop/files/Group_1_1_700x.webp?v=1771240747"
                 alt="AVP Ayurveda logo"
+                width={120}
+                height={44}
                 className="h-9 sm:h-11 w-auto object-contain"
+                priority
               />
             </div>
             <div className="flex flex-col w-full overflow-hidden justify-center min-w-0">
@@ -87,7 +111,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Trust Badge Bar - Restored to exact original compact style */}
+      {/* Trust Badge Bar */}
       <section className="max-w-6xl mx-auto px-3 sm:px-6 pt-1.5 pb-1">
         <div className="bg-[#123626] border border-[#B8862F]/30 rounded-lg py-2 px-3 text-center flex items-center justify-center gap-2">
           <span className="text-xs">🌿</span>
@@ -113,18 +137,17 @@ export default function Home() {
           <p className="text-xs sm:text-sm font-bold mb-2 text-emerald-950">
             Connect directly with our Senior Ayurveda Physician via WhatsApp for correct dosage.
           </p>
-  <a
-  href={docWaLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-1.5 px-3.5 rounded-lg shadow transition-all text-xs sm:text-sm border border-emerald-800"
->
-  <svg className="w-4 h-4 fill-current text-green-400 shrink-0" viewBox="0 0 24 24">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-  </svg>
-  <span>Book Consultation via WhatsApp</span>
-</a>
-
+          <a
+            href={docWaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-950 hover:bg-emerald-900 text-amber-300 font-bold py-1.5 px-3.5 rounded-lg shadow transition-all text-xs sm:text-sm border border-emerald-800"
+          >
+            <svg className="w-4 h-4 fill-current text-green-400 shrink-0" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>Book Consultation via WhatsApp</span>
+          </a>
         </div>
       </section>
 
@@ -144,7 +167,8 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="relative w-full">
+          {/* Search Box with Autocomplete Dropdown Popup */}
+          <div className="relative w-full" ref={searchContainerRef}>
             <label htmlFor="product-search" className="sr-only">Search medicine</label>
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#B8862F]">
               🔍
@@ -152,12 +176,69 @@ export default function Home() {
             <input
               id="product-search"
               type="text"
-              placeholder="Search medicine name (e.g. Arishtam, Kashayam)..."
+              placeholder="Search medicine name or description (e.g. Arishtam, Kashayam)..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#123626] border border-[#B8862F]/50 focus:border-[#B8862F] rounded-xl pl-10 pr-4 py-2.5 text-sm text-[#F3EEDD] placeholder-[#8FA192] shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]/50"
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setIsSearchFocused(true);
+              }}
+              onFocus={() => setIsSearchFocused(true)}
+              className="w-full bg-[#123626] border border-[#B8862F]/50 focus:border-[#B8862F] rounded-xl pl-10 pr-10 py-2.5 text-sm text-[#F3EEDD] placeholder-[#8FA192] shadow-inner focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8862F]/50"
             />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#8FA192] hover:text-[#F3EEDD] transition-colors"
+                title="Clear search"
+              >
+                ✕
+              </button>
+            )}
+
+            {/* Dropdown Popup */}
+            {isSearchFocused && searchQuery.trim() !== "" && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-[#123626] border border-[#B8862F]/60 rounded-xl shadow-2xl z-50 overflow-hidden">
+                {searchSuggestions.length > 0 ? (
+                  <ul>
+                    {searchSuggestions.map((item) => (
+                      <li key={item.id}>
+                        <button
+                          onClick={() => {
+                            setSearchQuery(item.name);
+                            setIsSearchFocused(false);
+                          }}
+                          className="w-full px-4 py-3 flex items-center gap-3 text-left hover:bg-[#1a4d35] transition-colors border-b border-[#B8862F]/20 last:border-none group"
+                        >
+                          <div className="w-10 h-10 bg-[#F3EEDD] rounded-lg p-1 shrink-0 flex items-center justify-center relative">
+                            <Image src={item.image} alt={item.name} width={40} height={40} className="w-full h-full object-contain" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs text-[#B8862F] font-semibold">{item.category}</p>
+                            <p className="text-sm font-bold text-[#F3EEDD] truncate group-hover:text-[#CB9B3F]">
+                              {item.name}
+                            </p>
+                          </div>
+                          <span className="text-sm font-display text-[#B8862F] font-bold shrink-0">
+                            {item.price}
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="p-4 text-center text-xs sm:text-sm text-[#C9BE9C]">
+                    No matching medicines found for "<span className="text-[#F3EEDD] font-semibold">{searchQuery}</span>"
+                  </div>
+                )}
+              </div>
+            )}
           </div>
+
+          {searchQuery && (
+            <p className="text-xs text-[#C9BE9C] px-1">
+              Showing {filteredProducts.length} result{filteredProducts.length === 1 ? "" : "s"} for "<span className="text-[#F3EEDD] font-semibold">{searchQuery}</span>"
+            </p>
+          )}
         </div>
 
         <div className="flex flex-wrap gap-x-4 gap-y-2 mb-6 border-b border-[#B8862F]/20 pb-3" role="group" aria-label="Filter by category">
@@ -190,8 +271,14 @@ export default function Home() {
                   <div className="absolute -top-2 left-6 w-4 h-4 rounded-full bg-[#0F2A1E] border border-[#B8862F] z-10" />
                   
                   <div className="bg-[#F3EEDD] rounded-t-lg overflow-hidden">
-                    <div className="p-4 pt-6 flex items-center justify-center">
-                      <img src={item.image} alt={item.name} className="w-full h-72 sm:h-80 object-contain" />
+                    <div className="p-4 pt-6 flex items-center justify-center relative w-full h-72 sm:h-80">
+                      <Image 
+                        src={item.image} 
+                        alt={item.name} 
+                        fill 
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain p-2" 
+                      />
                     </div>
                   </div>
 
@@ -301,7 +388,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto border-t border-[#B8862F]/20 pt-4 text-center text-xs text-[#7C8B7E]">
-          <p>© {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) LTD. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} The Arya Vaidya Pharmacy (Coimbatore) LTD. All rights reserved.</p>
         </div>
       </footer>
 

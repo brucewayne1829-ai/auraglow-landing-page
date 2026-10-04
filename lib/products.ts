@@ -15,7 +15,7 @@ export const products: Product[] = [
     name: "AVP Aragwadharishtam (450ml)",
     desc: "Skin health & blood purification",
     price: "₹140",
-    image: "https://avpayurveda.com/cdn/shop/files/4-2-3_b201c03e-9c48-4ce9-9008-2df884a5545e.png?v=1758801625&width=800"
+    image: "/images/aragwadharishtam.png"
   },
   {
     id: 102,
@@ -23,7 +23,7 @@ export const products: Product[] = [
     name: "AVP Khadirarishtam (450ml)",
     desc: "Skin disorders & blood cleansing",
     price: "₹150",
-    image: "/Khadirarishtam.png"
+    image: "/images/khadirarishtam.png"
   },
   {
     id: 103,
@@ -31,7 +31,7 @@ export const products: Product[] = [
     name: "AVP Parthadyarishtam (450ml)",
     desc: "Heart health & cardiac support",
     price: "₹135",
-    image: "/Parthadyarishtam.png"
+    image: "/images/parthadyarishtam.png"
   },
   {
     id: 104,
@@ -39,7 +39,7 @@ export const products: Product[] = [
     name: "AVP Aswagandharishtam (450ml)",
     desc: "Relieves fatigue, reduces stress, and builds physical stamina & energy.",
     price: "₹175",
-    image: "/aswagandharishtam.png"
+    image: "/images/aswagandharishtam.png"
   },
   {
     id: 105,
@@ -47,7 +47,7 @@ export const products: Product[] = [
     name: "AVP Dasamoolajeerakarishtam (450ml)",
     desc: "Excellent for post-delivery care (Prasava Raksha), improves digestion & immunity.",
     price: "₹165",
-    image: "https://avpayurveda.com/cdn/shop/files/4-2-6.png?v=1758801521&width=800"
+    image: "/images/dasamoolajeerakarishtam.png"
   },
   {
     id: 106,
@@ -55,7 +55,7 @@ export const products: Product[] = [
     name: "AVP Asokarishtam (450ml)",
     desc: "Regulates menstrual cycles, relieves period cramps, and supports women's health.",
     price: "₹110",
-    image: "https://avpayurveda.com/cdn/shop/files/4-2-10.png?v=1758802189&width=800"
+    image: "/images/asokarishtam.png"
   },
   {
     id: 107,
@@ -63,7 +63,7 @@ export const products: Product[] = [
     name: "AVP Saraswatharishtam Gold (200ml)",
     desc: "Enriched with Gold (Swarna). Enhances memory, focus, and speech clarity.",
     price: "₹580",
-    image: "https://avpayurveda.com/cdn/shop/files/ChatGPT_Image_Sep_5_2026_03_51_43_PM.png?v=1788603721&width=800"
+    image: "/images/saraswatharishtam_gold.png"
   },
   {
     id: 108,
@@ -71,7 +71,7 @@ export const products: Product[] = [
     name: "AVP Draksharishtam (450ml)",
     desc: "Cures anemia, improves digestion, and relieves physical weakness.",
     price: "₹150",
-    image: "https://avpayurveda.com/cdn/shop/files/4-2-14.png?v=1758801960&width=800"
+    image: "/images/draksharishtam.png"
   },
   {
     id: 109,
@@ -79,7 +79,7 @@ export const products: Product[] = [
     name: "AVP Vasarishtam (450ml)",
     desc: "Highly effective for chronic cough, asthma, and respiratory allergies.",
     price: "₹170",
-    image: "https://avpayurveda.com/cdn/shop/files/SA101696-1-e1680771676592.jpg?v=1758802073&width=800"
+    image: "/images/vasarishtam.png"
   },
   {
     id: 110,
@@ -87,7 +87,7 @@ export const products: Product[] = [
     name: "AVP Jeerakarishtam (450ml)",
     desc: "Soothes stomach issues, aids digestion, and essential for post-natal care.",
     price: "₹160",
-    image: "https://avpayurveda.com/cdn/shop/files/1_6256cf8e-4ac6-4b3e-9f70-a5af73b5d89e.png?v=1764229766&width=800"
+    image: "/images/jeerakarishtam.png"
   },
 
   // --- Kashayams ---
@@ -97,7 +97,7 @@ export const products: Product[] = [
     name: "AVP Kallyanaka Kashayam (200ml)",
     desc: "Mental wellness & memory",
     price: "₹255",
-    image: "https://avpayurveda.com/cdn/shop/files/31_9dfe38b7-e4a0-4cc0-8458-a24f73b6895f.jpg?v=1764232082&width=800"
+    image: "/images/kallyanaka_kashayam.png"
   },
   {
     id: 202,
@@ -105,7 +105,7 @@ export const products: Product[] = [
     name: "AVP Rasnasaptakam Kashayam (200ml)",
     desc: "Joint pain & rheumatism",
     price: "₹150",
-    image: "https://avpayurveda.com/cdn/shop/files/SA102032-2-e1680772064188.jpg?v=1758802039&width=800"
+    image: "/images/rasnasaptakam_kashayam.png"
   },
   {
     id: 203,
@@ -113,7 +113,7 @@ export const products: Product[] = [
     name: "AVP Sahacharadi Kashayam (200ml)",
     desc: "Vata disorders & lower back pain",
     price: "₹140",
-    image: "https://avpayurveda.com/cdn/shop/files/1.1-1.jpg?v=1758802048&width=800"
+    image: "/images/sahacharadi_kashayam.png"
   },
   {
     id: 204,
@@ -121,7 +121,7 @@ export const products: Product[] = [
     name: "AVP Dhanwantharam Kashayam (200ml)",
     desc: "Best for joint pains, arthritis, backache, and nerve-related issues.",
     price: "₹200",
-    image: "https://avpayurveda.com/cdn/shop/files/Dhanwantharam-Kashayam-1.png?v=1758801683&width=800"
+    image: "/images/dhanwantharam_kashayam.png"
   },
   {
     id: 205,
@@ -129,7 +129,7 @@ export const products: Product[] = [
     name: "AVP Katakakhadiradi Kashayam (200ml)",
     desc: "Excellent blood purifier. Helps manage skin allergies and high blood sugar.",
     price: "₹135",
-    image: "https://avpayurveda.com/cdn/shop/files/4-2-13.png?v=1758801832&width=800"
+    image: "/images/katakakhadiradi_kashayam.png"
   },
   {
     id: 206,
@@ -137,7 +137,7 @@ export const products: Product[] = [
     name: "AVP Punarnavadi Kashayam (200ml)",
     desc: "Reduces body swelling (edema), supports kidney function, and water retention.",
     price: "₹150",
-    image: "https://avpayurveda.com/cdn/shop/files/21_44077927-1715-4e60-8c6b-0775cb9cb0be.jpg?v=1763820118&width=800"
+    image: "/images/punarnavadi_kashayam.png"
   },
   {
     id: 207,
@@ -145,7 +145,7 @@ export const products: Product[] = [
     name: "AVP Rasnairandadi Kashayam (200ml)",
     desc: "Fast relief from severe joint stiffness, lower back pain, and muscle spasms.",
     price: "₹225",
-    image: "https://avpayurveda.com/cdn/shop/files/1_4cfc62b3-3570-459b-ba38-8528922e9efe.jpg?v=1763471327&width=800"
+    image: "/images/rasnairandadi_kashayam.png"
   },
   {
     id: 208,
@@ -153,7 +153,7 @@ export const products: Product[] = [
     name: "AVP Drakshadi Kashayam (200ml)",
     desc: "Relieves excessive body heat, fatigue, and weakness. Protects liver health.",
     price: "₹200",
-    image: "https://avpayurveda.com/cdn/shop/files/3-2-24.png?v=1758801729&width=800"
+    image: "/images/drakshadi_kashayam.png"
   },
   {
     id: 209,
@@ -161,7 +161,7 @@ export const products: Product[] = [
     name: "AVP Indukantham Kashayam (200ml)",
     desc: "Boosts natural immunity, cures chronic fevers, and relieves gas trouble.",
     price: "₹170",
-    image: "https://avpayurveda.com/cdn/shop/files/4_1_428a6692-86bd-4837-8251-d2339d617349.jpg?v=1764574197&width=800"
+    image: "/images/indukantham_kashayam.png"
   },
   {
     id: 210,
@@ -169,7 +169,7 @@ export const products: Product[] = [
     name: "AVP Gandharvahastadi Kashayam (200ml)",
     desc: "Mild laxative that clears bowel movements and relieves back pain.",
     price: "₹140",
-    image: "https://avpayurveda.com/cdn/shop/files/SA101726.jpg?v=1758801592&width=800"
+    image: "/images/gandharvahastadi_kashayam.png"
   },
 
   // --- Choornams ---
@@ -179,7 +179,7 @@ export const products: Product[] = [
     name: "AVP Amrutha Choornam (25g)",
     desc: "Blood sugar management & immunity",
     price: "₹100",
-    image: "https://avpayurveda.com/cdn/shop/files/1_0e1a9c01-dc15-470f-9dc5-2ecef026ae9e.jpg?v=1765864814&width=800"
+    image: "/images/amrutha_choornam.png"
   },
   {
     id: 302,
@@ -187,7 +187,7 @@ export const products: Product[] = [
     name: "AVP Ashta Choornam (25g)",
     desc: "Digestion, gas & acidity relief",
     price: "₹65",
-    image: "https://avpayurveda.com/cdn/shop/files/21_334efde0-158f-44e5-8311-f66ab0a46dd4.jpg?v=1765952695&width=800"
+    image: "/images/ashta_choornam.png"
   },
   {
     id: 303,
@@ -195,7 +195,7 @@ export const products: Product[] = [
     name: "AVP Rasnadi Choornam (25g)",
     desc: "Cold, headache & sinus care",
     price: "₹60",
-    image: "https://avpayurveda.com/cdn/shop/files/1_3228b7e8-3f15-4f2b-90f9-a92e239fe250.jpg?v=1766387994&width=800"
+    image: "/images/rasnadi_choornam.png"
   },
   {
     id: 304,
@@ -203,7 +203,7 @@ export const products: Product[] = [
     name: "Vaidyaratnam Thaiketta Moos Brihat Thriphala Choornam (100g)",
     desc: "Aids digestion, detoxifies the body, and relieves constipation.",
     price: "₹112",
-    image: "https://vaidyaratnamstore.com/storage/products/Oi5Q75EBKWkDTNMEdtGLple8lqiUtm27M5k0849B.png"
+    image: "/images/vaidyaratnam_thaiketta_moos_brihat_thriphala_choornam.png"
   },
 
   // --- Gulika / Tablet ---
@@ -213,7 +213,7 @@ export const products: Product[] = [
     name: "AVP Chandraprabha Vati (10\u00A0nos)",
     desc: "Urinary tract & general vitality",
     price: "₹40",
-    image: "https://avpayurveda.com/cdn/shop/files/Chandraprabha-Vatika.jpg?v=1758803874&width=800"
+    image: "/images/chandraprabha_vati.png"
   },
   {
     id: 402,
@@ -221,7 +221,7 @@ export const products: Product[] = [
     name: "AVP Kankayana Gutika (10\u00A0nos)",
     desc: "Piles & digestive wellness",
     price: "₹60",
-    image: "https://avpayurveda.com/cdn/shop/files/1_6bfef594-9b3a-432a-ad93-b325e380075d.jpg?v=1765961681&width=800"
+    image: "/images/kankayana_gutika.png"
   },
   {
     id: 403,
@@ -229,7 +229,7 @@ export const products: Product[] = [
     name: "AVP Rajapravarthini Vati (100\u00A0Tablets)",
     desc: "Women's health & menstrual care",
     price: "₹600",
-    image: "https://avpayurveda.com/cdn/shop/files/1_5767750b-e883-4f59-ba16-9fde2eda0acd.jpg?v=1766387696&width=800"
+    image: "/images/rajapravarthini_vati.png"
   },
   {
     id: 404,
@@ -237,7 +237,7 @@ export const products: Product[] = [
     name: "AVP Manjishtadi Kashayam Tablet (10\u00A0Tablets)",
     desc: "Purifies blood to clear acne, pimples, and stubborn skin allergies.",
     price: "₹75",
-    image: "https://avpayurveda.com/cdn/shop/files/Manjishtadi-Kashayam-Tablet-1.png?v=1758802629&width=800"
+    image: "/images/manjishtadi_kashayam_tablet.png"
   },
   {
     id: 405,
@@ -245,7 +245,7 @@ export const products: Product[] = [
     name: "AVP Manasamithra Vatakam (10\u00A0Tablets)",
     desc: "Reduces anxiety, mental stress, and promotes deep, uninterrupted sleep.",
     price: "₹275",
-    image: "https://avpayurveda.com/cdn/shop/files/1_030b0fd9-a741-4418-99e4-0fd874f8758c.jpg?v=1762146451&width=800"
+    image: "/images/manasamithra_vatakam.png"
   },
   {
     id: 406,
@@ -253,7 +253,7 @@ export const products: Product[] = [
     name: "AVP Vayu Gulika (10\u00A0Tablets)",
     desc: "Instant relief from gas trouble, stomach bloating, and acidity.",
     price: "₹110",
-    image: "https://avpayurveda.com/cdn/shop/files/Vayu-Gulika-1.png?v=1758803740&width=800"
+    image: "/images/vayu_gulika.png"
   },
   {
     id: 407,
@@ -261,7 +261,7 @@ export const products: Product[] = [
     name: "AVP Dhanwantharam Gulika (10\u00A0Tablets)",
     desc: "First-aid pill for chest congestion, breathlessness, and dizziness.",
     price: "₹35",
-    image: "https://avpayurveda.com/cdn/shop/files/1_1_f50d264f-1c97-4f23-afde-ff40ab9bc848.jpg?v=1767438537&width=800"
+    image: "/images/dhanwantharam_gulika.png"
   },
   {
     id: 408,
@@ -269,7 +269,7 @@ export const products: Product[] = [
     name: "AVP Gorochanadi Gulika (10\u00A0Tablets)",
     desc: "Treats high fever, breathing issues in kids, and balances body temperature.",
     price: "₹160",
-    image: "https://avpayurveda.com/cdn/shop/files/5-2.jpg?v=1758801764&width=800"
+    image: "/images/gorochanadi_gulika.png"
   },
   {
     id: 409,
@@ -277,7 +277,7 @@ export const products: Product[] = [
     name: "AVP Suvarnamuktadi Gulika (10\u00A0Tablets)",
     desc: "Premium formulation for treating chronic fevers and improving immunity.",
     price: "₹180",
-    image: "https://avpayurveda.com/cdn/shop/files/51.jpg?v=1764254129&width=800"
+    image: "/images/suvarnamuktadi_gulika.png"
   },
   {
     id: 410,
@@ -285,7 +285,7 @@ export const products: Product[] = [
     name: "AVP Vilwadi Gulika (10\u00A0Tablets)",
     desc: "Excellent for food poisoning, stomach infections, and insect bites.",
     price: "₹50",
-    image: "https://avpayurveda.com/cdn/shop/files/11_89d49319-1684-4af5-a96a-fa55617b8550.jpg?v=1764255625&width=800"
+    image: "/images/vilwadi_gulika.png"
   },
   {
     id: 411,
@@ -293,7 +293,7 @@ export const products: Product[] = [
     name: "AVP Swasanandam Gulika (10\u00A0Tablets)",
     desc: "Provides immediate relief from asthma attacks and chest tightness.",
     price: "₹40",
-    image: "https://avpayurveda.com/cdn/shop/files/Swasanandam-Gulika-1-01.jpg?v=1758803937&width=800"
+    image: "/images/swasanandam_gulika.png"
   },
   {
     id: 412,
@@ -301,7 +301,7 @@ export const products: Product[] = [
     name: "Kottakkal Glysikot Tablet (60\u00A0Tablets)",
     desc: "Helps manage blood sugar levels and diabetes care.",
     price: "₹200",
-    image: "https://shop.aryavaidyasala.com/pub/media/catalog/product/g/l/glysikot-1.jpg"
+    image: "/images/glysikot_tablet.png"
   },
   {
     id: 413,
@@ -309,7 +309,7 @@ export const products: Product[] = [
     name: "Kottakkal H.T. Kot (100\u00A0Tablets)",
     desc: "Supports hypertension and cardiovascular health.",
     price: "₹320",
-    image: "https://shop.aryavaidyasala.com/pub/media/catalog/product/h/t/ht_kot_1_1.png"
+    image: "/images/ht_kot.png" // Assumes standard naming if applicable, or you can adjust
   },
 
   // --- Lehyam ---
@@ -319,7 +319,7 @@ export const products: Product[] = [
     name: "AVP Narasimha Rasayanam (200g)",
     desc: "Hair growth & overall vitality",
     price: "₹160",
-    image: "https://avpayurveda.com/cdn/shop/files/1_f5c62de9-b66d-4ad8-bd94-5b6f9b6e3c29.jpg?v=1766203978&width=800"
+    image: "/images/narasimha_rasayanam.png"
   },
   {
     id: 502,
@@ -327,7 +327,7 @@ export const products: Product[] = [
     name: "AVP Vilwadi Lehyam (200g)",
     desc: "Diarrhea & digestive health",
     price: "₹150",
-    image: "https://avpayurveda.com/cdn/shop/files/SA102069-1-e1680774561592.jpg?v=1758802085&width=800"
+    image: "/images/vilwadi_lehyam.png"
   },
   {
     id: 503,
@@ -335,7 +335,7 @@ export const products: Product[] = [
     name: "AVP Sathavari Gulam (200g)",
     desc: "Women's health & hormonal balance",
     price: "₹165",
-    image: "/Sathavarigulam.png"
+    image: "/images/sathavarigulam.png" // Matched to your list or pattern
   },
   {
     id: 504,
@@ -343,7 +343,7 @@ export const products: Product[] = [
     name: "AVP Dasamoola Rasayanam (200g)",
     desc: "Highly effective for breathing difficulties, asthma, and chronic cough.",
     price: "₹220",
-    image: "https://avpayurveda.com/cdn/shop/files/5-2_11c50bc9-935b-4c5b-9fe3-b4126fbc5b1c.png?v=1758801654&width=800"
+    image: "/images/dasamoola_rasayanam.png"
   },
   {
     id: 505,
@@ -351,7 +351,7 @@ export const products: Product[] = [
     name: "AVP Aswagandhadi Lehyam (400g)",
     desc: "Weight gain supplement that builds muscle mass, strength, and stamina.",
     price: "₹350",
-    image: "https://avpayurveda.com/cdn/shop/files/3-2-12.png?v=1758802264&width=800"
+    image: "/images/aswagandhadi_lehyam.png"
   },
   {
     id: 506,
@@ -359,7 +359,7 @@ export const products: Product[] = [
     name: "AVP Sooranadi Lehyam (200g)",
     desc: "The best Ayurvedic remedy for all types of piles (hemorrhoids) and indigestion.",
     price: "₹170",
-    image: "https://avpayurveda.com/cdn/shop/files/1_38ee5251-9077-40e7-bebd-1c7e6e6c5d25.jpg?v=1766395193&width=800"
+    image: "/images/sooranadi_lehyam.png"
   },
   {
     id: 507,
@@ -367,7 +367,7 @@ export const products: Product[] = [
     name: "AVP Agasthya Rasayanam (200g)",
     desc: "Protects against recurrent colds, allergies, and builds strong lung immunity.",
     price: "₹115",
-    image: "https://avpayurveda.com/cdn/shop/files/Agasthyarasayanam-2.png?v=1758801427&width=800"
+    image: "/images/agasthya_rasayanam.png"
   },
   {
     id: 508,
@@ -375,7 +375,7 @@ export const products: Product[] = [
     name: "AVP Kalyanagulam (200g)",
     desc: "Safe laxative that detoxifies the body and helps treat skin disorders.",
     price: "₹110",
-    image: "https://avpayurveda.com/cdn/shop/files/1_e4e97d85-81f0-4e17-a18a-e99b5e971065.jpg?v=1765961301&width=800"
+    image: "/images/kalyanagulam.png"
   },
   {
     id: 509,
@@ -383,7 +383,7 @@ export const products: Product[] = [
     name: "AVP Thrivril Lehyam (200g)",
     desc: "Excellent for treating severe constipation and ensuring smooth bowel clearance.",
     price: "₹145",
-    image: "https://avpayurveda.com/cdn/shop/files/11_3212f2ba-a1f0-4a0b-af25-3cf5aaa9443b.jpg?v=1763819211&width=800"
+    image: "/images/thrivril_lehyam.png"
   },
   {
     id: 510,
@@ -391,7 +391,7 @@ export const products: Product[] = [
     name: "AVP Dasamoolaharitaki Lehyam (200g)",
     desc: "Reduces body swelling, aids weight loss, and improves liver health.",
     price: "₹115",
-    image: "https://avpayurveda.com/cdn/shop/files/1_122a9f18-34f2-48bb-b15f-bc2a57b6a0d7.jpg?v=1765954936&width=800"
+    image: "/images/dasamoolaharitaki_lehyam.png"
   },
 
   // --- Grithams ---
@@ -401,7 +401,7 @@ export const products: Product[] = [
     name: "AVP Saraswatha Gritham (150g)",
     desc: "Medicated ghee that drastically improves memory, intelligence, and focus.",
     price: "₹200",
-    image: "https://avpayurveda.com/cdn/shop/files/1_9241b43e-733b-4c3d-a4b8-0a42398e0087.jpg?v=1777533541&width=800"
+    image: "/images/saraswatha_gritham.png"
   },
 
   // --- Thailams ---
@@ -411,7 +411,7 @@ export const products: Product[] = [
     name: "AVP Dhanwantharam Thailam (200ml)",
     desc: "Best massage oil for muscle cramps, joint care, and pregnancy body care.",
     price: "₹220",
-    image: "https://avpayurveda.com/cdn/shop/files/4-21-2.png?v=1758801824&width=800"
+    image: "/images/dhanwantharam_thailam.png"
   },
   {
     id: 702,
@@ -419,7 +419,7 @@ export const products: Product[] = [
     name: "Kottakkal Rhukot Liniment (100ml)",
     desc: "Relief from joint pain, swelling, and muscular stiffness.",
     price: "₹250",
-    image: "https://shop.aryavaidyasala.com/pub/media/catalog/product/f/r/front1_copy_2.jpg"
+    image: "/images/rhukot_liniment.png"
   },
 
   // --- Other Home Made Products ---
@@ -429,7 +429,7 @@ export const products: Product[] = [
     name: "Special Nadan Vaidyar Pain Relief Oil",
     desc: "Fast-acting homemade oil with Shallots & Pepper for severe joint/muscle pains.",
     price: "₹250",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&auto=format&fit=crop&q=60"
+    image: "/images/special_nadan_vaidyar_pain_relief_oil.png"
   }
 ];
 

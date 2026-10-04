@@ -16,8 +16,9 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'AVP Agency | Original Ayurvedic Medicines',
-  description: 'Authorised dealer for The Arya Vaidya Pharmacy (Coimbatore) Ltd. All India delivery available.',
+  title: 'AVP Agency | Original Ayurvedic Medicines - The Arya Vaidya Pharmacy',
+  description: 'Authorised dealer for The Arya Vaidya Pharmacy (Coimbatore) Ltd. Shop authentic classical Ayurvedic medicines, herbal oils, and Kashayams with all-India delivery.',
+  keywords: ['AVP Ayurveda', 'Arya Vaidya Pharmacy', 'Ayurvedic medicines online', 'Murivenna oil', 'Ksheerabala'],
   generator: 'v0.app',
   icons: {
     icon: [
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#fff5f2',
+  themeColor: '#0F2A1E',
 }
 
 export default function RootLayout({
@@ -49,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${fraunces.variable} bg-background`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${geist.variable} ${fraunces.variable} bg-[#0F2A1E]`}>
+      <body className="font-sans antialiased bg-[#0F2A1E] text-[#F3EEDD]">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
