@@ -98,7 +98,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col w-full overflow-hidden justify-center min-w-0">
               <div className="flex items-center justify-between gap-1">
-                <p className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</p>
+                <h1 className="font-display text-lg sm:text-2xl leading-tight text-[#F3EEDD] font-bold">AVP Agency</h1>
                 <span className="text-[9px] sm:text-xs text-[#C9BE9C] font-medium shrink-0">
                   ENG · മലയാളം · தமிழ்
                 </span>
@@ -354,7 +354,7 @@ export default function Home() {
           </a>
         </div>
         <div className="bg-[#123626] border border-[#B8862F]/30 rounded-xl p-5 flex flex-col justify-center">
-          <p className="font-display text-lg text-[#F3EEDD] mb-1.5">Delivery, pan-India</p>
+          <h2 className="font-display text-lg text-[#F3EEDD] mb-1.5">Delivery, pan-India</h2>
           <p className="text-[#F3EEDD] leading-relaxed text-sm sm:text-base mb-2">
             Direct delivery across India via secure prepaid WhatsApp orders.
           </p>
