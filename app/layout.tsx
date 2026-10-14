@@ -20,6 +20,17 @@ export const metadata: Metadata = {
   description: 'Authorised dealer for The Arya Vaidya Pharmacy (Coimbatore) Ltd. Shop authentic classical Ayurvedic medicines, herbal oils, and Kashayams with all-India delivery.',
   keywords: ['AVP Ayurveda', 'Arya Vaidya Pharmacy', 'Ayurvedic medicines online', 'Murivenna oil', 'Ksheerabala'],
   generator: 'v0.app',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       {
